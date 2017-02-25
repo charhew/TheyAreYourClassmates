@@ -14,13 +14,14 @@
 			overflow-y: auto;
 			padding: 0;
 			margin: 0;
+			background: yellow;
 		}
 
 		.p-layer {
 			padding: 100px;
 		}
 
-		.p-layer-back {
+		#background {
 			transform: translateZ(-5px) scale(6);
 			background: green;
 			position: absolute;
@@ -64,7 +65,7 @@
 			background: orange;
 			position: absolute;
 			top: 1500px;
-			right: 0px;
+			right: 0;
 			transform: translateZ(-1px) scale(2);
 		}
 
@@ -72,7 +73,7 @@
 </head>
 <body>
 	<div class="parallax">
-		<div class="p-layer p-layer-back">
+		<div class="p-layer" id="background">
 			this is the back layer <br>
 			this is the back layer <br>
 			this is the back layer <br>

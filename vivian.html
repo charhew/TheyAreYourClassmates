@@ -1,0 +1,110 @@
+<html>
+<head>
+	<style type="text/css">
+
+		html, body {
+			padding: 0;
+			margin: 0;
+		}
+		/*The parallax class is where the parallax magic happens. Defining the height and perspective style properties of an element will lock the perspective to its centre, creating a fixed origin 3D viewport. Setting overflow-y: auto will allow the content inside the element to scroll in the usual way, but now descendant elements will be rendered relative to the fixed perspective. This is the key to creating the parallax effect.*/
+		.parallax {
+			perspective: 1px;
+			height: 100vh;
+			overflow-x: hidden;
+			overflow-y: auto;
+			padding: 0;
+			margin: 0;
+			background: #f4f3f2;
+		}
+
+		.p-layer {
+			padding: 100px;
+		}
+
+		#background {
+			transform: translateZ(-5px) scale(6);
+			background: #f4f3f2;
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+		}
+
+		/*makes all the images the same size as their container div*/
+		img {
+			max-width: 100%;
+			height: auto;
+		}
+
+		/*specific elements*/
+		#intro {
+			/*transform: translateZ(0);*/
+			background-image: url('img/vivian/a_intro.png');
+			background-size: cover;
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+		}
+
+		#esl-levels-text {
+			transform: translateZ(-1px) scale(2);
+			position: absolute;
+			top: 500px;
+			left: 300px;
+			width: 400px;
+			text-align: center;
+		}
+
+		#esl-levels {
+			transform: translateZ(-1px) scale(2);
+			position: absolute;
+			top: 1000px;
+			left: 300px;
+			width: 150px;
+		}
+
+		#esl-levels-2014 {
+			transform: translateZ(-1px) scale(2);
+			position: absolute;
+			top: 960px;
+			left: 600px;
+			width: 120px;
+		}
+
+		#esl-levels-2016 {
+			transform: translateZ(-1px) scale(2);
+			position: absolute;
+			top: 1590px;
+			left: 600px;
+			width: 120px;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="parallax">
+		<div class="p-layer" id="background">
+			
+		</div>
+		<div class="p-layer" id="esl-levels-text">
+			<p>I took 4 levels of ESL classes, starting in Level 2 and finishing Level 5 before I could move on to English 10. I took me over a year.
+		</div>
+		<div class="p-layer" id="esl-levels">
+			<img src="img/vivian/a_esl-levels.png">
+		</div>
+		<div class="p-layer" id="esl-levels-2014">
+			<img src="img/vivian/a_esl-levels-2014.png">
+		</div>
+		<div class="p-layer" id="esl-levels-2016">
+			<img src="img/vivian/a_esl-levels-2016.png">
+		</div>
+		<div class="p-layer" id="intro">
+			Vivian
+		</div>
+
+	</div>
+</body>
+</html>
