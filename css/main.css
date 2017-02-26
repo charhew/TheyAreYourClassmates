@@ -15,7 +15,7 @@ just in case!
 
 /*outlines everything for testing purposes*/
 * {
-  border: 1px solid orange;
+  /*border: 1px solid orange;*/
 }
 
 @font-face {
@@ -180,6 +180,10 @@ section.row:after {
 .story-container {
   max-width: 1200px;
   margin: auto;
+}
+
+* {
+  opacity: 1;
 }
 
 img {
