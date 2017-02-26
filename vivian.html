@@ -1,5 +1,6 @@
 <html>
 <head>
+	<link rel="stylesheet" href="css/main.css">
 	<style type="text/css">
 
 		html, body {
@@ -84,10 +85,10 @@
 
 	</style>
 </head>
-<body>
-	<div class="parallax">
+<body class="noscroll">
+	<!-- <div class="parallax">
 		<div class="p-layer" id="background">
-			
+
 		</div>
 		<div class="p-layer" id="esl-levels-text">
 			<p>I took 4 levels of ESL classes, starting in Level 2 and finishing Level 5 before I could move on to English 10. I took me over a year.
@@ -104,7 +105,30 @@
 		<div class="p-layer" id="intro">
 			Vivian
 		</div>
+		</div>-->
 
-	</div>
+		<div class="container-video">
+			<video id="video-vivian-intro" autoplay onended="startExperience()">
+				<source src="res/video-vivian-intro.mp4" type="video/mp4">
+			</video>
+			<div class="container-story-title">
+				<h4>01.</h4>
+				<h1>Vivian</h1>
+			</div>
+			<img src="img/video-replay.png" alt="replay video button" id="button-replay">
+			<a id="skip-video-link" class="text-link" href="#story-vivian">Already seen this? Skip this video.</a>
+		</div>
+		<div id="story-vivian" style="height: 2000px">
+			<p>asdlfjasldfjalsdfjalsfjasldf</p>
+		</div>
+		<video id="video-vivian-outro">
+			<source src="res/video-vivian-outro.mp4" type="video/mp4">
+		</video>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src="js/video.js"></script>
+		<script src="js/smooth-scroll.js"></script>
+
 </body>
+
 </html>
