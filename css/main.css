@@ -30,6 +30,11 @@
 
 body {
   font-family: "myAvenir", sans-serif;
+  margin: 0;
+}
+
+p {
+  margin: 0;
 }
 
 .text-link {
@@ -63,6 +68,10 @@ body {
   visibility: visible;
   -webkit-transform: scaleX(1);
   transform: scaleX(1);
+}
+
+.container-story {
+  background-color: #f4f3f2;
 }
 
 /* ----------------------------- video styling ----------------------------- */
