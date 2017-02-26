@@ -132,3 +132,9 @@ body.noscroll {
   letter-spacing: 2;
   margin: 0;
 }
+
+/*makes all the images the same size as their container div*/
+img {
+  max-width: 100%;
+  height: auto;
+}

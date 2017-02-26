@@ -2,95 +2,82 @@
 <head>
 	<link rel="stylesheet" href="css/main.css">
 	<style type="text/css">
+		/* --------------------- specific elements ------------------- */
 
-		html, body {
-			padding: 0;
-			margin: 0;
-		}
-		/*The parallax class is where the parallax magic happens. Defining the height and perspective style properties of an element will lock the perspective to its centre, creating a fixed origin 3D viewport. Setting overflow-y: auto will allow the content inside the element to scroll in the usual way, but now descendant elements will be rendered relative to the fixed perspective. This is the key to creating the parallax effect.*/
-		.parallax {
-			perspective: 1px;
-			height: 100vh;
-			overflow-x: hidden;
-			overflow-y: auto;
-			padding: 0;
-			margin: 0;
-			background: #f4f3f2;
-		}
-
-		.p-layer {
-			padding: 100px;
-		}
-
-		#background {
-			transform: translateZ(-5px) scale(6);
-			background: #f4f3f2;
-			position: absolute;
-			top: 0;
-			left: 0;
-			right: 0;
-			bottom: 0;
-		}
-
-		/*makes all the images the same size as their container div*/
-		img {
-			max-width: 100%;
-			height: auto;
-		}
-
-		/*specific elements*/
-		#intro {
-			/*transform: translateZ(0);*/
-			background-image: url('img/vivian/a_intro.png');
-			background-size: cover;
-			position: absolute;
-			top: 0;
-			right: 0;
-			bottom: 0;
-			left: 0;
-		}
-
-		#esl-levels-text {
-			transform: translateZ(-1px) scale(2);
-			position: absolute;
-			top: 500px;
-			left: 300px;
-			width: 400px;
-			text-align: center;
+		#esl-levels-para {
+		  margin: auto;
+		  width: 400px;
+		  text-align: center;
+		  padding-top: 80px;
+		  margin-bottom: 80px;
 		}
 
 		#esl-levels {
-			transform: translateZ(-1px) scale(2);
-			position: absolute;
-			top: 1000px;
-			left: 300px;
-			width: 150px;
+		  width: 150px;
+		  float: left;
+		  margin-left: 40%;
 		}
 
 		#esl-levels-2014 {
-			transform: translateZ(-1px) scale(2);
-			position: absolute;
-			top: 960px;
-			left: 600px;
-			width: 120px;
+		  width: 120px;
+		  float: left;
+		  margin-left: 10px;
+		  margin-top: 90px;
 		}
 
 		#esl-levels-2016 {
-			transform: translateZ(-1px) scale(2);
-			position: absolute;
-			top: 1590px;
-			left: 600px;
-			width: 120px;
+		  width: 120px;
+		  float: left;
+		  margin-left: -120px;
+		  margin-top: 405px;
 		}
+
+		#lunch {
+		  width: 600px;
+		  clear: both;
+		  float: left;
+		  margin-left: 100px;
+		  margin-top: 120px;
+		}
+
+		#paint1 {
+		  width: 160px;
+		  float: left;
+		  margin-left: -140px;
+		  margin-top: 520px;
+		}
+
+		#lunch-quote {
+		  width: 200px;
+		  float: left;
+		  margin-left: -40px;
+		  margin-top: 560px;
+		}
+
+		#lunch-para {
+		  width: 300px;
+		  float: right;
+		  margin-right: 100px;
+		}
+
 
 	</style>
 </head>
 <body class="noscroll">
-	<!-- <div class="parallax">
-		<div class="p-layer" id="background">
-
+		<div class="p-layer" id="intro">
+			<div class="container-video">
+				<video id="video-vivian-intro" autoplay onended="startExperience()">
+					<source src="res/video-vivian-intro.mp4" type="video/mp4">
+				</video>
+				<div class="container-story-title">
+					<h4>01.</h4>
+					<h1>Vivian</h1>
+				</div>
+				<img src="img/video-replay.png" alt="replay video button" id="button-replay">
+				<a id="skip-video-link" class="text-link" href="#esl-levels-para">Already seen this? Skip this video.</a>
+			</div>
 		</div>
-		<div class="p-layer" id="esl-levels-text">
+		<div class="p-layer" id="esl-levels-para">
 			<p>I took 4 levels of ESL classes, starting in Level 2 and finishing Level 5 before I could move on to English 10. I took me over a year.
 		</div>
 		<div class="p-layer" id="esl-levels">
@@ -102,25 +89,23 @@
 		<div class="p-layer" id="esl-levels-2016">
 			<img src="img/vivian/a_esl-levels-2016.png">
 		</div>
-		<div class="p-layer" id="intro">
-			Vivian
-		</div>
-		</div>-->
 
-		<div class="container-video">
-			<video id="video-vivian-intro" autoplay onended="startExperience()">
-				<source src="res/video-vivian-intro.mp4" type="video/mp4">
-			</video>
-			<div class="container-story-title">
-				<h4>01.</h4>
-				<h1>Vivian</h1>
-			</div>
-			<img src="img/video-replay.png" alt="replay video button" id="button-replay">
-			<a id="skip-video-link" class="text-link" href="#story-vivian">Already seen this? Skip this video.</a>
+		<div class="p-layer" id="lunch">
+			<img src="img/vivian/a_lunch.png">
 		</div>
-		<div id="story-vivian" class="container-story" style="height: 2000px">
-			<p>asdlfjasldfjalsdfjalsfjasldf</p>
+
+		<div class="p-layer" id="lunch-para">
+			I hoped to make lots of friends in ESL classes but it was harder because I’m shy. A lot of them were here for a longer time and also spoke better English than me, which made me feel bad. I ate by myself at lunch for the first few months, but I have some friends now. We talk about anime and cosplay, which I love.
 		</div>
+
+		<div class="p-layer" id="paint1">
+			<img src="img/vivian/a_paint1.png">
+		</div>
+
+		<div class="p-layer" id="lunch-quote">
+			<h2>I wonder if my friends stress about their English the way I do. We don’t really talk about things like that.</h2>
+		</div>
+	
 		<video id="video-vivian-outro">
 			<source src="res/video-vivian-outro.mp4" type="video/mp4">
 		</video>
