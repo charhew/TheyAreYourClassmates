@@ -1,3 +1,23 @@
+/*
+NOTES AND REMINDERS
+===================
+
+Every story section has its own .col-full or .col-left or .col-right,
+so each one needs to be styled individually! even though all
+.col-fulls will likely all be 100%, I separated them anyways
+just in case!
+
+
+*/
+
+
+
+
+/*outlines everything for testing purposes*/
+* {
+  border: 1px solid orange;
+}
+
 @font-face {
     font-family: "myAvenir";
     src: url(../fonts/Avenir-Book.ttf);
@@ -31,6 +51,7 @@
 body {
   font-family: "myAvenir", sans-serif;
   margin: 0;
+  background: #f4f3f2;
 }
 
 p {
@@ -133,8 +154,227 @@ body.noscroll {
   margin: 0;
 }
 
-/*makes all the images the same size as their container div*/
+html, body {
+  padding: 0;
+  margin: 0;
+}
+
+section.row:after {
+  content:"";
+  display: block;
+  clear: both;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+[class*='col-'] {
+  float: left;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+
+.story-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
 img {
   max-width: 100%;
+}
+
+section#esl .col-full {
+  width: 100%;
+}
+
+section#esl p {
+  width: 600px;
+  text-align: center;
+  margin: auto;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+section#esl img {
+  width: 300px;
+  margin: auto;
+  display: block;
+  margin-bottom: 70px
+}
+
+section#lunch .col-left {
+  width: 55%;
+  position: relative;
+  height: 500px;
+}
+
+section#lunch .col-left img.lunch {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 500px;
   height: auto;
+}
+
+section#lunch .col-left img.paint {
+  position: absolute;
+  bottom: 100px;
+  right: 350px;
+  width: 160px;
+}
+
+section#lunch .col-left h2 {
+  position: absolute;
+  bottom: 0;
+  right: 0px;
+  width: 400px;
+}
+
+section#lunch .col-right {
+  width: 45%;
+}
+
+section#lunch .col-right p {
+  margin-top: 150px;
+  max-width: 500px;
+}
+
+section#huh .col-full {
+  width: 100%;
+  position: relative;
+  height: 500px;
+  text-align: center;
+}
+
+section#huh p {
+  width: 600px;
+  margin: auto;
+  padding: 50px 0 50px 0;
+}
+
+section#huh img {
+  position: absolute;
+  left: 700px;
+  bottom: 0;
+}
+
+section#huh h2 {
+  width: 400px;
+  position: absolute;
+  left: 400px;
+  margin-top: 100px;
+}
+
+section#presentations .col-full {
+  width: 100%;
+  position: relative;
+  height: 800px;
+}
+
+section#presentations img.paint {
+  width: 90px;
+  position: absolute;
+  top: 0;
+  left: 30px;
+}
+
+section#presentations h2 {
+  width: 220px;
+  position: absolute; 
+  top: 250px;
+  left: 60px;
+}
+
+section#presentations img {
+  width: 700px;
+  position: absolute; 
+  top: 250px;
+  right: 0px;
+}
+
+section#presentations p {
+  width: 400px;
+  position: absolute; 
+  top: 550px;
+  left: 200px;
+}
+
+section#homework .col-full {
+  width: 100%;
+  position: relative;
+  height: 600px;
+}
+
+section#homework p {
+  padding: 50px 0 50px 0;
+  width: 600px;
+  margin: auto;
+}
+
+section#homework img.homework {
+  margin: auto;
+  display: block;
+}
+
+section#homework img.paint {
+  position: absolute;
+  right: 350px;
+  bottom: 0;
+  width: 150px;
+}
+
+section#homework h2 {
+  position: absolute;
+  right: 100px;
+  bottom: 0;
+  width: 300px;
+}
+
+section#participation .col-full {
+  width: 100%;
+  position: relative;
+  height: 400px;
+}
+
+section#participation p {
+  position: absolute;
+  left: 50px;
+  top: 80px;
+  width: 400px;
+}
+
+section#participation img {
+  position: absolute;
+  left: 200px;
+  bottom: 50px;
+  width: 100px;
+}
+
+section#participation h2 {
+  position: absolute;
+  left: 230px;
+  bottom: 50px;
+  width: 700px;
+  text-align: center;
+}
+
+section#assumptions {
+  max-width: 900px;
+  margin: auto;
+}
+
+section#assumptions .col-left,
+section#assumptions .col-right {
+  width: 50%;
+  height: 400px;
+  padding-top: 50px;
+}
+
+section#next-story {
+  height: 200px;
+  text-align: center;
+  padding-top: 50px;
 }
