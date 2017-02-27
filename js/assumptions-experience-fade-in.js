@@ -13,11 +13,11 @@ $(document).ready(function() {
       // This is where we use the function to detect if ".box2" is scrolled into view, and when it is add the class ".animated" to the <p> child element
       if(elementScrolled('#assumptions')) {
           console.log("we're at assumptions");
-          var els = $('#assumptions li'),
-              i = 0,
+          var i = 0,
               f = function () {
-                  $(els[i++]).addClass('animated');
-                  if(i < els.length) setTimeout(f, 1500);
+                  $('#assumptions-li-'+ i).addClass('animated');
+                  i++;
+                  setTimeout(f, 1500);
               };
           f();
       }
