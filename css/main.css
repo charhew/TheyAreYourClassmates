@@ -48,7 +48,8 @@ just in case!
     font-weight: bold;
 }
 
-body {
+html, body {
+  padding: 0;
   font-family: "myAvenir", sans-serif;
   margin: 0;
   background: #f4f3f2;
@@ -63,7 +64,7 @@ p {
   text-decoration: none;
   padding-bottom: 3px;
   font-size: 0.9rem;
-  letter-spacing: 0.5;
+  letter-spacing: 0.02rem;
 }
 
 .text-link:hover {
@@ -95,70 +96,6 @@ p {
   background-color: #f4f3f2;
 }
 
-/* ----------------------------- video styling ----------------------------- */
-video {
-  width: 100%;
-}
-
-.container-video {
-  position: relative;
-  text-align: center;
-  overflow: hidden;
-  display: block;
-  width: auto;
-  height: 100vh;
-}
-
-/* to disable scrolling past the video until it's ended - see video.js */
-body.noscroll {
-    position: fixed;
-    overflow-y: scroll;
-    width: 100%;
-}
-
-#skip-video-link {
-  position: absolute;
-  bottom: 20;
-  transform: translateX(-50%);
-}
-
-#button-replay {
-  position: absolute;
-  display: none;
-  top: 50%;
-  width: 7%;
-  height: auto;
-  transform: translate(-50%, -50%);
-}
-
-.container-story-title {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  font-family: "Harriet", serif;
-}
-
-.container-story-title h1 {
-  font-weight: bold;
-  font-size: 5rem;
-  letter-spacing: 5;
-  margin: 0;
-}
-
-.container-story-title h4 {
-  font-weight: normal;
-  font-size: 1.5rem;
-  letter-spacing: 2;
-  margin: 0;
-}
-
-html, body {
-  padding: 0;
-  margin: 0;
-}
-
 section.row:after {
   content:"";
   display: block;
@@ -177,17 +114,25 @@ section.row:after {
   padding-right: 2.5rem;
 }
 
-.story-container {
-  max-width: 1200px;
-  margin: auto;
-}
-
 * {
   opacity: 1;
 }
 
 img {
   max-width: 100%;
+}
+
+/* ----------------------------- story styling ----------------------------- */
+
+section h2 {
+  font-family: "Harriet", sans-serif;
+  letter-spacing: 0.03rem;
+  line-height: 1.3;
+}
+
+.story-container {
+  max-width: 1200px;
+  margin: auto;
 }
 
 section#esl .col-full {
@@ -206,7 +151,7 @@ section#esl img {
   width: 300px;
   margin: auto;
   display: block;
-  margin-bottom: 70px
+  margin-bottom: 70px;
 }
 
 section#lunch .col-left {
@@ -232,7 +177,7 @@ section#lunch .col-left img.paint {
 
 section#lunch .col-left h2 {
   position: absolute;
-  bottom: 0;
+  bottom: 10px;
   right: 0px;
   width: 400px;
 }
@@ -287,29 +232,28 @@ section#presentations img.paint {
 
 section#presentations h2 {
   width: 220px;
-  position: absolute; 
+  position: absolute;
   top: 250px;
-  left: 60px;
+  left: 70px;
 }
 
 section#presentations img {
   width: 700px;
-  position: absolute; 
+  position: absolute;
   top: 250px;
   right: 0px;
 }
 
 section#presentations p {
   width: 400px;
-  position: absolute; 
+  position: absolute;
   top: 550px;
-  left: 200px;
 }
 
 section#homework .col-full {
   width: 100%;
   position: relative;
-  height: 600px;
+  height: 670px;
 }
 
 section#homework p {
@@ -326,7 +270,7 @@ section#homework img.homework {
 section#homework img.paint {
   position: absolute;
   right: 350px;
-  bottom: 0;
+  bottom: 50px;
   width: 150px;
 }
 
@@ -340,7 +284,7 @@ section#homework h2 {
 section#participation .col-full {
   width: 100%;
   position: relative;
-  height: 400px;
+  height: 500px;
 }
 
 section#participation p {
@@ -377,8 +321,118 @@ section#assumptions .col-right {
   padding-top: 50px;
 }
 
+section#assumptions ul {
+  list-style: none;
+  padding: 0;
+}
+
+section#assumptions ul li {
+  margin-top: 20px;
+}
+
+section#assumptions h3 {
+  font-family: "Harriet", sans-serif;
+  font-size: 1.1rem;
+  letter-spacing: 0.05rem;
+  width: 100px;
+}
+
+section#assumptions h3::after {
+    content: ' ';
+    display: block;
+    width: 10px;
+    margin-top: 5px;
+    border: 1px solid black;
+}
+
 section#next-story {
-  height: 200px;
+  height: 350px;
   text-align: center;
-  padding-top: 50px;
+  position: relative;
+  background-image: url("../img/grant/next-story-grant.jpg");
+}
+
+section#next-story img {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+section#next-story .container-next-story-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Harriet", sans-serif;
+}
+
+section#next-story .container-next-story-title h5 {
+  margin: 0;
+  font-size: 2rem;
+  letter-spacing: 0.1rem;
+}
+
+section#next-story .container-next-story-title h6 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #666;
+}
+
+/* ----------------------------- video styling ----------------------------- */
+video {
+  width: 100%;
+}
+
+.container-video {
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+  display: block;
+  width: auto;
+  height: 100vh;
+}
+
+/* to disable scrolling past the video until it's ended - see video.js */
+body.noscroll {
+    position: fixed;
+    overflow-y: scroll;
+    width: 100%;
+}
+
+#skip-video-link {
+  position: absolute;
+  bottom: 20px;
+  transform: translateX(-50%);
+}
+
+#button-replay {
+  position: absolute;
+  display: none;
+  top: 50%;
+  width: 7%;
+  height: auto;
+  transform: translate(-50%, -50%);
+}
+
+.container-story-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-family: "Harriet", serif;
+}
+
+.container-story-title h1 {
+  font-weight: bold;
+  font-size: 5rem;
+  letter-spacing: 5;
+  margin: 0;
+}
+
+.container-story-title h4 {
+  font-weight: normal;
+  font-size: 1.5rem;
+  letter-spacing: 2;
+  margin: 0;
 }
