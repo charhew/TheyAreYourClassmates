@@ -17,7 +17,7 @@ $(document).ready(function() {
               i = 0,
               f = function () {
                   $(els[i++]).addClass('animated');
-                  if(i < els.length) setTimeout(f, 2000);
+                  if(i < els.length) setTimeout(f, 1500);
               };
           f();
       }
