@@ -20,30 +20,35 @@ just in case!
 
 @font-face {
     font-family: "myAvenir";
+    src: url(../fonts/Avenir-Roman.eot);
     src: url(../fonts/Avenir-Book.ttf) format("truetype");
     font-weight: normal;
 }
 
 @font-face {
     font-family: "myAvenir";
+    src: url(../fonts/Avenir-Oblique.eot)
     src: url(../fonts/Avenir-BookOblique.ttf) format("truetype");
     font-style: italic;
 }
 
 @font-face {
     font-family: "myAvenir";
+    src: url(../fonts/Avenir-Medium.eot);
     src: url(../fonts/Avenir-Heavy.ttf) format("truetype");
     font-weight: bold;
 }
 
 @font-face {
     font-family: "Harriet";
+    src: url(../fonts/Harriet-Regular.eot);
     src: url(../fonts/Harriet-Regular.otf);
     font-weight: normal;
 }
 
 @font-face {
     font-family: "Harriet";
+    src: url(../fonts/Harriet-Bold.eot);
     src: url(../fonts/Harriet-Bold.otf);
     font-weight: bold;
 }
