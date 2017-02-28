@@ -440,13 +440,13 @@ body.noscroll {
 .container-story-title h1 {
   font-weight: bold;
   font-size: 5rem;
-  letter-spacing: 5;
+  letter-spacing: 5px;
   margin: 0;
 }
 
 .container-story-title h4 {
   font-weight: normal;
   font-size: 1.5rem;
-  letter-spacing: 2;
+  letter-spacing: 2px;
   margin: 0;
 }
