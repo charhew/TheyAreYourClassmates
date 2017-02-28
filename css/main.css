@@ -369,6 +369,7 @@ section#next-story {
 section#next-story img {
   position: absolute;
   top: 50%;
+  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
 
@@ -376,6 +377,7 @@ section#next-story .container-next-story-title {
   position: absolute;
   top: 50%;
   left: 50%;
+  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   font-family: "Harriet", sans-serif;
 }
@@ -415,7 +417,9 @@ body.noscroll {
 
 #skip-video-link {
   position: absolute;
+  left: 50%;
   bottom: 20px;
+  -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
 }
 
@@ -423,8 +427,10 @@ body.noscroll {
   position: absolute;
   display: none;
   top: 50%;
+  left: 50%;
   width: 7%;
   height: auto;
+  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
 
@@ -432,6 +438,7 @@ body.noscroll {
   position: absolute;
   top: 50%;
   left: 50%;
+  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   color: white;
   font-family: "Harriet", serif;
