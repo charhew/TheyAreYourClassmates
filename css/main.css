@@ -20,19 +20,19 @@ just in case!
 
 @font-face {
     font-family: "myAvenir";
-    src: url(../fonts/Avenir-Book.ttf);
+    src: url(../fonts/Avenir-Book.ttf) format("truetype");
     font-weight: normal;
 }
 
 @font-face {
     font-family: "myAvenir";
-    src: url(../fonts/Avenir-BookOblique.ttf);
+    src: url(../fonts/Avenir-BookOblique.ttf) format("truetype");
     font-style: italic;
 }
 
 @font-face {
     font-family: "myAvenir";
-    src: url(../fonts/Avenir-Heavy.ttf);
+    src: url(../fonts/Avenir-Heavy.ttf) format("truetype");
     font-weight: bold;
 }
 
@@ -360,7 +360,7 @@ section#assumptions h3::after {
 }
 
 section#next-story {
-  height: 350px;
+  height: 400px;
   text-align: center;
   position: relative;
   background-image: url("../img/grant/next-story-grant.jpg");
@@ -371,6 +371,8 @@ section#next-story img {
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+  left: 50%;
+
 }
 
 section#next-story .container-next-story-title {
