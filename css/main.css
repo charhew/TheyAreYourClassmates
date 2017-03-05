@@ -60,8 +60,47 @@ html, body {
   background: #f4f3f2;
 }
 
+body {
+    opacity: 1;
+    transition: 3s opacity;
+    -webkit-transition: 3s opacity;
+}
+
+body.fade-out {
+    opacity: 0;
+    transition: none;
+    -webkit-transition: none;
+}
+
+h1, h2, h3, h4 {
+  margin: 0;
+}
+
 p {
   margin: 0;
+}
+
+.button-default {
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 3.5rem;
+  padding: 1rem 2rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.2rem;
+  color: white;
+  border: solid 2px transparent;
+  -moz-border-image: -moz-linear-gradient(left, #bbe6bc 0%, #ebe4a1 100%);
+  -webkit-border-image: -webkit-linear-gradient(left, #bbe6bc 0%, #ebe4a1 100%);
+  border-image: linear-gradient(to right, #bbe6bc 0%, #ebe4a1 100%);
+  border-image-slice: 1;
+  -webkit-transiton: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.button-default:hover {
+  background-color: rgba(255, 255, 255, .2);
 }
 
 .text-link {
@@ -127,6 +166,232 @@ img {
   max-width: 100%;
 }
 
+/* ----------------------------- home page styling ----------------------------- */
+
+#bg-index {
+  background-image: url("../img/bg-index.jpg");
+  background-size: cover;
+  background-position: center center;
+  height: 100vh;
+  text-align: center;
+}
+
+#container-classroom-infographic {
+  margin: auto;
+  width: 40em;
+  height: 75vh;
+  position: relative;
+}
+
+#container-classroom-infographic img {
+  position: absolute;
+}
+
+#container-classroom-infographic img#infographic {
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+}
+
+#container-classroom-infographic img#brush-stroke-1 {
+  top: 55%;
+  left: 25%;
+}
+
+#container-classroom-infographic img#brush-stroke-2 {
+  top: 53%;
+  left: 30%;
+}
+
+p.para-fade {
+  max-width: 30em;
+  color: white;
+  letter-spacing: 0.03rem;
+  font-size: 0.95rem;
+  margin: auto;
+}
+
+#bg-index .para-fade {
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+p#index-para-fade-1 {
+  -webkit-animation-name: fadeInOut;
+   animation-name: fadeInOut;
+   -webkit-animation-duration: 7s;
+   animation-duration: 7s;
+   -webkit-animation-fill-mode: both;
+   animation-fill-mode: both;
+}
+
+p#index-para-fade-2 {
+  opacity: 0;
+  -webkit-animation-name: fadeInOut;
+   animation-name: fadeInOut;
+   -webkit-animation-duration: 7s;
+   animation-duration: 7s;
+   -webkit-animation-fill-mode: both;
+   animation-fill-mode: both;
+   -webkit-animation-delay: 7s;
+   animation-delay: 7s;
+}
+
+div#index-container-fade-3 {
+  opacity: 0;
+  -webkit-animation-name: fadeIn;
+   animation-name: fadeIn;
+   -webkit-animation-duration: 7s;
+   animation-duration: 7s;
+   -webkit-animation-fill-mode: both;
+   animation-fill-mode: both;
+   -webkit-animation-delay: 15s;
+   animation-delay: 15s;
+}
+
+div#index-container-fade-3 p {
+  position: static;
+}
+
+/* ----------------------------- questions styling ----------------------------- */
+
+#bg-questions {
+  background-image: url("../img/bg-questions.jpg");
+  background-size: cover;
+  background-position: center center;
+  height: 100vh;
+  text-align: center;
+  opacity: 0.8;
+}
+
+#container-questions {
+  margin: auto;
+  width: 40em;
+  height: 100vh;
+  position: relative;
+}
+
+#container-questions #container-questions-explanation {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  left: 50%;
+}
+
+#container-questions-explanation p:first-of-type {
+  margin-bottom: 1rem;
+}
+
+p#questions-para-fade-1 {
+  -webkit-animation-name: fadeIn;
+   animation-name: fadeIn;
+   -webkit-animation-duration: 4s;
+   animation-duration: 4s;
+   -webkit-animation-fill-mode: both;
+   animation-fill-mode: both;
+}
+
+p#questions-para-fade-2 {
+  opacity: 0;
+  -webkit-animation-name: fadeIn;
+   animation-name: fadeIn;
+   -webkit-animation-duration: 4s;
+   animation-duration: 4s;
+   -webkit-animation-fill-mode: both;
+   animation-fill-mode: both;
+   -webkit-animation-delay: 4s;
+   animation-delay: 4s;
+}
+
+#question-one, #question-two, #question-three, #question-four, #question-four-p2, #question-five {
+  display: none;
+}
+
+.question {
+  padding-top: 12rem;
+  text-align: left;
+}
+
+.question p {
+  color: white;
+  letter-spacing: 0.05rem;
+  font-size: 0.85rem;
+}
+
+.question label {
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.2rem;
+  color: white;
+}
+
+.question input#text-input {
+  border: 0;
+  outline: 0;
+  background: transparent;
+  border-bottom: 1px solid white;
+  font-size: 0.9rem;
+  color: white;
+  width: 13rem;
+  font-family: "Avenir", sans-serif;
+}
+
+.question #container-other-input {
+  text-align: center;
+}
+
+.question button {
+  display: block;
+  background: transparent;
+  border: none;
+  margin: 2.5rem auto;
+  text-transform: uppercase;
+  padding: 1rem 0;
+  font-size: 0.85rem;
+  letter-spacing: 0.2rem;
+  color: white;
+  max-width: 23rem;
+}
+
+.question button:hover {
+  position: relative;
+}
+
+.question button:hover:after {
+  content: url('../img/hover-questions-brush.png'); /* no need for qoutes */
+  display: block;
+  position: absolute;
+  top: 50%;
+  z-index: -1;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.question button:hover,
+.question button:focus {
+  cursor: pointer;
+  color: #999;
+  outline: 0;
+}
+
+.question h2 {
+  font-size: 1.3rem;
+  color: white;
+  letter-spacing: 0.3rem;
+}
+
+.question h2::after {
+  content: ' ';
+  display: block;
+  width: 10px;
+  margin: 10px 0;
+  border: 1px solid white;
+}
 /* ----------------------------- story styling ----------------------------- */
 
 section h2 {
