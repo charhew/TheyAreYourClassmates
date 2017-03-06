@@ -3,10 +3,10 @@ $(document).ready(function() {
   setTimeout(function(){
     $('#container-questions-explanation').fadeOut(1000);
     showQuestionOne();
-  }, 8000);
+  }, 10000);
 
   function showQuestionOne(){
-    $('#question-one').fadeIn(500);
+    $('#question-one').fadeIn(2000);
     $('#yes, #no').click(function () {
       if (this.id == 'yes') {
           console.log('yes clicked');
@@ -102,7 +102,7 @@ $(document).ready(function() {
         if (this.id == 'presenting-annoyed') {
             console.log('presenting annoyed');
         }
-        else if (this.id == 'feel-bad,') {
+        else if (this.id == 'feel-bad') {
             console.log('feel bad');
         }
         else if (this.id == 'shouldnt-be-afraid') {
@@ -112,7 +112,7 @@ $(document).ready(function() {
             console.log('doesnt bother');
         }
         $('#question-five').fadeOut(500);
-        window.location.href = 'index.html';
+        window.location.href = 'stories.html';
       });
     }, 1000);
   }
