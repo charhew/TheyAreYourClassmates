@@ -20,14 +20,15 @@ just in case!
 
 @font-face {
     font-family: "myAvenir";
-    src: url(../fonts/Avenir-Roman.eot);
-    src: url(../fonts/Avenir-Book.ttf) format("truetype");
+    src: url('../fonts/Avenir-Roman.eot');
+    src: url(../fonts/Avenir-Roman.eot?#iefix) format('eot'),
+         url(../fonts/Avenir-Book.ttf) format('truetype');
     font-weight: normal;
 }
 
 @font-face {
     font-family: "myAvenir";
-    src: url(../fonts/Avenir-Oblique.eot)
+    src: url(../fonts/Avenir-Oblique.eot);
     src: url(../fonts/Avenir-BookOblique.ttf) format("truetype");
     font-style: italic;
 }
@@ -410,7 +411,7 @@ section#esl .col-full {
 }
 
 section#esl p {
-  width: 600px;
+  max-width: 600px;
   text-align: center;
   margin: auto;
   padding-top: 60px;
@@ -470,7 +471,7 @@ section#huh .col-full {
 }
 
 section#huh p {
-  width: 600px;
+  max-width: 600px;
   margin: auto;
   padding: 90px 0 50px 0;
   position: relative;
@@ -478,14 +479,16 @@ section#huh p {
 
 section#huh img {
   position: absolute;
-  left: 700px;
+  left: 52%;
   bottom: 0;
 }
 
 section#huh h2 {
   width: 400px;
   position: absolute;
-  left: 400px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
   top: 500px;
 }
 
@@ -500,6 +503,7 @@ section#presentations img.paint {
   position: absolute;
   top: 0;
   left: 30px;
+  z-index: 5;
 }
 
 section#presentations h2 {
@@ -531,8 +535,9 @@ section#homework .col-full {
 
 section#homework p {
   padding: 50px 0 50px 0;
-  width: 600px;
+  max-width: 600px;
   margin: auto;
+  text-align: center;
 }
 
 section#homework img.homework {
@@ -576,9 +581,11 @@ section#participation img {
 
 section#participation h2 {
   position: absolute;
-  left: 230px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
   bottom: 50px;
-  max-width: 700px;
+  max-width: 100vw;
   text-align: center;
 }
 
@@ -669,8 +676,27 @@ section#next-story .container-next-story-title h6 {
 }
 
 /* ----------------------------- video styling ----------------------------- */
+
+/*both videos*/
 video {
-  width: 100%;
+  min-width: 100vw;
+  min-height: 100vh;
+}
+
+/*just the top video*/
+#intro video {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+/*just the bottom video*/
+#outro video {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 
 .container-video {
@@ -678,8 +704,8 @@ video {
   text-align: center;
   overflow: hidden;
   display: block;
-  width: auto;
-  height: 100vh;
+  max-width: 100vw;
+  min-height: 100vh;
 }
 
 /* to disable scrolling past the video until it's ended - see video.js */
@@ -692,7 +718,7 @@ body.noscroll {
 #skip-video-link {
   position: absolute;
   left: 50%;
-  bottom: 20px;
+  top: 90%;
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
 }
@@ -730,4 +756,112 @@ body.noscroll {
   font-size: 1.5rem;
   letter-spacing: 2px;
   margin: 0;
+}
+
+/*========================
+  MEDIA QUERIES
+========================*/
+
+@media(max-width: 980px) {
+  section#lunch .col-left {
+    width: 100%;
+  }
+
+  section#lunch .col-right {
+    width: 100%;
+  }
+
+  section#lunch .col-right p {
+    margin-top: 100px
+  }
+
+  section#presentations .col-full {
+    max-height: 700px;
+  }
+
+  section#presentations img {
+    position: static;
+    margin-top: 5em;
+  }
+
+  section#presentations p {
+    position: static;
+    width: 90%;
+    margin-top: 1em;
+  }
+
+  section#participation h2 {
+    width: 80%;
+  }
+}
+
+@media(max-width: 670px) {
+  body {
+    overflow-x: hidden;
+  }
+  section#lunch p {
+    width: 100%;
+    text-align: center;
+  }
+
+  section#presentations p {
+    width: 100%;
+    text-align: center;
+    margin-top: 4em;
+  }
+
+  section#homework h2 {
+    position: static;
+    margin-top: 3em;
+  }
+
+  section#participation p {
+    text-align: center;
+    max-width: 100%;
+    position: static;
+  }
+
+  section#participation h2 {
+    position: static;
+    transform: none;
+    margin-top: 3em;
+    width: 100%;
+  }
+}
+
+@media(max-width: 460px) {
+  p {
+    font-size: .9rem;
+  }
+
+  section#lunch h2 {
+    position: static;
+    text-align: center;
+  }
+
+  section#huh h2 {
+    left: 0;
+    transform: none;
+    width: 100%;
+  }
+
+  section#presentations .col-full {
+    height: auto;
+    padding-bottom: 3em;
+  }
+
+  section#presentations p {
+    margin-top: 9em;
+    height: auto;
+  }
+
+  section#assumptions {
+    margin-top: 3em;
+  }
+
+  section#assumptions .col-left,
+  section#assumptions .col-right {
+    padding: 5px;
+    font-size: .8rem;
+  }
 }

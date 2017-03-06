@@ -5,12 +5,12 @@
 	<link rel="stylesheet" href="css/animation.css">
 	<!-- <link rel="stylesheet" href="css/fade-in.css"> -->
 </head>
-<body class="noscroll">
+<body class="">
 	<div id="skrollr-body">
 
 		<section id="intro">
 			<div class="container-video">
-				<video id="video-vivian-intro" autoplay onended="startExperience()">
+				<video id="video-vivian-intro" autoplay onended="startExperience()" controls muted>
 					<source src="res/video-vivian-intro.mp4" type="video/mp4">
 				</video>
 				<div class="container-story-title">
@@ -52,9 +52,9 @@
 						data-bottom-top="opacity: 0; right: 360px;"
 						data-center-top="opacity: 1; right: 350px;">
 					<h2
-						data-bottom-top="opacity: 0; right: 30px;"
-						data-center-top="opacity: 1; right: 15px;"
-						data-top-bottom="opacity: 1; right: 0px;">
+						data-bottom-top="opacity: 0; bottom: -20px;"
+						data-center-top="opacity: 1; bottom: -5px;"
+						data-top-bottom="opacity: 1; bottom: 10px;">
 						I wonder if my friends stress about their English the way I do. We don't really talk about things like that.</h2>
 				</div>
 				<div class="col-right">
@@ -144,10 +144,12 @@
 			</section>
 		</div> <!-- end story-container div -->
 
-		<section class="row" id="outro">
-			<video id="video-vivian-outro">
-				<source src="res/video-vivian-outro.mp4" type="video/mp4">
-			</video>
+		<section id="outro">
+			<div class="container-video">
+				<video id="video-vivian-outro" controls muted>
+					<source src="res/video-vivian-outro.mp4" type="video/mp4">
+				</video>
+			</div>
 		</section>
 
 		<section class="row" id="assumptions">
