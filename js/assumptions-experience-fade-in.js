@@ -1,7 +1,20 @@
 $(document).ready(function() {
 
-  $(window).scroll(function(){
-      // This is then function used to detect if the element is scrolled into view
+  
+
+  //mobile only
+  if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+    var i = 0,
+        f = function () {
+            $('#assumptions-li-'+ i).addClass('animated');
+            i++;
+            setTimeout(f, 0);
+        };
+    f();
+  }
+  else { //desktop only
+    // This is then function used to detect if the element is scrolled into view
+    $(window).scroll(function(){
       function elementScrolled(elem)
       {
           var docViewTop = $(window).scrollTop();
@@ -21,6 +34,6 @@ $(document).ready(function() {
               };
           f();
       }
-  });
-
+    });    
+  }
 });
