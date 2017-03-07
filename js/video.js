@@ -22,6 +22,7 @@ $(document).ready(function() {
 function startExperience() {
   console.log("video ended");
   skipVideoLink.innerHTML = "View Vivian's experience.";
+  $(skipVideoLink).removeClass("text-link").removeClass("skip-video-link-playing").addClass("button-default").addClass("skip-video-link-ended");
 }
 
 function checkScroll() {

@@ -104,6 +104,7 @@ p {
   background-color: rgba(255, 255, 255, .2);
 }
 
+
 .text-link {
   color: white;
   text-decoration: none;
@@ -720,6 +721,7 @@ section#homework h2 {
   right: 100px;
   bottom: 0;
   width: 300px;
+  z-index: 100;
 }
 
 section#participation .col-full {
@@ -881,9 +883,16 @@ body.noscroll {
 #skip-video-link {
   position: absolute;
   left: 50%;
-  top: 90%;
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
+}
+
+.skip-video-link-playing {
+  top: 93%;
+}
+
+.skip-video-link-ended {
+  top: 80%;
 }
 
 #button-replay {
@@ -962,6 +971,11 @@ body.noscroll {
   body {
     overflow-x: hidden;
   }
+
+  #skip-video-link.skip-video-link-ended {
+    width: 70%;
+  }
+
   section#lunch p {
     width: 100%;
     text-align: center;
@@ -975,13 +989,17 @@ body.noscroll {
 
   section#homework h2 {
     position: static;
-    margin-top: 3em;
+  }
+
+  section#homework img.paint {
+    position: static;
   }
 
   section#participation p {
     text-align: center;
-    max-width: 100%;
+    width: 100%;
     position: static;
+    margin-top: 3em;
   }
 
   section#participation h2 {
@@ -990,9 +1008,25 @@ body.noscroll {
     margin-top: 3em;
     width: 100%;
   }
+  
+  section#assumptions .col-left,
+  section#assumptions .col-right {
+    padding: 15px;
+    font-size: .9rem;
 }
 
 @media(max-width: 460px) {
+  .skip-video-link-playing {
+    top: 90%;  
+    width: 80%;
+    font-size: .8em;
+  }
+
+  .skip-video-link-ended {
+    top: 70%;
+    width: 90%;
+  }
+
   p {
     font-size: .9rem;
   }
@@ -1026,5 +1060,20 @@ body.noscroll {
   section#assumptions .col-right {
     padding: 5px;
     font-size: .8rem;
+  }
+
+  h2 {
+    padding: 0 .5em;
+  }
+}
+
+
+@media(max-width: 360px) {
+  section#presentations p {
+    margin-top: 12em;
+  }
+
+  section#outro {
+    margin-top: 10em;
   }
 }
