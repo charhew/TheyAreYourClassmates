@@ -20,37 +20,33 @@ just in case!
 
 @font-face {
     font-family: "myAvenir";
-    src: url('../fonts/Avenir-Roman.eot');
-    src: url(../fonts/Avenir-Roman.eot?#iefix) format('eot'),
-         url(../fonts/Avenir-Book.ttf) format('truetype');
+    src: url('../fonts/Avenir-Book.ttf') format('truetype');
     font-weight: normal;
 }
 
 @font-face {
     font-family: "myAvenir";
-    src: url(../fonts/Avenir-Oblique.eot);
-    src: url(../fonts/Avenir-BookOblique.ttf) format("truetype");
+    src: url('../fonts/Avenir-BookOblique.ttf') format("truetype");
     font-style: italic;
 }
 
 @font-face {
     font-family: "myAvenir";
-    src: url(../fonts/Avenir-Medium.eot);
-    src: url(../fonts/Avenir-Heavy.ttf) format("truetype");
+    src: url('../fonts/Avenir-Heavy.ttf') format("truetype");
     font-weight: bold;
 }
 
 @font-face {
     font-family: "Harriet";
-    src: url(../fonts/Harriet-Regular.eot);
-    src: url(../fonts/Harriet-Regular.otf);
+    src: url('../fonts/Harriet-Regular.woff2') format('woff2'),
+         url('../fonts/Harriet-Regular.woff') format('woff');
     font-weight: normal;
 }
 
 @font-face {
     font-family: "Harriet";
-    src: url(../fonts/Harriet-Bold.eot);
-    src: url(../fonts/Harriet-Bold.otf);
+    src: url('../fonts/Harriet-Bold.woff2') format('woff2'),
+         url('../fonts/Harriet-Bold.woff') format('woff');
     font-weight: bold;
 }
 
@@ -1008,7 +1004,7 @@ body.noscroll {
     margin-top: 3em;
     width: 100%;
   }
-  
+
   section#assumptions .col-left,
   section#assumptions .col-right {
     padding: 15px;
@@ -1017,7 +1013,7 @@ body.noscroll {
 
 @media(max-width: 460px) {
   .skip-video-link-playing {
-    top: 90%;  
+    top: 90%;
     width: 80%;
     font-size: .8em;
   }
@@ -1066,7 +1062,6 @@ body.noscroll {
     padding: 0 .5em;
   }
 }
-
 
 @media(max-width: 360px) {
   section#presentations p {
