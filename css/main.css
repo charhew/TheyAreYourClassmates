@@ -614,7 +614,8 @@ section#lunch .col-left {
   height: 500px;
 }
 
-section#lunch .col-left img.lunch {
+section#lunch .col-left img.lunch,
+section#lunch .col-left img.lunch-friend {
   position: absolute;
   top: 0;
   left: 0;
@@ -623,10 +624,11 @@ section#lunch .col-left img.lunch {
   height: auto;
 }
 
+
 section#lunch .col-left img.paint {
   position: absolute;
-  bottom: 100px;
-  right: 350px;
+  bottom: 50px;
+  right: 250px;
   max-width: 160px;
 }
 
