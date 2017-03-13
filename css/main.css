@@ -725,7 +725,7 @@ section#huh img {
 }
 
 section#huh h2 {
-  width: 400px;
+  max-width: 400px;
   position: absolute;
   left: 50%;
   -webkit-transform: translateX(-50%);
@@ -1130,7 +1130,7 @@ body.noscroll {
   section#huh h2 {
     left: 0;
     transform: none;
-    width: 100%;
+    max-width: 10px;
   }
 
   section#presentations .col-full {
@@ -1145,6 +1145,17 @@ body.noscroll {
 
   section#presentations h2 {
     width: 100%;
+    left: 0;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+  }
+
+  section#homework h2 {
+    text-align: center;
+    left: 0;
+    width: 100%;
+    transform: none;
   }
 
   section#assumptions {
@@ -1159,6 +1170,10 @@ body.noscroll {
 
   h2 {
     padding: 0 .5em;
+  }
+
+  section#projects p {
+    margin-top: 12rem;
   }
 }
 
