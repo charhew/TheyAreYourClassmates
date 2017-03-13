@@ -6,6 +6,8 @@ var videoEnded = false;
 var scrolling = false;
 
 $(document).ready(function() {
+	videoVivianIntro.play();
+	
 	$(window).on("mousewheel DOMMouseScroll", function() {
 		if ($('body').hasClass('noscroll')) {
 			if (videoEnded === false) {
