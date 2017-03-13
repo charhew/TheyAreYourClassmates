@@ -1,6 +1,5 @@
 $(document).ready(function() {
-
-  
+  var videoVivianOutro = document.getElementById("video-vivian-outro");
 
   //mobile only
   if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
@@ -34,6 +33,13 @@ $(document).ready(function() {
               };
           f();
       }
-    });    
+
+      if(elementScrolled('#video-vivian-outro')) {
+        console.log("we're at outro");
+        if (videoVivianOutro.played.length === 0 ) {
+          videoVivianOutro.play();
+        }
+      }
+    });
   }
 });

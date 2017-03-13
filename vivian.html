@@ -17,7 +17,7 @@
 					<h4>01.</h4>
 					<h1>Vivian</h1>
 				</div>
-				<img src="img/video-replay.png" alt="replay video button" id="button-replay">
+				<img src="img/video-replay.png" alt="replay video button" id="button-replay-intro" class="replay">
 				<a id="skip-video-link" class="text-link skip-video-link-playing" href="#story-vivian">Already seen this? Skip this video.</a>
 			</div>
 		</section>
@@ -31,7 +31,7 @@
 					<p
 						data-bottom-top="opacity: 0;"
 						data-center-top="opacity: 1;">
-						I took 4 levels of ESL classes, starting in Level 2 and finishing Level 5 before I could move on to English 10. I took me over a year.
+						I took 4 levels of ESL classes, starting in Level 2 and finishing Level 5 before I could move on to English 10. It took me over a year.
 					</p>
 					<img src="img/vivian/a_esl-levels.png"
 						data-bottom-top="opacity: 0; position: relative; top: 100px;"
@@ -146,9 +146,10 @@
 
 		<section id="outro">
 			<div class="container-video">
-				<video id="video-vivian-outro">
+				<video id="video-vivian-outro" onended="replayOutro()">
 					<source src="res/video-vivian-outro.mp4" type="video/mp4">
 				</video>
+				<img src="img/video-replay.png" alt="replay video button" id="button-replay-outro" class="replay">
 			</div>
 		</section>
 
@@ -173,18 +174,19 @@
 			<img src="img/grant/paint-next-story.png" alt="green paint smear">
 			<div class="container-next-story-title">
 				<h6>02.</h6>
-				<h5>Grant</h5>
+				<h5>Andy</h5>
 			</div>
 		</section>
 
 	</div>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="js/isInViewport.min.js"></script>
 	<script src="js/skrollr.min.js"></script>
 	<script src="js/skrollr-story.js"></script>
 	<script src="js/video.js"></script>
 	<script src="js/smooth-scroll.js"></script>
-	<script src="js/assumptions-experience-fade-in.js"></script>
+	<script src="js/on-scroll-to.js"></script>
 
 </body>
 </html>
