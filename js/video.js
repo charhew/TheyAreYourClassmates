@@ -11,7 +11,6 @@ $(document).ready(function() {
 			if (videoEnded === false) {
 				if (scrolling === false) {
 					scrolling = true;
-					console.log("scrolling");
 					$('#skip-video-link').on("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function(){
 		     		$(this).removeClass("bounce");
 					}).addClass("bounce");
@@ -41,11 +40,6 @@ $(document).ready(function() {
 		videoVivianOutro.play();
 		$("#button-replay-outro").hide();
   });
-
-	// var $outro = $('#outro');
-	// if ($outro.is(':in-viewport')) {
-	// 	console.log("outro in viewport");
-	// }
 });
 
 function startExperience() {

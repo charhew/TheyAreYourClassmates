@@ -646,11 +646,15 @@ section#lunch .col-right p {
   max-width: 500px;
 }
 
-section#huh .col-full {
+section#huh .col-full,
+section#projects .col-full {
   width: 100%;
   position: relative;
-  height: 500px;
   text-align: center;
+}
+
+section#huh .col-full {
+  height: 500px;
 }
 
 section#huh p {
@@ -716,7 +720,8 @@ section#homework .col-full {
   height: 670px;
 }
 
-section#homework p {
+section#homework p,
+section#projects p {
   padding: 50px 0 50px 0;
   max-width: 600px;
   margin: auto;
@@ -738,7 +743,7 @@ section#homework img.paint {
 section#homework h2 {
   position: absolute;
   right: 100px;
-  bottom: 0;
+  bottom: 50px;
   width: 300px;
   z-index: 100;
 }
