@@ -8,9 +8,19 @@
 <body class="noscroll">
 	<div id="skrollr-body">
 
+		<div class="language-panel">
+			<div class="language-panel-caller">
+				<img src="img/sound.png" alt="microphone icon">
+			</div>
+			<div class="language-options">
+				<button id="eng">ENG</button>
+				<button id="chinese">中文</button>
+			</div>
+		</div>
+
 		<section id="intro">
 			<div class="container-video">
-				<video id="video-vivian-intro" autoplay onended="startExperience()">
+				<video id="video-vivian-intro" onended="startExperience()">
 					<source src="res/vivian-intro-eng.mp4" type="video/mp4">
 				</video>
 				<div class="container-story-title">
@@ -54,12 +64,12 @@
 						data-top-top="opacity: 1;"
 						>
 					<img src="img/vivian/a_paint1.png" class="paint"
-						data-bottom-top="opacity: 0; right: 360px;"
-						data-center-top="opacity: 1; right: 250px;">
+						data-bottom-top="opacity: 0; right: 400px;"
+						data-center-top="opacity: 1; right: 350px;">
 					<h2 id="quote-worry"
-						data-bottom-top="opacity: 0; bottom: -30px;"
-						data-center-top="opacity: 1; bottom: -5px;"
-						data-top-bottom="opacity: 1; bottom: 10px;">
+						data-bottom-top="opacity: 0; bottom: -10px;"
+						data-center-top="opacity: 1; bottom: 10px;"
+						data-top-bottom="opacity: 1; bottom: 50px;">
 						I wonder if my friends worry about their English the way I do.</h2>
 					<audio id="audio-vivian-worry">
 						<source src="res/vivian-quote-worry-eng.mp3" type="audio/mpeg">
@@ -76,23 +86,14 @@
 			<!-- huh section -->
 			<section class="row" id="huh">
 				<div class="col-full">
-					<p
-						data-bottom-top="opacity: 0;"
-						data-center-top="opacity: 1;"
-						>Even though I didn't have a lot of friends in my ESL classes, I wish I could have stayed there. I dread my regular classes so much. I am silent during class because I think my accent is ugly and embarrassing.</p>
-
 					<img src="img/vivian/a_paint2.png"
 						data-bottom-top="opacity: 0;"
 						data-top-bottom="opacity: 1;"
 						>
-					<h2 id="quote-huh"
-						data-bottom-top="opacity: 0; top: 350px;"
-						data-center-top="opacity: 1; top: 250px;"
-						data-top-bottom="opacity: 1; top: 150px;"
-						>My worst fear is people asking "Huh?" and "What did you say?" over and over again.</h2>
-					<audio id="audio-vivian-huh">
-						<source src="res/vivian-quote-huh-eng.mp3" type="audio/mpeg">
-					</audio>
+					<p
+						data-bottom-top="opacity: 0;"
+						data-center-top="opacity: 1;"
+						>Even though I didn't have a lot of friends in my ESL classes, I wish I could have stayed there. I dread my regular classes so much. I am silent during class because I think my accent is ugly and embarrassing.</p>
 				</div>
 			</section>
 
@@ -103,10 +104,12 @@
 						data-bottom-top="opacity: 0;;"
 						data-center-top="opacity: 1;"
 						>
-					<h2
+					<h2 id="quote-huh"
 						data-bottom-top="opacity: 0; top: 350px;"
-						data-top-bottom="opacity: 1; top: 250px;">I dread class presentations the most.</h2>
-
+						data-top-bottom="opacity: 1; top: 250px;">My worst fear is people asking "Huh?" and "What did you say?" over and over again.</h2>
+						<audio id="audio-vivian-huh">
+							<source src="res/vivian-quote-huh-eng.mp3" type="audio/mpeg">
+						</audio>
 					<img src="img/vivian/bored.jpg" class="bored"
 						data-bottom-top="opacity: 0;"
 						data-center-top="opacity: 1;">
@@ -132,8 +135,8 @@
 						data-center-top="opacity: 1;"
 						>
 					<h2 id="quote-annoying"
-						data-bottom-top="opacity: 0; right: 150px;"
-						data-center-top="opacity: 1; right: 125px;"
+						data-bottom-top="opacity: 0; right: 60px;"
+						data-center-top="opacity: 1; right: 80px;"
 						data-top-bottom="opacity: 1; right: 100px;"
 						>I feel like I’m annoying my classmates when I keep asking for help.</h2>
 					<audio id="audio-vivian-annoying">
@@ -209,6 +212,7 @@
 	<script src="js/skrollr.min.js"></script>
 	<script src="js/skrollr-story.js"></script>
 	<script src="js/video.js"></script>
+	<script src="js/switch-language.js"></script>
 	<script src="js/smooth-scroll.js"></script>
 	<script src="js/on-scroll-to.js"></script>
 

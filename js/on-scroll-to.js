@@ -23,7 +23,7 @@ $(document).ready(function() {
       {
           var docViewTop = $(window).scrollTop();
           var docViewBottom = docViewTop + $(window).height();
-          var elemTop = $(elem).offset().top + 300;
+          var elemTop = $(elem).offset().top;
           return ((elemTop <= docViewBottom) && (elemTop >= docViewTop));
       }
 

@@ -578,6 +578,58 @@ section#story-selection {
 
 /* ----------------------------- story styling ----------------------------- */
 
+.language-panel {
+  position: fixed;
+  background-color: white;
+  opacity: 0.9;
+  bottom: 3rem;
+  height: 50px;
+  width: 100px;
+  right: -100px;
+  -webkit-transition: right 0.4s ease-in-out;
+  transition: right 0.4s ease-in-out;
+  z-index: 999;
+}
+
+.language-panel-caller {
+  position: absolute;
+  right: 100px;
+  width: 50px;
+  padding: 12px;
+  height: 50px;
+  opacity: 0.9;
+  background: white;
+}
+
+.language-panel:hover {
+  right: 0;
+}
+
+.language-options {
+  position: relative;
+  height: 100%;
+}
+
+.language-options button {
+  background: none;
+  border: none;
+  padding: 10px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.language-options button#eng {
+  left: 0;
+}
+
+.language-options button#chinese {
+  right: 0;
+}
+
 section h2 {
   font-family: "Harriet", sans-serif;
   letter-spacing: 0.03rem;
@@ -628,7 +680,7 @@ section#lunch .col-left img.lunch-friend {
 section#lunch .col-left img.paint {
   position: absolute;
   bottom: 50px;
-  right: 250px;
+  right: 300px;
   max-width: 160px;
 }
 
@@ -656,7 +708,7 @@ section#projects .col-full {
 }
 
 section#huh .col-full {
-  height: 500px;
+  height: 300px;
 }
 
 section#huh p {
@@ -698,7 +750,7 @@ section#presentations img.paint {
 section#presentations h2 {
   width: 220px;
   position: absolute;
-  top: 250px;
+  top: 280px;
   left: 70px;
   z-index: 10;
 }
@@ -1022,6 +1074,10 @@ body.noscroll {
     margin-top: 4em;
   }
 
+  section#presentations h2 {
+    width: 400px;
+  }
+
   section#homework h2 {
     position: static;
   }
@@ -1085,6 +1141,10 @@ body.noscroll {
   section#presentations p {
     margin-top: 9em;
     height: auto;
+  }
+
+  section#presentations h2 {
+    width: 100%;
   }
 
   section#assumptions {
