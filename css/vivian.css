@@ -1,0 +1,322 @@
+section#esl .col-full {
+  width: 100%;
+}
+
+section#esl p {
+  max-width: 600px;
+  text-align: center;
+  margin: auto;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+section#esl img {
+  width: 300px;
+  margin: auto;
+  display: block;
+  margin-bottom: 70px;
+}
+
+section#lunch .col-left {
+  width: 55%;
+  position: relative;
+  height: 500px;
+}
+
+section#lunch .col-left img.lunch,
+section#lunch .col-left img.lunch-friend {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 500px;
+  max-width: 100%;
+  height: auto;
+}
+
+
+section#lunch .col-left img.paint {
+  position: absolute;
+  bottom: 50px;
+  right: 300px;
+  max-width: 160px;
+}
+
+section#lunch .col-left h2 {
+  position: absolute;
+  bottom: 10px;
+  right: 0px;
+  max-width: 400px;
+}
+
+section#lunch .col-right {
+  width: 45%;
+}
+
+section#lunch .col-right p {
+  margin-top: 150px;
+  max-width: 500px;
+}
+
+section#huh .col-full,
+section#projects .col-full {
+  width: 100%;
+  position: relative;
+  text-align: center;
+}
+
+section#huh .col-full {
+  height: 300px;
+}
+
+section#huh p {
+  max-width: 600px;
+  margin: auto;
+  padding: 90px 0 50px 0;
+  position: relative;
+}
+
+section#huh img {
+  position: absolute;
+  left: 52%;
+  bottom: 0;
+}
+
+section#huh h2 {
+  max-width: 400px;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  top: 500px;
+}
+
+section#presentations .col-full {
+  width: 100%;
+  position: relative;
+  height: 800px;
+}
+
+section#presentations img.paint {
+  width: 90px;
+  position: absolute;
+  top: 0;
+  left: 30px;
+  z-index: 5;
+}
+
+section#presentations h2 {
+  width: 220px;
+  position: absolute;
+  top: 280px;
+  left: 70px;
+  z-index: 10;
+}
+
+section#presentations img {
+  width: 700px;
+  position: absolute;
+  top: 250px;
+  right: 0px;
+}
+
+section#presentations p {
+  width: 400px;
+  position: absolute;
+  top: 550px;
+}
+
+section#homework .col-full {
+  width: 100%;
+  position: relative;
+  height: 670px;
+}
+
+section#homework p,
+section#projects p {
+  padding: 50px 0 50px 0;
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+}
+
+section#homework img.homework {
+  margin: auto;
+  display: block;
+}
+
+section#homework img.paint {
+  position: absolute;
+  right: 350px;
+  bottom: 50px;
+  width: 150px;
+}
+
+section#homework h2 {
+  position: absolute;
+  right: 100px;
+  bottom: 50px;
+  width: 300px;
+  z-index: 100;
+}
+
+section#participation .col-full {
+  width: 100%;
+  position: relative;
+  height: 500px;
+}
+
+section#participation p {
+  position: absolute;
+  left: 50px;
+  top: 80px;
+  width: 400px;
+}
+
+section#participation img {
+  position: absolute;
+  left: 200px;
+  bottom: 50px;
+  width: 100px;
+}
+
+section#participation h2 {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  bottom: 50px;
+  max-width: 100vw;
+  text-align: center;
+}
+
+/*========================
+  MEDIA QUERIES
+========================*/
+
+@media(max-width: 980px) {
+  section#lunch .col-left {
+    width: 100%;
+  }
+
+  section#lunch .col-right {
+    width: 100%;
+  }
+
+  section#lunch .col-right p {
+    margin-top: 100px
+  }
+
+  section#presentations .col-full {
+    max-height: 700px;
+  }
+
+  section#presentations img {
+    position: static;
+    margin-top: 5em;
+  }
+
+  section#presentations p {
+    position: static;
+    width: 90%;
+    margin-top: 1em;
+  }
+
+  section#participation h2 {
+    width: 80%;
+  }
+}
+
+@media(max-width: 670px) {
+  section#lunch p {
+    width: 100%;
+    text-align: center;
+  }
+
+  section#presentations p {
+    width: 100%;
+    text-align: center;
+    margin-top: 4em;
+  }
+
+  section#presentations h2 {
+    width: 400px;
+  }
+
+  section#homework h2 {
+    position: static;
+  }
+
+  section#homework img.paint {
+    position: static;
+  }
+
+  section#participation p {
+    text-align: center;
+    width: 100%;
+    position: static;
+    margin-top: 3em;
+  }
+
+  section#participation h2 {
+    position: static;
+    transform: none;
+    margin-top: 3em;
+    width: 100%;
+  }
+}
+
+@media(max-width: 460px) {
+  section#lunch h2 {
+    position: static;
+    text-align: center;
+  }
+
+  section#huh h2 {
+    left: 0;
+    transform: none;
+    max-width: 10px;
+  }
+
+  section#presentations .col-full {
+    height: auto;
+    padding-bottom: 3em;
+  }
+
+  section#presentations p {
+    margin-top: 9em;
+    height: auto;
+  }
+
+  section#presentations h2 {
+    width: 100%;
+    left: 0;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+  }
+
+  section#homework h2 {
+    text-align: center;
+    left: 0;
+    width: 100%;
+    transform: none;
+  }
+
+  h2 {
+    padding: 0 .5em;
+  }
+
+  section#projects p {
+    margin-top: 12rem;
+  }
+}
+
+@media(max-width: 360px) {
+  section#presentations p {
+    margin-top: 12em;
+  }
+
+  section#outro {
+    margin-top: 10em;
+  }
+}

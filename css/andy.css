@@ -1,0 +1,345 @@
+section#multicultural {
+  margin-top: 5rem;
+}
+
+section#multicultural .col-left {
+  width: 55%;
+  position: relative;
+  height: 500px;
+}
+
+section#multicultural .col-left img.website {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 500px;
+  max-width: 100%;
+  height: auto;
+}
+
+
+section#multicultural .col-left img.paint {
+  position: absolute;
+  bottom: 50px;
+  right: 300px;
+  max-width: 160px;
+}
+
+section#multicultural .col-left h2 {
+  position: absolute;
+  bottom: 10px;
+  right: 0px;
+  max-width: 400px;
+}
+
+section#multicultural .col-right {
+  width: 45%;
+}
+
+section#multicultural .col-right p {
+  margin-top: 150px;
+  max-width: 500px;
+}
+
+
+section#divide .col-full {
+  width: 100%;
+  position: relative;
+  min-height: 40rem;
+}
+
+section#divide img.paint {
+  width: 90px;
+  position: absolute;
+  top: 0;
+  left: 30px;
+  z-index: 0;
+}
+
+section#divide h2 {
+  width: 220px;
+  position: absolute;
+  top: 300px;
+  left: 6rem;
+  z-index: 10;
+}
+
+section#divide img {
+  width: 700px;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+
+section#divide p {
+  width: 400px;
+  position: absolute;
+  top: 10rem;
+}
+
+section#halloween {
+  margin-top: 5rem;
+  /*margin-bottom: 5rem;*/
+}
+
+section#halloween .col-full {
+  width: 100%;
+  position: relative;
+  height: 44rem;
+}
+
+section#halloween p {
+  padding: 50px 0 50px 0;
+  max-width: 500px;
+  margin: auto;
+  text-align: center;
+}
+
+section#halloween img.halloween {
+  margin: auto;
+  display: block;
+}
+
+section#halloween img.paint {
+  position: absolute;
+  right: 350px;
+  bottom: 50px;
+  width: 150px;
+}
+
+section#halloween h2 {
+  position: absolute;
+  right: 100px;
+  bottom: 0px;
+  width: 300px;
+  z-index: 100;
+}
+
+section#welcoming .col-full {
+  width: 100%;
+  position: relative;
+  margin-top: 15rem;
+}
+
+section#welcoming img {
+  position: absolute;
+  left: 200px;
+  bottom: 50px;
+  width: 100px;
+}
+
+section#welcoming h2 {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  bottom: 50px;
+  max-width: 100vw;
+  text-align: center;
+}
+
+section#invited .col-full {
+  width: 100%;
+  position: relative;
+  height: 25rem;
+}
+
+section#invited p {
+  position: absolute;
+  left: 50px;
+  top: 80px;
+  width: 500px;
+}
+
+section#invited img {
+  position: absolute;
+  left: 200px;
+  bottom: 50px;
+  width: 100px;
+}
+
+section#invited h2 {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  bottom: 50px;
+  max-width: 100vw;
+  text-align: center;
+}
+
+section#lemonade {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+section#lemonade .col-full {
+  width: 100%;
+  position: relative;
+  height: 50rem;
+}
+
+section#lemonade p {
+  padding: 50px 0 50px 0;
+  max-width: 500px;
+  margin: auto;
+  text-align: center;
+}
+
+section#lemonade img.lemonade {
+  margin: auto;
+  display: block;
+  max-width:40rem;
+}
+
+section#lemonade img.paint {
+  position: absolute;
+  right: 350px;
+  bottom: 50px;
+  width: 150px;
+}
+
+section#lemonade h2 {
+  position: absolute;
+  right: 100px;
+  bottom: 0px;
+  width: 300px;
+  z-index: 100;
+}
+
+/*========================
+  MEDIA QUERIES
+========================*/
+
+@media(max-width: 980px) {
+  section#multicultural .col-left {
+    width: 100%;
+  }
+
+  section#multicultural .col-right {
+    width: 100%;
+  }
+
+  section#multicultural .col-right p {
+    margin-top: 100px
+  }
+
+  section#divide .col-full {
+    max-height: 700px;
+  }
+
+  section#divide img {
+    position: static;
+    margin-top: 5em;
+  }
+
+  section#divide p {
+    position: static;
+    width: 90%;
+    margin-top: 1em;
+  }
+
+  section#welcoming h2 {
+    width: 80%;
+  }
+
+  section#invited h2 {
+    width: 80%;
+  }
+}
+
+@media(max-width: 670px) {
+  section#multicultural p {
+    width: 100%;
+    text-align: center;
+  }
+
+  section#divide p {
+    width: 100%;
+    text-align: center;
+    margin-top: 4em;
+  }
+
+  section#divide h2 {
+    width: 400px;
+  }
+
+  section#halloween h2 {
+    position: static;
+  }
+
+  section#halloween img.paint {
+    position: static;
+  }
+
+  section#welcoming h2 {
+    position: static;
+    transform: none;
+    margin-top: 3em;
+    width: 100%;
+  }
+
+  section#invited p {
+    text-align: center;
+    width: 100%;
+    position: static;
+    margin-top: 3em;
+  }
+
+  section#invited h2 {
+    position: static;
+    transform: none;
+    margin-top: 3em;
+    width: 100%;
+  }
+}
+
+@media(max-width: 460px) {
+  section#multicultural h2 {
+    position: static;
+    text-align: center;
+  }
+
+  section#divide .col-full {
+    height: auto;
+    padding-bottom: 3em;
+  }
+
+  section#divide p {
+    margin-top: 9em;
+    height: auto;
+  }
+
+  section#divide h2 {
+    width: 100%;
+    left: 0;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+  }
+
+  section#halloween h2 {
+    text-align: center;
+    left: 0;
+    width: 100%;
+    transform: none;
+  }
+
+  h2 {
+    padding: 0 .5em;
+  }
+
+  section#projects p {
+    margin-top: 12rem;
+  }
+}
+
+@media(max-width: 360px) {
+  section#divide p {
+    margin-top: 12em;
+  }
+
+  section#outro {
+    margin-top: 10em;
+  }
+}
