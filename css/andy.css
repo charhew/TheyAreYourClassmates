@@ -22,7 +22,7 @@ section#multicultural .col-left img.paint {
   position: absolute;
   bottom: 50px;
   right: 300px;
-  max-width: 160px;
+  max-width: 90px;
 }
 
 section#multicultural .col-left h2 {
@@ -49,10 +49,10 @@ section#divide .col-full {
 }
 
 section#divide img.paint {
-  width: 90px;
+  max-width: 160px;
   position: absolute;
-  top: 0;
-  left: 30px;
+  top: 100px;
+  left: 0px;
   z-index: 0;
 }
 
