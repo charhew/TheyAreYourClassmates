@@ -69,8 +69,16 @@ body.fade-out {
     -webkit-transition: none;
 }
 
-h1, h2, h3, h4 {
+h1, h2, h3, h4, h5, h6 {
   margin: 0;
+}
+
+h6 {
+  font-size: 0.7rem;
+  color: #DDD;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  font-family: "myAvenir", sans-serif;
 }
 
 p {
@@ -91,7 +99,7 @@ p {
   -webkit-border-image: -webkit-linear-gradient(left, #bbe6bc 0%, #ebe4a1 100%);
   border-image: linear-gradient(to right, #bbe6bc 0%, #ebe4a1 100%);
   border-image-slice: 1;
-  -webkit-transiton: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
@@ -519,7 +527,7 @@ section#story-selection {
   right: 0;
 }
 
-.container-brush#grant {
+.container-brush#andy {
   left: 50%;
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
@@ -562,7 +570,7 @@ section#story-selection {
   top: 0;
 }
 
-#container-brushes #brush-link-grant {
+#container-brushes #brush-link-andy {
   left: 40%;
   top: 0;
 }
@@ -694,7 +702,7 @@ section#next-story {
   height: 400px;
   text-align: center;
   position: relative;
-  background-image: url("../img/grant/next-story-grant.jpg");
+  background-image: url("../img/andy/next-story-andy.jpg");
 }
 
 section#next-story img {
@@ -716,14 +724,11 @@ section#next-story .container-next-story-title {
 }
 
 section#next-story .container-next-story-title h5 {
-  margin: 0;
   font-size: 2rem;
   letter-spacing: 0.1rem;
 }
 
 section#next-story .container-next-story-title h6 {
-  margin: 0;
-  font-size: 1.1rem;
   color: #666;
 }
 
@@ -767,7 +772,7 @@ body.noscroll {
     width: 100%;
 }
 
-#skip-video-link {
+#skip-andy-video-link {
   position: absolute;
   left: 50%;
   -webkit-transform: translateX(-50%);
@@ -782,7 +787,7 @@ body.noscroll {
   top: 80%;
 }
 
-#skip-video-link.bounce {
+#skip-andy-video-link.bounce {
   -webkit-animation-name: bounce;
    animation-name: bounce;
    -webkit-animation-duration: 1s;
@@ -835,7 +840,7 @@ body.noscroll {
     overflow-x: hidden;
   }
 
-  #skip-video-link.skip-video-link-ended {
+  #skip-andy-video-link.skip-video-link-ended {
     width: 70%;
   }
 

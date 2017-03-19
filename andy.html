@@ -6,7 +6,7 @@
 	<link rel="stylesheet" href="css/andy.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=no">
 </head>
-<body class="">
+<body class="noscroll">
 	<div id="skrollr-body">
 
 		<div class="language-panel">
@@ -21,19 +21,20 @@
 
 		<section id="intro">
 			<div class="container-video">
-				<video id="video-vivian-intro" onended="startExperience()">
+				<video id="video-andy-intro" onended="startExperience()">
 					<source src="res/andy-intro-eng.mp4" type="video/mp4">
 				</video>
 				<div class="container-story-title">
+					<h6>story</h6>
 					<h1>Andy</h1>
 				</div>
 				<img src="img/video-replay.png" alt="replay video button" id="button-replay-intro" class="replay">
-				<a id="skip-video-link" class="text-link skip-video-link-playing" href="#story-vivian">Already seen this? Skip this video.</a>
+				<a id="skip-andy-video-link" class="text-link skip-video-link-playing" href="#story-andy">Already seen this? Skip this video.</a>
 			</div>
 		</section>
 
 		<!-- container for all the other assets -->
-		<div class="story-container" id="story-vivian">
+		<div class="story-container" id="story-andy">
 
 			<!-- welcoming section -->
 			<section class="row" id="welcoming">
@@ -41,10 +42,10 @@
 					<img src="img/andy/paint1.png" class="paint"
 						data-bottom-top="opacity: 0;"
 						data-center-top="opacity: 1;">
-					<h2 id="quote-contribute"
+					<h2 id="quote-welcoming"
 						data-bottom-top="opacity: 0; bottom: 0px;"
-						data-top-bottom="opacity: 1; bottom: 50px;">I begged to go to Canada instead of America because I heard they were more open and welcoming..</h2>
-					<audio>
+						data-top-bottom="opacity: 1; bottom: 50px;">I begged to go to Canada instead of America because I heard they were more open and welcoming.</h2>
+					<audio id="audio-andy-welcoming">
 						<source src="res/andy-quote-welcoming-eng.mp3" type="audio/mpeg">
 					</audio>
 				</div>
@@ -53,13 +54,10 @@
 			<!-- multicultural section -->
 			<section class="row" id="multicultural">
 				<div class="col-left">
-					<img src="img/andy/website.png" class="website"
+					<img src="img/andy/website.jpg" class="website"
 						data-bottom-top="opacity: 0; left: -100px;"
 						data-center-top="opacity: 1; left: 0;"
 						>
-					<img src="img/andy/paint2.png" class="paint"
-						data-bottom-top="opacity: 0; right: 400px;"
-						data-center-top="opacity: 1; right: 350px;">
 				</div>
 				<div class="col-right">
 					<p
@@ -82,10 +80,10 @@
 					<p
 						data-bottom-top="opacity: 0;"
 						data-center-top="opacity: 1;">This wasn’t the reality, though. When I started high school, a month after moving here, I noticed that Canadian students never talked to me unless they needed to. We didn’t really have a presence to them, it seemed.</p>
-					<h2 id="quote-huh"
+					<h2 id="quote-divide"
 						data-bottom-top="opacity: 0; top: 400px;"
 						data-top-bottom="opacity: 1; top: 300px;">There was a divide between Canadian students and International students.</h2>
-						<audio id="asdf">
+						<audio id="audio-andy-divide">
 							<source src="res/andy-quote-divide-eng.mp3" type="audio/mpeg">
 						</audio>
 				</div>
@@ -106,12 +104,12 @@
 						data-bottom-top="opacity: 0;"
 						data-center-top="opacity: 1;"
 						>
-					<h2 id=""
+					<h2 id="quote-halloween"
 						data-bottom-top="opacity: 0; right: 60px;"
 						data-center-top="opacity: 1; right: 80px;"
 						data-top-bottom="opacity: 1; right: 100px;"
 						>By not dressing up for Halloween, we missed an opportunity for our classmates to accept us as part of the school.</h2>
-					<audio>
+					<audio id="audio-andy-halloween">
 						<source src="res/andy-quote-halloween-eng.mp3" type="audio/mpeg">
 					</audio>
 				</div>
@@ -128,11 +126,11 @@
 					<img src="img/andy/paint5.png" class="paint"
 						data-bottom-top="opacity: 0;"
 						data-center-top="opacity: 1;">
-					<h2 id="quote-contribute"
+					<h2 id="quote-invited"
 						data-bottom-top="opacity: 0; bottom: 0px;"
-						data-top-bottom="opacity: 1; bottom: 50px;">I know everyone in the school is invited to these events, but I never felt invited because it was like we were never part of the school to begin with.</h2>
-					<audio id="audio-vivian-contribute">
-						<source src="res/vivian-quote-contribute-eng.mp3" type="audio/mpeg">
+						data-top-bottom="opacity: 1; bottom: 50px;">I know everyone in the school is invited to these events, but I never felt invited because it was like we were never part of the school to begin with anyways.</h2>
+					<audio id="audio-andy-invited">
+						<source src="res/andy-quote-invited-eng.mp3" type="audio/mpeg">
 					</audio>
 				</div>
 			</section>
@@ -157,23 +155,23 @@
 						data-bottom-top="opacity: 0;"
 						data-center-top="opacity: 1;"
 						>
-					<h2 id="quote-lemonade"
+					<h2 id="quote-temporary"
 						data-bottom-top="opacity: 0; right: 60px;"
 						data-center-top="opacity: 1; right: 80px;"
 						data-top-bottom="opacity: 1; right: 100px;"
 						>Maybe Canadian students didn’t bother to talk with us because they saw us as temporary since we were international students.</h2>
 					<audio id="audio-andy-temporary">
-						<source src="res/vivian-quote-annoying-eng.mp3" type="audio/mpeg">
+						<source src="res/andy-quote-temporary-eng.mp3" type="audio/mpeg">
 					</audio>
 				</div>
 			</section>
 
-		</div> 
+		</div>
 		<!-- end story-container div -->
 
 		<section id="outro">
 			<div class="container-video">
-				<video id="video-vivian-outro" onended="replayOutro()">
+				<video id="video-andy-outro" onended="replayOutro()">
 					<source src="res/andy-outro-eng.mp4" type="video/mp4">
 				</video>
 				<img src="img/video-replay.png" alt="replay video button" id="button-replay-outro" class="replay">
@@ -182,26 +180,26 @@
 
 		<section class="row" id="assumptions">
 			<div class="col-left">
-				<h3>Vivian's Experience</h3>
+				<h3>Andy's Experience</h3>
 				<ul>
-					<li id="assumptions-li-0">I am so embarrassed about my accent and I always fear saying the wrong thing.</li>
-					<li id="assumptions-li-2">Canadian students don't trust me with group work because I seem stupid. It's very difficult trying to learn new concepts taught in class and English at the same time.</li>
+					<li id="assumptions-li-0">My dad sent me here to live by myself at 14 years old. I didn't want to leave my friends in Beijing.</li>
+					<li id="assumptions-li-2">I came to Canada because it is known for its multiculturalism and I believed it would be inclusive.</li>
 				</ul>
 			</div>
 			<div class="col-right">
 				<h3>Your Perspective</h3>
 				<ul>
-					<li id="assumptions-li-1">They are usually too quiet during presentations and discussions and they should speak up.</li>
-					<li id="assumptions-li-3">They're annoying to work with because they never pull their weight. They contribute the minimum. I have to do most of the work.</li>
+					<li id="assumptions-li-1">They chose to come here to learn English, so they should speak it.</li>
+					<li id="assumptions-li-3">Canada is an English-speaking country, so they should be speaking English when they are at school.</li>
 				</ul>
 			</div>
 		</section>
 
 		<section class="row" id="next-story">
-			<img src="img/grant/paint-next-story.png" alt="green paint smear">
+			<img src="img/andy/paint-next-story.png" alt="green paint smear">
 			<div class="container-next-story-title">
-				<!-- <h6>02.</h6> -->
-				<h5>Andy</h5>
+				<h6>next</h6>
+				<h5>Ruiwen</h5>
 			</div>
 		</section>
 
@@ -214,6 +212,6 @@
 	<script src="js/switch-language.js"></script>
 	<script src="js/smooth-scroll.js"></script>
 	<script src="js/on-scroll-to.js"></script>
-
+	<script src="js/mobile.js"></script>
 </body>
 </html>
