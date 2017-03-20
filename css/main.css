@@ -142,7 +142,7 @@ p {
 }
 
 nav#container-home-nav {
-  padding: 2.5rem;
+  height: 10vh;
 }
 
 nav#container-home-nav #home-link {
@@ -151,6 +151,8 @@ nav#container-home-nav #home-link {
   font-size: 0.8rem;
   letter-spacing: 0.05rem;
   float: left;
+  margin-top: 2.5rem;
+  margin-left: 2.5rem;
   color: #ddd;
 }
 
@@ -158,6 +160,7 @@ nav#container-home-nav #container-mobile-links {
   float: right;
   display: none;
   visibility: hidden;
+  padding: 2.5rem;
 }
 
 #container-mobile-links a {
@@ -233,6 +236,7 @@ img {
   transform: translate(-50%, -50%);
   top: 50%;
   left: 50%;
+  height: 90%;
 }
 
 #container-classroom-infographic img#brush-stroke-1 {
@@ -331,7 +335,7 @@ div#index-container-fade-3 p {
 #container-questions {
   margin: auto;
   width: 40em;
-  height: 100vh;
+  height: 90vh;
   position: relative;
 }
 
@@ -376,7 +380,7 @@ p#questions-para-fade-2 {
 }
 
 .question {
-  padding-top: 25%;
+  padding-top: 15%;
   text-align: left;
 }
 
@@ -415,7 +419,7 @@ p#questions-para-fade-2 {
   margin: 2.5rem auto;
   text-transform: uppercase;
   padding: 1rem 0;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   letter-spacing: 0.2rem;
   color: white;
   max-width: 23rem;
@@ -913,12 +917,12 @@ body.noscroll {
     left: 65%;
   }
 
-  img#infographic {
-    padding: 1rem;
-  }
-
   .button-default {
     margin-top: 5rem;
+  }
+
+  #container-classroom-infographic img#infographic {
+    padding: 1rem;
   }
 
   #container-classroom-infographic img#brush-stroke-1 {
@@ -943,7 +947,6 @@ body.noscroll {
 /* 570 px */
 @media(max-width: 35.625em) {
   #container-brushes .brush-link {
-    /*height: 70%;*/
     height: 20rem;
   }
 }
@@ -951,7 +954,6 @@ body.noscroll {
 /* 500 px */
 @media(max-width: 31.25em) {
   #container-brushes .brush-link {
-    /*height: 60%;*/
     height: 18rem;
   }
 }
@@ -966,7 +968,12 @@ body.noscroll {
     padding: 0 1rem;
   }
 
-  nav#container-home-nav {
+  nav#container-home-nav #home-link {
+    margin-top: 1rem;
+    margin-left: 1rem;
+  }
+
+  nav#container-home-nav #container-mobile-links {
     padding: 1rem;
   }
 
@@ -1038,5 +1045,50 @@ body.noscroll {
 @media (max-width: 25em) {
   #container-brushes .brush-link {
     height: 16rem;
+  }
+}
+
+/* ---------------- max-height stuff ---------------- */
+
+/* 680px */
+@media (max-height: 42.5em) {
+  .question {
+    padding-top: 5%;
+  }
+}
+
+/* 620px */
+@media (max-height: 38.75em) {
+  .question {
+    padding-top: 5%;
+  }
+
+  .question button {
+    margin: 1.5rem auto;
+  }
+}
+
+/* 550px */
+@media (max-height: 34.375em) {
+  .question button {
+    margin: 1rem auto;
+    font-size: 0.75rem;
+  }
+
+  #container-classroom-infographic img#brush-stroke-1 {
+    height: 20%;
+    left: 28%;
+  }
+
+  #container-classroom-infographic img#brush-stroke-2 {
+    height: 35%;
+  }
+}
+
+/* 400px */
+@media (max-height: 25em) {
+  #container-stories-explanation-1,
+  #container-stories-explanation-2 {
+    top: 50%;
   }
 }

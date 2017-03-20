@@ -1,5 +1,7 @@
 $(document).ready(function() {
 
+  var goToPart2;
+
   setTimeout(function(){
     $('#container-questions-explanation').fadeOut(1000);
     showQuestionOne();
@@ -69,9 +71,16 @@ $(document).ready(function() {
         }
         else if (this.id == 'avoid') {
             console.log('avoid clicked');
+            goToPart2 = true;
         }
         $('#question-four').fadeOut(500);
-        showQuestionFourPart2();
+
+        if (goToPart2) {
+          showQuestionFourPart2();
+          goToPart2 = false;
+        } else {
+          showQuestionFive();
+        }
       });
     }, 1000);
   }
