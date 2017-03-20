@@ -75,7 +75,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h6 {
   font-size: 0.7rem;
-  color: #DDD;
+  color: #999;
   letter-spacing: 0.2rem;
   text-transform: uppercase;
   font-family: "myAvenir", sans-serif;
@@ -108,7 +108,6 @@ p {
   background-color: rgba(255, 255, 255, .2);
 }
 
-
 .text-link {
   color: white;
   text-decoration: none;
@@ -140,6 +139,36 @@ p {
   visibility: visible;
   -webkit-transform: scaleX(1);
   transform: scaleX(1);
+}
+
+nav#container-home-nav {
+  padding: 2.5rem;
+}
+
+nav#container-home-nav #home-link {
+  text-decoration: none;
+  font-family: "Harriet", serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.05rem;
+  float: left;
+  color: #ddd;
+}
+
+nav#container-home-nav #container-mobile-links {
+  float: right;
+  display: none;
+  visibility: hidden;
+}
+
+#container-mobile-links a {
+  color: #ddd;
+  font-size: 0.75rem;
+  letter-spacing:0.06rem;
+  margin-left: 2rem;
+}
+
+#container-mobile-links a:before {
+  background-color: #ddd;
 }
 
 .container-story {
@@ -185,7 +214,7 @@ img {
 #container-classroom-infographic {
   margin: auto;
   width: 40em;
-  height: 75vh;
+  height: 65vh;
   position: relative;
   -webkit-animation-name: simpleFadeIn;
    animation-name: simpleFadeIn;
@@ -275,6 +304,7 @@ div#index-container-fade-3 p {
   letter-spacing: 0.2rem;
   line-height: 0;
   padding-bottom: 10px;
+  opacity: 0.7;
 }
 
 #view-stories-link {
@@ -308,7 +338,7 @@ div#index-container-fade-3 p {
 #container-questions #container-questions-explanation {
   position: absolute;
   width: 100%;
-  top: 50%;
+  top: 40%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   left: 50%;
@@ -497,7 +527,7 @@ p#stories-para-fade-4 {
 }
 
 section#stories-explanation {
-  height: 40vh;
+  height: 30vh;
 }
 
 section#story-selection {
@@ -576,7 +606,7 @@ section#story-selection {
 }
 
 #container-brushes #brush-link-ruiwen {
-  left: 70%;
+  left: 67%;
   top: 0;
 }
 
@@ -835,7 +865,22 @@ body.noscroll {
   MEDIA QUERIES
 ========================*/
 
-@media(max-width: 670px) {
+/* 800 px */
+@media(max-width: 50em) {
+  nav#container-home-nav #container-mobile-links {
+    display: block;
+    visibility: visible;
+  }
+
+  #thanks-link,
+  #view-stories-link {
+    display: none;
+    visibility: hidden;
+  }
+}
+
+/* 670 px */
+@media(max-width: 41.875em) {
   body {
     overflow-x: hidden;
   }
@@ -849,9 +894,87 @@ body.noscroll {
     padding: 15px;
     font-size: .9rem;
   }
+
+  div#container-classroom-infographic,
+  #container-brushes,
+  #container-questions {
+    width: 100%;
+  }
+
+  #container-questions {
+    padding: 2.5rem;
+  }
+
+  .container-brush {
+    width: 47%;
+  }
+
+  .container-brushes #brush-link-ruiwen {
+    left: 65%;
+  }
+
+  img#infographic {
+    padding: 1rem;
+  }
+
+  .button-default {
+    margin-top: 5rem;
+  }
+
+  #container-classroom-infographic img#brush-stroke-1 {
+    width: 15%;
+  }
+
+  #container-classroom-infographic img#brush-stroke-2 {
+    width: 25%;
+  }
+
+  nav#container-home-nav #home-link {
+    width: 5em;
+    text-align: left;
+  }
+
+  #container-stories-explanation-1,
+  #container-stories-explanation-2 {
+    padding: 2.5rem;
+  }
 }
 
-@media(max-width: 460px) {
+/* 570 px */
+@media(max-width: 35.625em) {
+  #container-brushes .brush-link {
+    /*height: 70%;*/
+    height: 20rem;
+  }
+}
+
+/* 500 px */
+@media(max-width: 31.25em) {
+  #container-brushes .brush-link {
+    /*height: 60%;*/
+    height: 18rem;
+  }
+}
+
+/* 460 px */
+@media(max-width: 28.75em) {
+  section#stories-explanation {
+    height: 40vh;
+  }
+
+  p.para-fade {
+    padding: 0 1rem;
+  }
+
+  nav#container-home-nav {
+    padding: 1rem;
+  }
+
+  #container-mobile-links a {
+    font-size: 0.7rem;
+    margin-left: 1rem;
+  }
+
   .skip-video-link-playing {
     top: 90%;
     width: 80%;
@@ -864,7 +987,7 @@ body.noscroll {
   }
 
   p {
-    font-size: .9rem;
+    font-size: .9rem !important;
   }
 
   section#assumptions {
@@ -877,7 +1000,43 @@ body.noscroll {
     font-size: .8rem;
   }
 
-  h2 {
+  #story-andy h2,
+  #story-vivian h2,
+  #story-ruiwen h2 {
     padding: 0 .5em;
+  }
+
+  div#container-classroom-infographic {
+    height: 60vh;
+  }
+
+  #container-questions {
+    padding: 1rem;
+  }
+
+  .question {
+    padding-top: 15%;
+  }
+
+  .question button {
+    margin: 1rem auto;
+    font-size: 0.75rem;
+    letter-spacing: 0.15rem;
+  }
+
+  #container-stories-explanation-1,
+  #container-stories-explanation-2 {
+    padding: 0rem;
+  }
+
+  .container-story-text h3 {
+    font-size: 1rem;
+  }
+}
+
+/* 400px */
+@media (max-width: 25em) {
+  #container-brushes .brush-link {
+    height: 16rem;
   }
 }

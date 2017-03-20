@@ -98,6 +98,7 @@ section#halloween p {
 section#halloween img.halloween {
   margin: auto;
   display: block;
+  opacity: 0.7;
 }
 
 section#halloween img.paint {
@@ -191,7 +192,8 @@ section#lemonade p {
 section#lemonade img.lemonade {
   margin: auto;
   display: block;
-  max-width:40rem;
+  max-width: 40rem;
+  opacity: 0.7;
 }
 
 section#lemonade img.paint {
