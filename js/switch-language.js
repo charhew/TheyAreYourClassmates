@@ -64,10 +64,10 @@ $(document).ready(function() {
       videoAndyIntro.play();
     }
     //outro
-    // videoAndyOutro.pause();
-    // videoAndyOutro.src = "res/andy-outro-zh.mp4";
-    // videoAndyOutro.load();
-    // $("#button-replay-outro").hide();
+    videoAndyOutro.pause();
+    videoAndyOutro.src = "res/andy-outro-zh.mp4";
+    videoAndyOutro.load();
+    $("#button-replay-outro").hide();
 
     //welcoming
     audioAndyWelcoming.src = "res/andy-quote-welcoming-zh.mp3";
@@ -143,10 +143,10 @@ $(document).ready(function() {
       videoAndyIntro.play();
     }
     //outro
-    // videoAndyOutro.pause();
-    // videoAndyOutro.src = "res/andy-outro-eng.mp4";
-    // videoAndyOutro.load();
-    // $("#button-replay-outro").hide();
+    videoAndyOutro.pause();
+    videoAndyOutro.src = "res/andy-outro-eng.mp4";
+    videoAndyOutro.load();
+    $("#button-replay-outro").hide();
 
     //welcoming
     audioAndyWelcoming.src = "res/andy-quote-welcoming-eng.mp3";

@@ -126,6 +126,7 @@ section#welcoming img {
   left: 200px;
   bottom: 50px;
   width: 100px;
+  z-index: 0;
 }
 
 section#welcoming h2 {
@@ -136,6 +137,7 @@ section#welcoming h2 {
   bottom: 50px;
   max-width: 100vw;
   text-align: center;
+  z-index: 5;
 }
 
 section#invited .col-full {
@@ -147,7 +149,7 @@ section#invited .col-full {
 section#invited p {
   position: absolute;
   left: 50px;
-  top: 80px;
+  top: 130px;
   width: 500px;
 }
 
@@ -170,13 +172,13 @@ section#invited h2 {
 
 section#lemonade {
   margin-top: 5rem;
-  margin-bottom: 5rem;
+  margin-bottom: 15rem;
 }
 
 section#lemonade .col-full {
-  width: 100%;
   position: relative;
-  height: 50rem;
+  width: 100%;
+  padding: 0;
 }
 
 section#lemonade p {
@@ -221,7 +223,11 @@ section#lemonade h2 {
   }
 
   section#multicultural .col-right p {
-    margin-top: 100px
+    margin-top: 150px;
+  }
+
+  section#halloween {
+    margin-top: 9rem;
   }
 
   section#divide .col-full {
@@ -246,6 +252,16 @@ section#lemonade h2 {
   section#invited h2 {
     width: 80%;
   }
+  section#lemonade img.paint {
+    position: static;
+    width: 150px;
+  }
+  section#lemonade h2 {
+    position: static;
+    max-width: 400px;
+    display: block;
+    margin: auto;
+  }
 }
 
 @media(max-width: 670px) {
@@ -265,11 +281,11 @@ section#lemonade h2 {
   }
 
   section#halloween h2 {
-    position: static;
+    /*position: static;*/
   }
 
   section#halloween img.paint {
-    position: static;
+    /*position: static;*/
   }
 
   section#welcoming h2 {
@@ -325,21 +341,45 @@ section#lemonade h2 {
     transform: none;
   }
 
+  section#halloween .paint {
+    left: 0;
+    max-width: 50px;
+  }
+
   h2 {
     padding: 0 .5em;
   }
 
-  section#projects p {
-    margin-top: 12rem;
+  section#lemonade h2 {
+    left:0;
+    width: 100%;
+    text-align: center;
   }
 }
 
-@media(max-width: 360px) {
+@media(max-width: 370px) {
+  section#welcoming h2 {
+    margin-top: 0;
+  }
+  section#welcoming .col-full {
+    margin-top: 5rem;
+  }
+
+  section#multicultural .col-right p {
+    margin-top: 0;
+  }
   section#divide p {
     margin-top: 12em;
   }
 
+  section#halloween {
+    margin-top: 0;
+  }
+
   section#outro {
     margin-top: 10em;
+  }
+  section#lemonade img {
+    width: 100%;
   }
 }
