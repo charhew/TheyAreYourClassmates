@@ -22,11 +22,13 @@ just in case!
     font-family: "myAvenir";
     src: url('../fonts/Avenir-Book.ttf') format('truetype');
     font-weight: normal;
+    font-style: normal;
 }
 
 @font-face {
     font-family: "myAvenir";
     src: url('../fonts/Avenir-BookOblique.ttf') format("truetype");
+    font-weight: normal;
     font-style: italic;
 }
 
@@ -34,6 +36,7 @@ just in case!
     font-family: "myAvenir";
     src: url('../fonts/Avenir-Heavy.ttf') format("truetype");
     font-weight: bold;
+    font-style: normal;
 }
 
 @font-face {
@@ -41,6 +44,7 @@ just in case!
     src: url('../fonts/Harriet-Regular.woff2') format('woff2'),
          url('../fonts/Harriet-Regular.woff') format('woff');
     font-weight: normal;
+    font-style: normal;
 }
 
 @font-face {
@@ -48,6 +52,15 @@ just in case!
     src: url('../fonts/Harriet-Bold.woff2') format('woff2'),
          url('../fonts/Harriet-Bold.woff') format('woff');
     font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Harriet";
+    src: url('../fonts/Harriet-Italic.woff2') format('woff2'),
+         url('../fonts/Harriet-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
 }
 
 html, body {
@@ -75,7 +88,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h6 {
   font-size: 0.7rem;
-  color: #999;
+  color: white;
   letter-spacing: 0.2rem;
   text-transform: uppercase;
   font-family: "myAvenir", sans-serif;
@@ -94,7 +107,8 @@ p {
   font-size: 0.75rem;
   letter-spacing: 0.2rem;
   color: white;
-  border: solid 2px transparent;
+  border-style: solid;
+  border-width: 2px;
   -moz-border-image: -moz-linear-gradient(left, #bbe6bc 0%, #ebe4a1 100%);
   -webkit-border-image: -webkit-linear-gradient(left, #bbe6bc 0%, #ebe4a1 100%);
   border-image: linear-gradient(to right, #bbe6bc 0%, #ebe4a1 100%);
@@ -153,7 +167,11 @@ nav#container-home-nav #home-link {
   float: left;
   margin-top: 2.5rem;
   margin-left: 2.5rem;
-  color: #ddd;
+  color: #333;
+}
+
+nav#container-home-nav #home-link:hover {
+  color: #777;
 }
 
 nav#container-home-nav #container-mobile-links {
@@ -164,14 +182,19 @@ nav#container-home-nav #container-mobile-links {
 }
 
 #container-mobile-links a {
-  color: #ddd;
   font-size: 0.75rem;
   letter-spacing:0.06rem;
   margin-left: 2rem;
+  color: #333;
 }
 
 #container-mobile-links a:before {
-  background-color: #ddd;
+  background-color: #333;
+}
+
+#thanks-link:before,
+#about-link:before {
+  background-color: #333;
 }
 
 .container-story {
@@ -249,6 +272,10 @@ img {
   left: 30%;
 }
 
+/*#container-classroom-infographic img#brush-strokes {
+  left: 0;
+}*/
+
 p.para-fade {
   max-width: 30em;
   color: white;
@@ -263,44 +290,55 @@ p.para-fade {
   right: 0;
 }
 
-p#index-para-fade-1 {
-  -webkit-animation-name: fadeInOut;
-   animation-name: fadeInOut;
-   -webkit-animation-duration: 7s;
-   animation-duration: 7s;
-   -webkit-animation-fill-mode: both;
-   animation-fill-mode: both;
+.button-next {
+  position: absolute;
+  top: 6rem;
+  transform: translate(-50%, -50%);
+  border: none;
+  background: transparent;
+  font-family: "myAvenir", sans-serif;
+  font-size: 0.75rem;
+  color: #666;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  outline: none;
 }
 
-p#index-para-fade-2 {
-  opacity: 0;
-  -webkit-animation-name: fadeInOut;
-   animation-name: fadeInOut;
-   -webkit-animation-duration: 7s;
-   animation-duration: 7s;
-   -webkit-animation-fill-mode: both;
-   animation-fill-mode: both;
-   -webkit-animation-delay: 7s;
-   animation-delay: 7s;
+.button-next:hover {
+  color: #777;
 }
 
-div#index-container-fade-3 {
+#index-container-fade-1,
+#index-container-fade-2,
+#index-container-fade-3 {
+  position: relative;
+}
+
+.not-initially-visible {
   opacity: 0;
+  z-index: -1;
+}
+
+.fade-in {
   -webkit-animation-name: fadeIn;
    animation-name: fadeIn;
-   -webkit-animation-duration: 7s;
-   animation-duration: 7s;
+   -webkit-animation-duration: 4s;
+   animation-duration: 4s;
+   z-index: 5;
+}
+
+.fade-out {
+  -webkit-animation-name: simpleFadeOut;
+   animation-name: simpleFadeOut;
+   -webkit-animation-duration: 0.7s;
+   animation-duration: 0.7s;
    -webkit-animation-fill-mode: both;
    animation-fill-mode: both;
-   -webkit-animation-delay: 15s;
-   animation-delay: 15s;
 }
 
-div#index-container-fade-3 p {
-  position: static;
-}
-
-#view-stories-link,
+#about-link,
 #thanks-link {
   position: absolute;
   top: 50%;
@@ -309,14 +347,16 @@ div#index-container-fade-3 p {
   line-height: 0;
   padding-bottom: 10px;
   opacity: 0.7;
+  color: #333;
+  font-weight: bold;
 }
 
-#view-stories-link {
+#thanks-link {
   right: 0;
   transform: rotate(90deg);
 }
 
-#thanks-link {
+#about-link {
   left: 0;
   transform: rotate(-90deg);
 }
@@ -354,25 +394,8 @@ div#index-container-fade-3 p {
   margin-bottom: 1rem;
 }
 
-p#questions-para-fade-1 {
-  -webkit-animation-name: fadeIn;
-   animation-name: fadeIn;
-   -webkit-animation-duration: 4s;
-   animation-duration: 4s;
-   -webkit-animation-fill-mode: both;
-   animation-fill-mode: both;
-}
-
-p#questions-para-fade-2 {
-  opacity: 0;
-  -webkit-animation-name: fadeIn;
-   animation-name: fadeIn;
-   -webkit-animation-duration: 4s;
-   animation-duration: 4s;
-   -webkit-animation-fill-mode: both;
-   animation-fill-mode: both;
-   -webkit-animation-delay: 4s;
-   animation-delay: 4s;
+#container-questions-explanation .button-next {
+  top: 8rem;
 }
 
 #question-one, #question-two, #question-three, #question-four, #question-four-p2, #question-five {
@@ -402,10 +425,30 @@ p#questions-para-fade-2 {
   outline: 0;
   background: transparent;
   border-bottom: 1px solid white;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   color: white;
-  width: 13rem;
+  width: 15rem;
   font-family: "myAvenir", sans-serif;
+}
+
+.question input[type="submit"] {
+  border: none;
+  background-color: rgba(255, 255, 255, 0.3);
+  font-family: "myAvenir",sans-serif;
+  text-transform: uppercase;
+  padding: 0.3rem 0.7rem;
+  color: white;
+  letter-spacing: 0.08rem;
+  margin-left: 0.5rem;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  outline: none;
+}
+
+.question input[type="submit"]:hover {
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 .question #container-other-input {
@@ -423,28 +466,7 @@ p#questions-para-fade-2 {
   letter-spacing: 0.2rem;
   color: white;
   max-width: 23rem;
-}
-
-.question button:hover {
-  position: relative;
-}
-
-.question button:hover:after {
-  content: url('../img/hover-questions-brush.png'); /* no need for qoutes */
-  display: block;
-  position: absolute;
-  top: 50%;
-  z-index: -1;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-}
-
-.question button:hover,
-.question button:focus {
   cursor: pointer;
-  color: #999;
-  outline: 0;
 }
 
 .question h2 {
@@ -461,6 +483,10 @@ p#questions-para-fade-2 {
   border: 1px solid white;
 }
 
+#question-four-p2 span {
+  color: #ebe4a1;
+}
+
 /* ----------------------------- stories page styling ----------------------------- */
 
 #bg-stories {
@@ -472,62 +498,22 @@ p#questions-para-fade-2 {
 }
 
 #container-stories-explanation-1,
-#container-stories-explanation-2 {
+#container-stories-explanation-2,
+#container-stories-explanation-3 {
   position: absolute;
   width: 100%;
   top: 30%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   left: 50%;
-   -webkit-animation-duration: 2s;
-   animation-duration: 2s;
-   -webkit-animation-fill-mode: both;
-   animation-fill-mode: both;
 }
 
-#container-stories-explanation-1 {
-  -webkit-animation-delay: 6s;
-  animation-delay: 6s;
-  -webkit-animation-name: simpleFadeOut;
-   animation-name: simpleFadeOut;
+section#stories-explanation .button-next {
+  top: 5.5rem;
 }
 
-#container-stories-explanation-2 {
-  -webkit-animation-delay: 8s;
-  animation-delay: 8s;
-  -webkit-animation-name: simpleFadeIn;
-   animation-name: simpleFadeIn;
-}
-
-p#stories-para-fade-1,
-p#stories-para-fade-2,
-p#stories-para-fade-3,
-p#stories-para-fade-4 {
-  -webkit-animation-name: fadeIn;
-   animation-name: fadeIn;
-   -webkit-animation-duration: 3s;
-   animation-duration: 3s;
-   -webkit-animation-fill-mode: both;
-   animation-fill-mode: both;
+section#stories-explanation p {
    max-width: 40em;
-}
-
-p#stories-para-fade-2 {
-  opacity: 0;
-   -webkit-animation-delay: 3s;
-   animation-delay: 3s;
-}
-
-p#stories-para-fade-3 {
-  opacity: 0;
-   -webkit-animation-delay: 9s;
-   animation-delay: 9s;
-}
-
-p#stories-para-fade-4 {
-  opacity: 0;
-   -webkit-animation-delay: 14s;
-   animation-delay: 14s;
 }
 
 section#stories-explanation {
@@ -539,18 +525,11 @@ section#story-selection {
 }
 
 #container-brushes {
-  -webkit-animation-name: simpleFadeIn;
-   animation-name: simpleFadeIn;
-   -webkit-animation-duration: 2s;
-   animation-duration: 2s;
-   -webkit-animation-fill-mode: both;
-   animation-fill-mode: both;
-   -webkit-animation-delay: 17s;
-   animation-delay: 17s;
    margin: auto;
    width: 40em;
    height: 100%;
    position: relative;
+   display: none;
 }
 
 .container-brush {
@@ -597,6 +576,18 @@ section#story-selection {
   width: 20%;
   height: 90%;
   transform: rotate(30deg);
+  z-index: 999;
+}
+
+div.container-brush img {
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  opacity: 0.8;
+}
+
+.brush-link:hover + div.container-brush img {
+  opacity: 1;
 }
 
 #container-brushes #brush-link-vivian {
@@ -624,8 +615,8 @@ section#story-selection {
   position: fixed;
   background-color: white;
   opacity: 0.9;
-  bottom: 3rem;
-  height: 50px;
+  bottom: 4rem;
+  height: 60px;
   width: 100px;
   right: -100px;
   -webkit-transition: right 0.4s ease-in-out;
@@ -636,9 +627,9 @@ section#story-selection {
 .language-panel-caller {
   position: absolute;
   right: 100px;
-  width: 50px;
-  padding: 12px;
-  height: 50px;
+  width: 60px;
+  padding: 7px;
+  height: 60px;
   opacity: 0.9;
   background: white;
 }
@@ -655,6 +646,7 @@ section#story-selection {
 .language-options button {
   background: none;
   border: none;
+  outline: none;
   padding: 10px;
   position: absolute;
   top: 50%;
@@ -692,7 +684,11 @@ section#assumptions .col-left,
 section#assumptions .col-right {
   width: 50%;
   height: 400px;
-  padding-top: 50px;
+  padding-top: 5rem;
+}
+
+section#assumptions .col-right {
+  position: relative;
 }
 
 section#assumptions ul {
@@ -701,7 +697,7 @@ section#assumptions ul {
 }
 
 section#assumptions ul li {
-  margin-top: 20px;
+  margin-top: 1.5rem;
   opacity: 0;
 }
 
@@ -721,15 +717,14 @@ section#assumptions h3 {
   font-family: "Harriet", sans-serif;
   font-size: 1.1rem;
   letter-spacing: 0.05rem;
-  width: 100px;
 }
 
-section#assumptions h3::after {
-    content: ' ';
-    display: block;
-    width: 10px;
-    margin-top: 5px;
-    border: 1px solid black;
+section#assumptions h5 {
+  font-family: "Harriet", sans-serif;
+  font-style: italic;
+  font-weight: normal;
+  letter-spacing: 0.08rem;
+  font-size: 0.75rem;
 }
 
 section#next-story {
@@ -877,7 +872,7 @@ body.noscroll {
   }
 
   #thanks-link,
-  #view-stories-link {
+  #about-link {
     display: none;
     visibility: hidden;
   }
@@ -917,10 +912,6 @@ body.noscroll {
     left: 65%;
   }
 
-  .button-default {
-    margin-top: 5rem;
-  }
-
   #container-classroom-infographic img#infographic {
     padding: 1rem;
   }
@@ -955,6 +946,30 @@ body.noscroll {
 @media(max-width: 31.25em) {
   #container-brushes .brush-link {
     height: 18rem;
+  }
+}
+
+/* for non-mobile devices for the yellow paint to hover */
+@media(min-width: 31.25em) {
+  .question button:hover,
+  .question button:focus,
+  .question button:active {
+    position: relative;
+    color: #999;
+    outline: 0;
+  }
+
+  .question button:hover:after,
+  .question button:focus:after,
+  .question button:active:after {
+    content: url(../img/hover-questions-brush.png);
+    display: block;
+    position: absolute;
+    top: 50%;
+    z-index: -1;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
   }
 }
 
@@ -994,7 +1009,7 @@ body.noscroll {
   }
 
   p {
-    font-size: .9rem !important;
+    font-size: .95rem !important;
   }
 
   section#assumptions {
@@ -1049,6 +1064,13 @@ body.noscroll {
 }
 
 /* ---------------- max-height stuff ---------------- */
+
+/* 700px */
+@media (max-height: 43.75em) {
+  #bg-index .button-default {
+    color: #333;
+  }
+}
 
 /* 680px */
 @media (max-height: 42.5em) {

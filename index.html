@@ -5,6 +5,7 @@
 		<link rel="stylesheet" href="css/main.css">
 		<link rel="stylesheet" href="css/animation.css">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta charset="utf-8">
 		<title>They Are Your Classmates</title>
 	</head>
 	<body>
@@ -12,26 +13,33 @@
 			<nav id="container-home-nav">
 				<a id="home-link" href="index.html">they are your classmates</a>
 				<div id="container-mobile-links">
-					<a class="text-link" href="#">THANKS TO</a>
-					<a class="text-link" href="stories.html">VIEW STORIES</a>
+					<a class="text-link" href="#">ABOUT US</a>
+					<a class="text-link" href="#">THANK YOU</a>
 				</div>
 			</nav>
 			<div id="container-classroom-infographic">
 				<img id="infographic" src="img/index-infographic.png" alt="line isometric drawing of a classroom">
 				<img id="brush-stroke-1" src="img/index-infographic-brush1.png" alt="yellow brush stroke">
 				<img id="brush-stroke-2" src="img/index-infographic-brush2.png" alt="yellow brush stroke">
+				<!-- <img id="brush-strokes" src="img/index-infographic-brushes.gif" alt="yellow brush strokes"> -->
 			</div>
-			<p id="index-para-fade-1" class="para-fade">Between 2004 and 2015, the number of Chinese international students in Canada <strong>tripled</strong> from about 40,000 to 120,000 students.</p>
-			<p id="index-para-fade-2" class="para-fade">Chinese international students have become a real, strong presence in our country. You’ve likely walked down the school hallways with them, lined up for cafeteria food alongside them, and had classes with them.</p>
-			<div id="index-container-fade-3">
+			<div id="index-container-fade-1" class="fade-in">
+				<p id="index-para-fade-1" class="para-fade">Between 2004 and 2015, the number of Chinese international students in Canada <strong>tripled</strong> from about 40,000 to 120,000 students.</p>
+				<button class="button-next">next ></button>
+			</div>
+			<div id="index-container-fade-2" class="not-initially-visible">
+				<p id="index-para-fade-2" class="para-fade">Chinese international students have become a real, strong presence in our country. You’ve likely walked down the school hallways with them, lined up for cafeteria food alongside them, and had classes with them.</p>
+				<button class="button-next">next ></button>
+			</div>
+			<div id="index-container-fade-3" class="not-initially-visible">
 				<p class="para-fade">What are your thoughts on these Chinese international students?</p>
 				<a id="button-share-thoughts" class="button-default" href="questions.html">Share your thoughts</a>
 			</div>
-			<a class="text-link" id="thanks-link" href="#">THANKS TO</a>
-			<a class="text-link" id="view-stories-link" href="stories.html">VIEW STORIES</a>
+			<a class="text-link" id="about-link" href="#">ABOUT US</a>
+			<a class="text-link" id="thanks-link" href="stories.html">THANK YOU</a>
 		</header>
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-		<script src="js/disable-click.js"></script>
+		<script src="js/fading-text.js"></script>
 	</body>
 </html>

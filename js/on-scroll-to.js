@@ -75,7 +75,7 @@ $(document).ready(function() {
       // }
 
       // andy quotes
-      if(elementScrolled('#video-andy-outro', 0)) {
+      if(elementScrolled('#video-andy-outro', 600)) {
         if (videoAndyOutro.played.length === 0 ) {
           videoAndyOutro.play();
         }

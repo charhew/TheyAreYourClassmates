@@ -2,13 +2,17 @@ $(document).ready(function() {
 
   var goToPart2;
 
-  setTimeout(function(){
-    $('#container-questions-explanation').fadeOut(1000);
-    showQuestionOne();
-  }, 10000);
+  $('#container-questions-explanation .button-next').click(function() {
+    $('#container-questions-explanation div').removeClass('fade-in');
+    $('#container-questions-explanation div').addClass('fade-out');
+    setTimeout(function() {
+      showQuestionOne();
+      $('#container-questions-explanation div').hide();
+    }, 1000);
+  });
 
   function showQuestionOne(){
-    $('#question-one').fadeIn(2000);
+    $('#question-one').fadeIn(1000);
     $('#yes, #no').click(function () {
       if (this.id == 'yes') {
           console.log('yes clicked');
