@@ -130,6 +130,16 @@ p {
   letter-spacing: 0.02rem;
 }
 
+.inline-link {
+  text-decoration: underline;
+  color: #000;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.inline-link:hover {
+  color: #777;
+}
+
 .text-link:hover {
   position: relative;
 }
@@ -148,6 +158,7 @@ p {
   -webkit-transition: all 0.3s ease-in-out 0s;
   transition: all 0.3s ease-in-out 0s;
 }
+
 
 .text-link:hover:before {
   visibility: visible;

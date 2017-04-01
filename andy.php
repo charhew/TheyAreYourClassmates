@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!doctype html>
 <html>
 <head>
@@ -80,7 +83,7 @@
 						data-center-top="opacity: 1;">
 					<p
 						data-bottom-top="opacity: 0;"
-						data-center-top="opacity: 1;">This wasn't the reality, though. When I started high school, a month after moving here, I noticed that Canadian students never talked to me unless they needed to. We didn't really have a presence to them, it seemed.</p>
+						data-center-top="opacity: 1;">The reality turned out quite different from what I expected. When I started high school, a month after moving here, I noticed that Canadian students never talked to me unless they needed to. We didn't really have a presence to them, it seemed.</p>
 					<h2 id="quote-divide"
 						data-bottom-top="opacity: 0; top: 400px;"
 						data-top-bottom="opacity: 1; top: 300px;">There was a divide between Canadian students and International students.</h2>
@@ -179,27 +182,76 @@
 				<h3>Andy's Experience</h3>
 				<h5>key takeaways</h5>
 				<ul>
-					<li id="assumptions-li-0">My dad sent me here to live by myself at 14 years old. I didn't want to leave my friends in Beijing.</li>
-					<li id="assumptions-li-2">I came to Canada because it is known for its multiculturalism and I believed it would be inclusive.</li>
+					<li id="assumptions-li-0">I came here because my dad wanted me to have a better education, but I didn't want to leave my friends in Beijing.</li>
+					<li id="assumptions-li-2">I believed Canada would be inclusive of me because it is known for its multiculturalism.</li>
 				</ul>
 			</div>
 			<div class="col-right">
 				<h3>Your Perspective</h3>
 				<h5>sourced from the prior questions</h5>
 				<ul>
-					<li id="assumptions-li-1">They chose to come here to learn English, so they should speak it.</li>
-					<li id="assumptions-li-3">Canada is an English-speaking country, so they should be speaking English when they are at school.</li>
+					<?php
+						//if the questions were answered
+						if(!empty($_SESSION['answer2'])&&!empty($_SESSION['answer3'])) {
+							//display answer 2 (why they came here)
+							if($_SESSION['answer2']=="learn english") {
+								echo "<li id='assumptions-li-1'>Chinese international students chose to come to Canada <b>to learn English</b>.</li>";
+							}
+							else if($_SESSION['answer2']=="better education") {
+								echo "<li id='assumptions-li-1'>Chinese international students came to Canada because education is better here.</li>";
+							}
+							else if($_SESSION['answer2']=="better life") {
+								echo "<li id='assumptions-li-1'>Chinese international students came to Canada to have a better life.</li>";
+							}
+							
+							//display answer 3 (how i feel when they stick together)
+							if($_SESSION['answer3']=="annoyed") {
+								echo "<li id='assumptions-li-3'>I feel <b>annoyed</b> when Chinese international students stick together and speak their own language</b>.</li>";
+							}
+							else if($_SESSION['answer3']=="frustrated") {
+								echo "<li id='assumptions-li-3'>I feel <b>frustrated</b> when Chinese international students stick together and speak their own language.</li>";
+							}
+							else if($_SESSION['answer3']=="dont mind") {
+								echo "<li id='assumptions-li-3'>I <b>don't mind</b> when Chinese international students stick together and speak their own language.</li>";
+							}
+							else if($_SESSION['answer3']=="no opinion") {
+								echo "<li id='assumptions-li-3'>I have <b>no opinion</b> about Chinese international students sticking together and speaking their own language.</li>";
+							}
+						}
+						//but if they werent answered
+						else {
+							//display error message
+							echo "<li id='assumptions-li-1'>We don't your perspective. <a href='questions.html' class='inline-link'>Click here to tell us</a>.</li>";
+						}
+					?>
 				</ul>
 			</div>
 		</section>
 
-		<section class="row" id="next-story">
-			<img src="img/andy/paint-next-story.png" alt="green paint smear">
-			<div class="container-next-story-title">
-				<h6>next</h6>
-				<h5>Ruiwen</h5>
-			</div>
+		<section class="row" id="footer">
+			<a href="thank-you.html">
+				<div class="container-conclusion-text">
+					<h5>Finished the stories? Continue to the conclusion.</h5>
+				</div>
+			</a>
+			<a class="arrow-link" href="">
+				<div class="next-story">
+					<img class="arrow-next-story" src="img/arrow-right.png" alt="right arrow">
+        	<p>Ruiwen's Story</p>
+      	</div>
+			</a>
+			<a class="arrow-link" href="">
+      	<div class="prev-story">
+					<img class="arrow-next-story" src="img/arrow-left.png" alt="left arrow">
+        	<p>Vivian's Story</p>
+      	</div>
+			</a>
 		</section>
+
+		<a class="button-back" href="stories.html">
+			<img src="img/back.png" alt="back button">
+			<span>all stories</span>
+		</a>
 
 	</div>
 

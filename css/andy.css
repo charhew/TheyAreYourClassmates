@@ -272,10 +272,16 @@ section#lemonade h2 {
     text-align: center;
   }
 
+  section#multicultural .col-right p {
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+  }
+
   section#divide p {
     width: 100%;
     text-align: center;
-    margin-top: 4em;
+    margin-top: 0;
   }
 
   section#divide h2 {
@@ -290,11 +296,19 @@ section#lemonade h2 {
     /*position: static;*/
   }
 
+  section#welcoming .col-full {
+    margin-top: 3rem;
+  }
+
   section#welcoming h2 {
     position: static;
     transform: none;
     margin-top: 3em;
     width: 100%;
+  }
+
+  section#invited {
+    margin-top: 130px;
   }
 
   section#invited p {
@@ -313,6 +327,18 @@ section#lemonade h2 {
 }
 
 @media(max-width: 460px) {
+  section#welcoming .col-full {
+    margin-top: 0;
+  }
+
+  section#multicultural .col-right p {
+    margin-top: 0px;
+  }
+
+  section#multicultural .col-left {
+    height: 410px;
+  }
+
   section#multicultural h2 {
     position: static;
     text-align: center;
@@ -324,7 +350,6 @@ section#lemonade h2 {
   }
 
   section#divide p {
-    margin-top: 9em;
     height: auto;
   }
 
@@ -336,11 +361,19 @@ section#lemonade h2 {
     margin: 0;
   }
 
+  section#halloween .col-full{
+    height: 37rem;
+  }
+
   section#halloween h2 {
     text-align: center;
     left: 0;
     width: 100%;
     transform: none;
+  }
+
+  section#halloween p {
+    padding-top: 0;
   }
 
   section#halloween .paint {
@@ -350,6 +383,27 @@ section#lemonade h2 {
 
   h2 {
     padding: 0 .5em;
+  }
+
+  section#invited img {
+    position: static;
+  }
+
+  section#invited p {
+    margin-top: 170px;
+  }
+
+  section#invited h2 {
+    margin-top: 0;
+  }
+
+  section#lemonade {
+    margin-top: 27rem;
+  }
+
+  section#lemonade p {
+    padding: 0 30px;
+    margin-bottom: 40px
   }
 
   section#lemonade h2 {
@@ -371,11 +425,11 @@ section#lemonade h2 {
     margin-top: 0;
   }
   section#divide p {
-    margin-top: 12em;
+    margin-top: 8em;
   }
 
   section#halloween {
-    margin-top: 0;
+    margin-top: 6em;
   }
 
   section#outro {
