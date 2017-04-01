@@ -10,7 +10,7 @@ session_start();
 	<meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=no">
 	<meta charset="utf-8">
 </head>
-<body class="noscroll">
+<body class="noscroll" id="story-andy">
 	<div id="skrollr-body">
 
 		<div class="language-panel">
@@ -37,12 +37,12 @@ session_start();
 					<h1>Andy</h1>
 				</div>
 				<img src="img/video-replay.png" alt="replay video button" id="button-replay-intro" class="replay">
-				<a id="skip-andy-video-link" class="text-link skip-video-link-playing" href="#story-andy">Already seen this? Skip this video.</a>
+				<a id="skip-andy-video-link" class="text-link skip-video-link-playing" href="#story-content">Already seen this? Skip this video.</a>
 			</div>
 		</section>
 
 		<!-- container for all the other assets -->
-		<div class="story-container" id="story-andy">
+		<div class="story-container" id="story-content">
 
 			<!-- welcoming section -->
 			<section class="row" id="welcoming">
@@ -207,7 +207,7 @@ session_start();
 							else if($_SESSION['answer2']=="better life") {
 								echo "<li id='assumptions-li-1'>Chinese international students came to Canada to <b>have a better life</b>.</li>";
 							}
-							
+
 							//display answer 3 (how i feel when they stick together)
 							if($_SESSION['answer3']=="annoyed") {
 								echo "<li id='assumptions-li-3'>I feel <b>annoyed</b> when Chinese international students stick together and speak their own language</b>.</li>";
@@ -225,7 +225,7 @@ session_start();
 						//but if they werent answered
 						else {
 							//display error message
-							echo "<li id='assumptions-li-1'>We don't your perspective. <a href='questions.html' class='inline-link'>Click here to tell us</a>.</li>";
+							echo "<li id='assumptions-li-1'>We don't know your perspective. <a href='questions.html' class='inline-link'>Click here to tell us</a>.</li>";
 						}
 					?>
 				</ul>

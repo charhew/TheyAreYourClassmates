@@ -18,26 +18,7 @@ just in case!
   /*border: 1px solid orange;*/
 }
 
-@font-face {
-    font-family: "myAvenir";
-    src: url('../fonts/Avenir-Book.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "myAvenir";
-    src: url('../fonts/Avenir-BookOblique.ttf') format("truetype");
-    font-weight: normal;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: "myAvenir";
-    src: url('../fonts/Avenir-Heavy.ttf') format("truetype");
-    font-weight: bold;
-    font-style: normal;
-}
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,700');
 
 @font-face {
     font-family: "Harriet";
@@ -65,7 +46,7 @@ just in case!
 
 html, body {
   padding: 0;
-  font-family: "myAvenir", sans-serif;
+  font-family: "Work Sans", sans-serif;
   margin: 0;
   background: #f4f3f2;
 }
@@ -91,7 +72,7 @@ h6 {
   color: white;
   letter-spacing: 0.2rem;
   text-transform: uppercase;
-  font-family: "myAvenir", sans-serif;
+  font-family: "Work Sans", sans-serif;
 }
 
 p {
@@ -312,8 +293,9 @@ p.para-fade {
   max-width: 30em;
   color: white;
   letter-spacing: 0.03rem;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   margin: auto;
+  line-height: 1.3
 }
 
 #bg-index .para-fade {
@@ -328,14 +310,13 @@ p.para-fade {
   transform: translate(-50%, -50%);
   border: none;
   background: transparent;
-  font-family: "myAvenir", sans-serif;
+  font-family: "Work Sans", sans-serif;
   font-size: 0.75rem;
   color: #666;
   cursor: pointer;
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
-  outline: none;
 }
 
 .button-next:hover {
@@ -374,7 +355,7 @@ p.para-fade {
 #thanks-link {
   position: absolute;
   top: 50%;
-  font-size: 0.7rem;
+  font-size: 0.75rem;
   letter-spacing: 0.2rem;
   line-height: 0;
   padding-bottom: 10px;
@@ -450,19 +431,18 @@ p.para-fade {
 
 .question input#text-input {
   border: 0;
-  outline: 0;
   background: transparent;
   border-bottom: 1px solid white;
   font-size: 0.8rem;
   color: white;
   width: 15rem;
-  font-family: "myAvenir", sans-serif;
+  font-family: "Work Sans", sans-serif;
 }
 
 .question input[type="submit"] {
   border: none;
   background-color: rgba(255, 255, 255, 0.3);
-  font-family: "myAvenir",sans-serif;
+  font-family: "Work Sans", sans-serif;
   text-transform: uppercase;
   padding: 0.3rem 0.7rem;
   color: white;
@@ -472,7 +452,6 @@ p.para-fade {
   -moz-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   cursor: pointer;
-  outline: none;
 }
 
 .question input[type="submit"]:hover {
@@ -693,6 +672,7 @@ section#thank-you-text {
   left: 50%;
   transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
+  line-height: 1.5;
 }
 
 #about-us-text .para-fade {
@@ -740,7 +720,6 @@ section#thank-you-text {
 .language-options button {
   background: none;
   border: none;
-  outline: none;
   padding: 10px;
   position: absolute;
   top: 50%;
@@ -1119,10 +1098,26 @@ body.noscroll {
   /*#container-brushes .brush-link {
     height: 20rem;
   }*/
-
   #container-classroom-infographic {
     max-width: 100%;
     max-height:50vh;
+  }
+}
+
+/* 500 px */
+@media(max-width: 31.25em) {
+  #container-brushes .brush-link {
+    height: 18rem;
+  }
+}
+
+/* for non-mobile devices for the yellow paint to hover */
+@media(min-width: 31.25em) {
+  .question button:hover,
+  .question button:focus,
+  .question button:active {
+    position: relative;
+    color: #999;
   }
 
   #container-classroom-infographic img {
@@ -1247,6 +1242,14 @@ body.noscroll {
   .question {
     padding-top: 5%;
   }
+
+  #container-brushes {
+    width: 35em;
+  }
+
+  .container-brush {
+    width: 47%;
+  }
 }
 
 /* 620px */
@@ -1256,9 +1259,32 @@ body.noscroll {
   }
 }
 
+/* 600px */
+@media (max-height: 37.5em) {
+  #container-brushes {
+    width: 30em;
+  }
+
+  .container-story-text {
+    font-size: 0.9rem;
+    letter-spacing: 0.03rem;
+  }
+}
+
 /* 550px */
 @media (max-height: 34.375em) {
 
+}
+
+/* 500px */
+@media (max-height: 31.25em) {
+  section#stories-explanation {
+    height: 20vh;
+  }
+
+  #container-brushes {
+    width: 25em;
+  }
 }
 
 /* 400px */
@@ -1266,5 +1292,9 @@ body.noscroll {
   #container-stories-explanation-1,
   #container-stories-explanation-2 {
     top: 50%;
+  }
+
+  #container-brushes .brush-link {
+    height: 15rem;
   }
 }
