@@ -253,6 +253,7 @@ img {
   height: 100vh;
   text-align: center;
   overflow: scroll;
+  overflow-x: hidden;
 }
 
 /* ----------------------------- home page styling ----------------------------- */
@@ -475,7 +476,7 @@ p.para-fade {
   text-align: center;
 }
 
-.question button {
+/*.question button {
   display: block;
   background: transparent;
   border: none;
@@ -487,7 +488,7 @@ p.para-fade {
   color: white;
   max-width: 23rem;
   cursor: pointer;
-}
+}*/
 
 .question h2 {
   font-size: 1.3rem;
@@ -956,8 +957,10 @@ video {
 .container-video .button-back span {
   font-size: 0.8rem;
   color: #555;
-  display: none;
+  opacity: 0;
+  display: inline-block;
   margin-top: 0.5rem;
+  transition: all 0.2s ease-in-out;
 }
 
 .container-video .button-back img {
@@ -972,7 +975,7 @@ video {
 }
 
 .container-video .button-back:hover span {
-  display: inline-block;
+  opacity: 1;
 }
 
 /* to disable scrolling past the video until it's ended - see video.js */
@@ -1143,15 +1146,15 @@ body.noscroll {
 
 /* for non-mobile devices for the yellow paint to hover */
 @media(min-width: 31.25em) {
-  .question button:hover,
+  /*.question button:hover,
   .question button:focus,
   .question button:active {
     position: relative;
     color: #999;
     outline: 0;
-  }
+  }*/
 
-  .question button:hover:after,
+  /*.question button:hover:after,
   .question button:focus:after,
   .question button:active:after {
     content: url(../img/hover-questions-brush.png);
@@ -1162,7 +1165,7 @@ body.noscroll {
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-  }
+  }*/
 }
 
 /* 460 px */
@@ -1232,11 +1235,11 @@ body.noscroll {
     padding-top: 15%;
   }
 
-  .question button {
+  /*.question button {
     margin: 1rem auto;
     font-size: 0.75rem;
     letter-spacing: 0.15rem;
-  }
+  }*/
 
   #container-stories-explanation-1,
   #container-stories-explanation-2 {
@@ -1294,17 +1297,17 @@ body.noscroll {
     padding-top: 5%;
   }
 
-  .question button {
+  /*.question button {
     margin: 1.5rem auto;
-  }
+  }*/
 }
 
 /* 550px */
 @media (max-height: 34.375em) {
-  .question button {
+  /*.question button {
     margin: 1rem auto;
     font-size: 0.75rem;
-  }
+  }*/
 
   #container-classroom-infographic img#brush-stroke-1 {
     height: 20%;

@@ -1,0 +1,28 @@
+.question button {
+	display: block;
+	background: transparent;
+	border: none;
+	text-transform: uppercase;
+	letter-spacing: 0.2rem;
+	color: white;
+	min-height: 77px;
+	min-width: 230px;
+	padding: 0 2rem;
+	cursor: pointer;
+	margin: auto;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	font-size: 0.8rem;
+}
+
+.question button:hover,
+.question button:focus,
+.question button:active {
+	background-image: url('../img/hover-questions-brush.png');
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 100% 100%;
+	color: #999;
+	border: none;
+	outline: 0;
+}

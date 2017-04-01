@@ -25,6 +25,10 @@ session_start();
 
 		<section id="intro">
 			<div class="container-video">
+				<a class="button-back" href="stories.html">
+					<img src="img/back.png" alt="back button">
+					<span>all stories</span>
+				</a>
 				<video id="video-andy-intro" onended="startExperience()">
 					<source src="res/andy-intro-eng.mp4" type="video/mp4">
 				</video>
@@ -198,10 +202,10 @@ session_start();
 								echo "<li id='assumptions-li-1'>Chinese international students chose to come to Canada <b>to learn English</b>.</li>";
 							}
 							else if($_SESSION['answer2']=="better education") {
-								echo "<li id='assumptions-li-1'>Chinese international students came to Canada because education is better here.</li>";
+								echo "<li id='assumptions-li-1'>Chinese international students came to Canada because <b>education is better</b> here.</li>";
 							}
 							else if($_SESSION['answer2']=="better life") {
-								echo "<li id='assumptions-li-1'>Chinese international students came to Canada to have a better life.</li>";
+								echo "<li id='assumptions-li-1'>Chinese international students came to Canada to <b>have a better life</b>.</li>";
 							}
 							
 							//display answer 3 (how i feel when they stick together)
@@ -247,12 +251,6 @@ session_start();
       	</div>
 			</a>
 		</section>
-
-		<a class="button-back" href="stories.html">
-			<img src="img/back.png" alt="back button">
-			<span>all stories</span>
-		</a>
-
 	</div>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
