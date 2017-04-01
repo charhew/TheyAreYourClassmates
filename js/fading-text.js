@@ -48,4 +48,15 @@ $(document).ready(function() {
       $('#container-stories-explanation-2').hide();
     }, 700);
   });
+
+  $('#container-thankyou-fade-1 button').click(function() {
+    $('#container-thankyou-fade-1 div').removeClass('fade-in');
+    $('#container-thankyou-fade-1 div').addClass('fade-out');
+
+    setTimeout(function() {
+      $('#container-thankyou-fade-2').removeClass('not-initially-visible');
+      $('#container-thankyou-fade-2 div').addClass('fade-in');
+      $('#container-thankyou-fade-1').hide();
+    }, 700);
+  });
 });
