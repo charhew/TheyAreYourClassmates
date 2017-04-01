@@ -263,43 +263,50 @@ img {
 }
 
 #container-classroom-infographic {
-  margin: auto;
-  width: 40em;
-  height: 65vh;
   position: relative;
-  -webkit-animation-name: simpleFadeIn;
-   animation-name: simpleFadeIn;
-   -webkit-animation-duration: 3s;
-   animation-duration: 3s;
-   -webkit-animation-fill-mode: both;
-   animation-fill-mode: both;
+  width: 35rem;
+  margin: auto;
+  height: 65vh;
 }
 
 #container-classroom-infographic img {
   position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
 }
 
 #container-classroom-infographic img#infographic {
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  top: 50%;
-  left: 50%;
-  height: 90%;
+  -webkit-animation-name: simpleFadeIn;
+  animation-name: simpleFadeIn;
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
 }
 
 #container-classroom-infographic img#brush-stroke-1 {
-  top: 55%;
-  left: 25%;
+  -webkit-animation-name: simpleFadeIn;
+  animation-name: simpleFadeIn;
+  -webkit-animation-duration: 1.5s;
+  animation-duration: 1.5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 2s;
 }
 
 #container-classroom-infographic img#brush-stroke-2 {
-  top: 53%;
-  left: 30%;
+  -webkit-animation-name: simpleFadeIn;
+  animation-name: simpleFadeIn;
+  -webkit-animation-duration: 1.5s;
+  animation-duration: 1.5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 4s;
 }
-
-/*#container-classroom-infographic img#brush-strokes {
-  left: 0;
-}*/
 
 p.para-fade {
   max-width: 30em;
@@ -475,20 +482,6 @@ p.para-fade {
 .question #container-other-input {
   text-align: center;
 }
-
-/*.question button {
-  display: block;
-  background: transparent;
-  border: none;
-  margin: 2.5rem auto;
-  text-transform: uppercase;
-  padding: 1rem 0;
-  font-size: 0.8rem;
-  letter-spacing: 0.2rem;
-  color: white;
-  max-width: 23rem;
-  cursor: pointer;
-}*/
 
 .question h2 {
   font-size: 1.3rem;
@@ -1089,7 +1082,6 @@ body.noscroll {
     font-size: .9rem;
   }
 
-  div#container-classroom-infographic,
   #container-brushes,
   #container-questions {
     width: 100%;
@@ -1111,14 +1103,6 @@ body.noscroll {
     padding: 1rem;
   }
 
-  #container-classroom-infographic img#brush-stroke-1 {
-    width: 15%;
-  }
-
-  #container-classroom-infographic img#brush-stroke-2 {
-    width: 25%;
-  }
-
   nav#container-home-nav #home-link {
     width: 5em;
     text-align: left;
@@ -1132,41 +1116,21 @@ body.noscroll {
 
 /* 570 px */
 @media(max-width: 35.625em) {
-  #container-brushes .brush-link {
+  /*#container-brushes .brush-link {
     height: 20rem;
+  }*/
+
+  #container-classroom-infographic {
+    max-width: 100%;
+    max-height:50vh;
+  }
+
+  #container-classroom-infographic img {
+    max-height: 100%;
+    width: auto;
   }
 }
 
-/* 500 px */
-@media(max-width: 31.25em) {
-  #container-brushes .brush-link {
-    height: 18rem;
-  }
-}
-
-/* for non-mobile devices for the yellow paint to hover */
-@media(min-width: 31.25em) {
-  /*.question button:hover,
-  .question button:focus,
-  .question button:active {
-    position: relative;
-    color: #999;
-    outline: 0;
-  }*/
-
-  /*.question button:hover:after,
-  .question button:focus:after,
-  .question button:active:after {
-    content: url(../img/hover-questions-brush.png);
-    display: block;
-    position: absolute;
-    top: 50%;
-    z-index: -1;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-  }*/
-}
 
 /* 460 px */
 @media(max-width: 28.75em) {
@@ -1224,7 +1188,7 @@ body.noscroll {
   }
 
   div#container-classroom-infographic {
-    height: 60vh;
+    max-height: 40vh;
   }
 
   #container-questions {
@@ -1234,12 +1198,6 @@ body.noscroll {
   .question {
     padding-top: 15%;
   }
-
-  /*.question button {
-    margin: 1rem auto;
-    font-size: 0.75rem;
-    letter-spacing: 0.15rem;
-  }*/
 
   #container-stories-explanation-1,
   #container-stories-explanation-2 {
@@ -1296,27 +1254,11 @@ body.noscroll {
   .question {
     padding-top: 5%;
   }
-
-  /*.question button {
-    margin: 1.5rem auto;
-  }*/
 }
 
 /* 550px */
 @media (max-height: 34.375em) {
-  /*.question button {
-    margin: 1rem auto;
-    font-size: 0.75rem;
-  }*/
 
-  #container-classroom-infographic img#brush-stroke-1 {
-    height: 20%;
-    left: 28%;
-  }
-
-  #container-classroom-infographic img#brush-stroke-2 {
-    height: 35%;
-  }
 }
 
 /* 400px */
