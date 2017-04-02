@@ -9,6 +9,8 @@ session_start();
 	<link rel="stylesheet" href="css/andy.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=no">
 	<meta charset="utf-8">
+	<title>They Are Your Classmates</title>
+	<link rel="shortcut icon" type="image/png" href="favicon.png"/>
 </head>
 <body class="noscroll" id="story-andy">
 	<div id="skrollr-body">
