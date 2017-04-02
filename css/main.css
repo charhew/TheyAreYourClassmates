@@ -251,6 +251,7 @@ img {
   text-align: center;
   overflow: scroll;
   overflow-x: hidden;
+  -ms-overflow-x: hidden;
 }
 
 /* ----------------------------- home page styling ----------------------------- */
@@ -261,7 +262,7 @@ img {
 
 #container-classroom-infographic {
   position: relative;
-  width: 35rem;
+  width: 27rem;
   margin: auto;
   height: 65vh;
 }
@@ -410,6 +411,11 @@ p.para-fade {
   left: 50%;
 }
 
+/*MS Edge Fix*/
+body#stories-page {
+  overflow-x: hidden;
+}
+
 #container-questions-explanation p:first-of-type,
 #container-stories-explanation-1 p:first-of-type,
 #container-stories-explanation-2 p:first-of-type {
@@ -448,6 +454,8 @@ p.para-fade {
 	border: none;
 	text-transform: uppercase;
 	letter-spacing: 0.2rem;
+  font-size: .9rem;
+  line-height: 1.1rem;
 	color: white;
 	min-height: 77px;
 	min-width: 230px;
@@ -501,6 +509,7 @@ p.para-fade {
 
 .question #container-other-input {
   text-align: center;
+  line-height: 2rem;
 }
 
 .question h2 {
@@ -539,7 +548,7 @@ p.para-fade {
 }
 
 section#stories-explanation .button-next {
-  top: 5.5rem;
+  
 }
 
 section#stories-explanation p {
@@ -1154,7 +1163,7 @@ body.noscroll {
   }*/
   #container-classroom-infographic {
     max-width: 100%;
-    max-height:50vh;
+    /*max-height:50vh;*/
   }
 
   .next-story,
@@ -1255,7 +1264,15 @@ body.noscroll {
   }
 
   div#container-classroom-infographic {
-    max-height: 40vh;
+    max-height: 60vh;
+  }
+
+  .button-next {
+    top: 8rem;
+  }
+
+  #container-questions-explanation .button-next {
+    top: 10rem;
   }
 
   #container-questions {
@@ -1314,6 +1331,10 @@ body.noscroll {
   .arrow-link p {
     font-size: 0.8rem;
     margin-top: 0.5rem;
+  }
+
+  div#container-classroom-infographic {
+    max-height: 50vh;
   }
 }
 

@@ -356,6 +356,7 @@ section#lemonade h2 {
 
   section#divide p {
     height: auto;
+    margin-top: 7rem;
   }
 
   section#divide h2 {
@@ -395,7 +396,7 @@ section#lemonade h2 {
   }
 
   section#invited p {
-    margin-top: 170px;
+    
   }
 
   section#invited h2 {
