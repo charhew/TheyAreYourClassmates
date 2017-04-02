@@ -11,12 +11,13 @@ $(document).ready(function() {
     $('video').css('min-height', 'auto');
     videoAndyIntro.controls = 'controls';
     videoAndyOutro.controls = 'controls';
-    videoAndyIntro.poster = 'img/andy/andy-intro-poster.png'
-    videoAndyOutro.poster = 'img/andy/andy-outro-poster.png'
+    videoAndyIntro.poster = 'img/andy/andy-intro-poster.png';
+    videoAndyOutro.poster = 'img/andy/andy-outro-poster.png';
   }
 
   if (/iPhone|iPad/i.test(navigator.userAgent)) {
-    $('#container-video').click(function() {
+    console.log("is iphone");
+    $('.container-video').click(function() {
       console.log("play video");
       videoAndyIntro.play();
     });

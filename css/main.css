@@ -18,7 +18,22 @@ just in case!
   /*border: 1px solid orange;*/
 }
 
-@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,700');
+
+@font-face {
+    font-family: "Work Sans";
+    src: url('../fonts/WorkSans-Regular.woff2') format('woff2'),
+         url('../fonts/WorkSans-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Work Sans";
+    src: url('../fonts/WorkSans-Bold.woff2') format('woff2'),
+         url('../fonts/WorkSans-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
 
 @font-face {
     font-family: "Harriet";
@@ -711,6 +726,11 @@ section#thank-you-text {
 
 /* ----------------------------- story styling ----------------------------- */
 
+.story-container p {
+  color: #333;
+  line-height: 1.4;
+}
+
 .language-panel {
   position: fixed;
   background-color: white;
@@ -798,6 +818,7 @@ section#assumptions ul {
 section#assumptions ul li {
   margin-top: 1.5rem;
   opacity: 0;
+  color: #333;
 }
 
 /* this is for animating the list items */
@@ -1135,6 +1156,15 @@ body.noscroll {
     max-width: 100%;
     max-height:50vh;
   }
+
+  .next-story,
+  .prev-story {
+    padding: 1rem;
+  }
+
+  .arrow-next-story {
+    width: 2rem;
+  }
 }
 
 /* 500 px */
@@ -1162,6 +1192,10 @@ body.noscroll {
 
 /* 460 px */
 @media(max-width: 28.75em) {
+
+  .arrow-link p {
+    width: 5rem;
+  }
 
   #bg-index .button-next {
     top: 7rem;
@@ -1265,6 +1299,21 @@ body.noscroll {
 
   #container-share-buttons {
     padding: 1rem;
+  }
+
+  .next-story,
+  .prev-story {
+    padding: 0rem;
+  }
+
+  .container-conclusion-text h5 {
+    font-size: 1rem;
+    max-width: 8rem;
+  }
+
+  .arrow-link p {
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
   }
 }
 
