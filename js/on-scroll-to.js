@@ -38,29 +38,21 @@ $(document).ready(function() {
       } else {
         scrollingDown = false;
       }
+      console.log(scrollingDown);
       initScrollPos = curScrollPos;
 
       function elementScrolled(elem, offsetTop)
       {
           var docViewTop = $(window).scrollTop();
           var docViewBottom = docViewTop + $(window).height();
-          if (scrollingDown) {
+          // if (scrollingDown) {
             var elemTop = $(elem).offset().top + offsetTop;
-          } else {
-            var elemTop = $(elem).offset().top - offsetTop + 50; // adding 50px to make it a nicer place where audio comes in
-          }
+          // } else {
+          //   var elemTop = $(elem).offset().top - offsetTop + 50; // adding 50px to make it a nicer place where audio comes in
+          // }
           return ((elemTop <= docViewBottom) && (elemTop >= docViewTop));
       }
 
-      function insideBuffer(elem) {
-        var elemPos = $(elem).offset().top;
-        var elemTopBuffer = $(elem).offset().top - 200;
-        var elemBottomBuffer = $(elem).offset().top + 200;
-        console.log("elem pos", elemPos);
-        console.log("top", elemTopBuffer);
-        console.log("bottom", elemBottomBuffer);
-        return ((elemPos > elemTopBuffer) && (elemPos < elemBottomBuffer));
-      }
 
       if(elementScrolled('#assumptions', 300)) {
           var i = 0,
@@ -110,49 +102,141 @@ $(document).ready(function() {
         }
       }
 
-      if(elementScrolled('#quote-welcoming', 350)) {
-        if (insideBuffer('#quote-welcoming')) {
-          // if (audioAndyWelcoming.played.length === 0 ) {
-          console.log("inside welcoming quote");
-          if (playSoundWelcoming) {
+      // if(elementScrolled('#quote-welcoming', 350)) {
+      //   if (insideBuffer('#quote-welcoming')) {
+      //     // if (audioAndyWelcoming.played.length === 0 ) {
+      //     console.log("inside welcoming quote");
+      //     if (playSoundWelcoming) {
+      //       audioAndyWelcoming.play();
+      //       playSoundWelcoming = false;
+      //     }
+      //     // }
+      //   } else {
+      //     playSoundWelcoming = true;
+      //     console.log("outside welcoming quote");
+      //   }
+      // }
+
+      // if(elementScrolled('#quote-divide', 350)) {
+      //   // if (audioAndyDivide.played.length === 0 ) {
+      //   if (insideBuffer('#quote-welcoming')) {
+      //     if (playSoundDivide) {
+      //       audioAndyDivide.play();
+      //       playSoundDivide = false;
+      //     }
+      //   } else {
+      //     playSoundDivide = true;
+      //   }
+      //   // }
+      // }
+
+      //-------SCROLLING DOWN--------
+      //-------SCROLLING DOWN--------
+      //-------SCROLLING DOWN--------
+      if(scrollingDown==true) {
+        if(elementScrolled('#quote-welcoming', 350)) {
+          if (audioAndyWelcoming.currentTime == 0 ) {
             audioAndyWelcoming.play();
-            playSoundWelcoming = false;
+            audioAndyDivide.currentTime = 0;
+            audioAndyHalloween.currentTime = 0;
+            audioAndyInvited.currentTime = 0;
+            audioAndyTemporary.currentTime = 0;
           }
-          // }
-        } else {
-          playSoundWelcoming = true;
-          console.log("outside welcoming quote");
         }
-      }
 
-      if(elementScrolled('#quote-divide', 350)) {
-        // if (audioAndyDivide.played.length === 0 ) {
-        if (insideBuffer('#quote-welcoming')) {
-          if (playSoundDivide) {
+        if(elementScrolled('#quote-divide', 350)) {
+          if (audioAndyDivide.currentTime == 0 ) {
             audioAndyDivide.play();
-            playSoundDivide = false;
+            audioAndyWelcoming.currentTime = 0;
+            audioAndyHalloween.currentTime = 0;
+            audioAndyInvited.currentTime = 0;
+            audioAndyTemporary.currentTime = 0;
           }
-        } else {
-          playSoundDivide = true;
         }
-        // }
-      }
 
-      if(elementScrolled('#quote-halloween', 350)) {
-        if (audioAndyHalloween.played.length === 0 ) {
-          audioAndyHalloween.play();
+        if(elementScrolled('#quote-halloween', 350)) {
+          if (audioAndyHalloween.currentTime == 0 ) {
+            audioAndyHalloween.play();
+            audioAndyWelcoming.currentTime = 0;
+            audioAndyDivide.currentTime = 0;
+            audioAndyInvited.currentTime = 0;
+            audioAndyTemporary.currentTime = 0;
+          }
+        }
+
+        if(elementScrolled('#quote-invited', 350)) {
+          if (audioAndyInvited.currentTime == 0 ) {
+            audioAndyInvited.play();
+            audioAndyWelcoming.currentTime = 0;
+            audioAndyDivide.currentTime = 0;
+            audioAndyHalloween.currentTime = 0;
+            audioAndyTemporary.currentTime = 0;
+          }
+        }
+
+        if(elementScrolled('#quote-temporary', 350)) {
+          if (audioAndyTemporary.currentTime == 0 ) {
+            audioAndyTemporary.play();
+            audioAndyWelcoming.currentTime = 0;
+            audioAndyDivide.currentTime = 0;
+            audioAndyHalloween.currentTime = 0;
+            audioAndyInvited.currentTime = 0;
+          }
         }
       }
-
-      if(elementScrolled('#quote-invited', 350)) {
-        if (audioAndyInvited.played.length === 0 ) {
-          audioAndyInvited.play();
+      
+      //-------SCROLLING UP--------
+      //-------SCROLLING UP--------
+      //-------SCROLLING UP--------
+      else if(scrollingDown==false) {
+        if(elementScrolled('#quote-welcoming', -150)) {
+          if (audioAndyWelcoming.currentTime == 0 ) {
+            audioAndyWelcoming.play();
+            audioAndyDivide.currentTime = 0;
+            audioAndyHalloween.currentTime = 0;
+            audioAndyInvited.currentTime = 0;
+            audioAndyTemporary.currentTime = 0;
+          }
         }
-      }
 
-      if(elementScrolled('#quote-temporary', 350)) {
-        if (audioAndyTemporary.played.length === 0 ) {
-          audioAndyTemporary.play();
+        if(elementScrolled('#quote-divide', -150)) {
+          if (audioAndyDivide.currentTime == 0 ) {
+            audioAndyDivide.play();
+            audioAndyWelcoming.currentTime = 0;
+            audioAndyHalloween.currentTime = 0;
+            audioAndyInvited.currentTime = 0;
+            audioAndyTemporary.currentTime = 0;
+          }
+        }
+
+        if(elementScrolled('#quote-halloween', -150)) {
+          if (audioAndyHalloween.currentTime == 0 ) {
+            audioAndyHalloween.play();
+            audioAndyWelcoming.currentTime = 0;
+            audioAndyDivide.currentTime = 0;
+            audioAndyInvited.currentTime = 0;
+            audioAndyTemporary.currentTime = 0;
+          }
+        }
+
+        if(elementScrolled('#quote-invited', -150)) {
+          if (audioAndyInvited.currentTime == 0 ) {
+            audioAndyInvited.play();
+            audioAndyWelcoming.currentTime = 0;
+            audioAndyDivide.currentTime = 0;
+            audioAndyHalloween.currentTime = 0;
+            audioAndyTemporary.currentTime = 0;
+          }
+        }
+
+        if(elementScrolled('#quote-temporary', -150)) {
+          if (audioAndyTemporary.currentTime == 0 ) {
+            audioAndyTemporary.play();
+            audioAndyWelcoming.currentTime = 0;
+            audioAndyDivide.currentTime = 0;
+            audioAndyHalloween.currentTime = 0;
+            audioAndyInvited.currentTime = 0;
+          }
         }
       }
 

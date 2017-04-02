@@ -146,6 +146,10 @@ section#welcoming h2 {
   z-index: 5;
 }
 
+section#invited {
+  margin-top: 10rem;
+}
+
 section#invited .col-full {
   width: 100%;
   position: relative;
