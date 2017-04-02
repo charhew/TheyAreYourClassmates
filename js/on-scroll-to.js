@@ -25,6 +25,9 @@ $(document).ready(function() {
   else { //desktop only
     // This is the function used to detect if the element is scrolled into view
     var initScrollPos = 0;
+    var playSoundWelcoming = true;
+    var playSoundDivide = true;
+
     $(window).scroll(function(){
 
       var curScrollPos = $(this).scrollTop();
@@ -47,6 +50,16 @@ $(document).ready(function() {
             var elemTop = $(elem).offset().top - offsetTop + 50; // adding 50px to make it a nicer place where audio comes in
           }
           return ((elemTop <= docViewBottom) && (elemTop >= docViewTop));
+      }
+
+      function insideBuffer(elem) {
+        var elemPos = $(elem).offset().top;
+        var elemTopBuffer = $(elem).offset().top - 200;
+        var elemBottomBuffer = $(elem).offset().top + 200;
+        console.log("elem pos", elemPos);
+        console.log("top", elemTopBuffer);
+        console.log("bottom", elemBottomBuffer);
+        return ((elemPos > elemTopBuffer) && (elemPos < elemBottomBuffer));
       }
 
       if(elementScrolled('#assumptions', 300)) {
@@ -98,15 +111,31 @@ $(document).ready(function() {
       }
 
       if(elementScrolled('#quote-welcoming', 350)) {
-        if (audioAndyWelcoming.played.length === 0 ) {
-          audioAndyWelcoming.play();
+        if (insideBuffer('#quote-welcoming')) {
+          // if (audioAndyWelcoming.played.length === 0 ) {
+          console.log("inside welcoming quote");
+          if (playSoundWelcoming) {
+            audioAndyWelcoming.play();
+            playSoundWelcoming = false;
+          }
+          // }
+        } else {
+          playSoundWelcoming = true;
+          console.log("outside welcoming quote");
         }
       }
 
       if(elementScrolled('#quote-divide', 350)) {
-        if (audioAndyDivide.played.length === 0 ) {
-          audioAndyDivide.play();
+        // if (audioAndyDivide.played.length === 0 ) {
+        if (insideBuffer('#quote-welcoming')) {
+          if (playSoundDivide) {
+            audioAndyDivide.play();
+            playSoundDivide = false;
+          }
+        } else {
+          playSoundDivide = true;
         }
+        // }
       }
 
       if(elementScrolled('#quote-halloween', 350)) {
