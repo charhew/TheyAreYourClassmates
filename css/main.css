@@ -1338,7 +1338,11 @@ body.noscroll {
   }
 }
 
-/* ---------------- max-height stuff ---------------- */
+
+
+/*========================
+  MEDIA QUERIES - MAX-HEIGHT
+========================*/
 
 /* 700px */
 @media (max-height: 43.75em) {
@@ -1396,6 +1400,16 @@ body.noscroll {
   }
 }
 
+@media (max-height: 556px) {
+  #container-classroom-infographic {
+    width: 70vh;
+  }
+
+  #container-classroom-infographic img {
+    
+  }
+}
+
 /* 550px */
 @media (max-height: 34.375em) {
   .question button {
@@ -1429,3 +1443,4 @@ body.noscroll {
     height: 15rem;
   }
 }
+
