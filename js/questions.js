@@ -114,6 +114,10 @@ $(document).ready(function() {
             console.log('dont contribute clicked');
             answer4b="dont contribute";
         }
+        else if (this.id == 'bad-grade') {
+            console.log('bad grade clicked');
+            answer4b="bad grade";
+        }
         else if (this.id == 'other-submit') {
             console.log('submitted');
             answer4b="they typed their own answer";
@@ -159,7 +163,7 @@ $(document).ready(function() {
       // code for IE6, IE5
       xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
     }
-    
+
     xmlhttp.onreadystatechange=function(){
       if (xmlhttp.readyState==4 && xmlhttp.status==200){
         window.location.href = 'stories.html';

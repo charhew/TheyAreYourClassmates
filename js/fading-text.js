@@ -35,21 +35,21 @@ $(document).ready(function() {
       $('#container-stories-explanation-2').removeClass('not-initially-visible');
       $('#container-stories-explanation-2 div').addClass('fade-in');
       $('#container-stories-explanation-1').hide();
-    }, 700);
-  });
-
-  $('#container-stories-explanation-2 button').click(function() {
-    $('#container-stories-explanation-2 div').removeClass('fade-in');
-    $('#container-stories-explanation-2 div').addClass('fade-out');
-
-    setTimeout(function() {
-      $('#container-stories-explanation-3').removeClass('not-initially-visible');
-      $('#container-stories-explanation-3 div').addClass('fade-in');
       $('.brush-link').removeClass('disable-click');
       $('#container-brushes').fadeIn(1000);
-      $('#container-stories-explanation-2').hide();
     }, 700);
   });
+
+  // $('#container-stories-explanation-2 button').click(function() {
+  //   $('#container-stories-explanation-2 div').removeClass('fade-in');
+  //   $('#container-stories-explanation-2 div').addClass('fade-out');
+  //
+  //   setTimeout(function() {
+  //     $('#container-stories-explanation-3').removeClass('not-initially-visible');
+  //     $('#container-stories-explanation-3 div').addClass('fade-in');
+  //     $('#container-stories-explanation-2').hide();
+  //   }, 700);
+  // });
 
   $('#container-thankyou-fade-1 button').click(function() {
     $('#container-thankyou-fade-1 div').removeClass('fade-in');

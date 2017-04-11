@@ -205,8 +205,11 @@ nav#container-home-nav #container-mobile-links {
 #container-mobile-links a {
   font-size: 0.75rem;
   letter-spacing:0.06rem;
-  margin-left: 2rem;
   color: #333;
+}
+
+#container-mobile-links a:first-of-type {
+  margin-right: 2rem;
 }
 
 #container-mobile-links a:before {
@@ -266,7 +269,7 @@ img {
 
 #container-classroom-infographic {
   position: relative;
-  width: 27rem;
+  width: 35rem;
   margin: auto;
   height: 65vh;
 }
@@ -426,7 +429,8 @@ body#stories-page {
 
 #container-questions-explanation p:first-of-type,
 #container-stories-explanation-1 p:first-of-type,
-#container-stories-explanation-2 p:first-of-type {
+#container-stories-explanation-2 p:first-of-type,
+#container-stories-explanation-1 p#stories-para-fade-2 {
   margin-bottom: 1rem;
 }
 
@@ -545,8 +549,7 @@ body#stories-page {
 }
 
 #container-stories-explanation-1,
-#container-stories-explanation-2,
-#container-stories-explanation-3 {
+#container-stories-explanation-2 {
   position: absolute;
   width: 100%;
   top: 30%;
@@ -556,7 +559,7 @@ body#stories-page {
 }
 
 section#stories-explanation .button-next {
-  
+  top: 8rem;
 }
 
 section#stories-explanation p {
@@ -1237,7 +1240,10 @@ body.noscroll {
 
   #container-mobile-links a {
     font-size: 0.7rem;
-    margin-left: 1rem;
+  }
+
+  #container-mobile-links a:first-of-type {
+    margin-right: 1rem;
   }
 
   .skip-video-link-playing {
