@@ -1078,6 +1078,10 @@ body.noscroll {
 
 /* 800 px */
 @media(max-width: 50em) {
+  #about-us-text {
+    padding-bottom: 4rem;
+  }
+
   nav#container-home-nav #container-mobile-links {
     display: block;
     visibility: visible;
@@ -1295,9 +1299,6 @@ body.noscroll {
     font-size: 1rem;
   }
 
-  #about-us-text {
-    padding: 0rem;
-  }
 }
 
 /* 400px */
@@ -1465,7 +1466,8 @@ body.noscroll {
   }
 }
 
-@media (max-height: 310px) {}
+
+@media (max-height: 310px) {
   #container-questions {
     padding: 4rem 2.5rem;
   }
