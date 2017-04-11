@@ -1452,5 +1452,15 @@ body.noscroll {
   #container-brushes .brush-link {
     height: 15rem;
   }
+
+  #container-questions {
+    padding: 3rem 2.5rem;
+  }
+}
+
+@media (max-height: 310px) {}
+  #container-questions {
+    padding: 4rem 2.5rem;
+  }
 }
 
