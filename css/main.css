@@ -768,7 +768,7 @@ section#thank-you-text {
   position: absolute;
   right: 100px;
   width: 60px;
-  padding: 7px;
+  padding: 8px 10px 10px 10px;
   height: 60px;
   opacity: 0.9;
   background: white;
