@@ -186,7 +186,7 @@ session_start();
 		<section class="row" id="assumptions">
 			<div class="col-left">
 				<h3>Andy's Experience</h3>
-				<h5>key takeaways</h5>
+				<h5>from his perspective</h5>
 				<ul>
 					<li id="assumptions-li-0">I came here because my dad wanted me to have a better education, but I didn't want to leave my friends in Beijing.</li>
 					<li id="assumptions-li-2">I believed Canada would be inclusive of me because it is known for its multiculturalism.</li>

@@ -1,0 +1,1448 @@
+/*
+NOTES AND REMINDERS
+===================
+
+Every story section has its own .col-full or .col-left or .col-right,
+so each one needs to be styled individually! even though all
+.col-fulls will likely all be 100%, I separated them anyways
+just in case!
+
+
+*/
+
+
+
+
+/*outlines everything for testing purposes*/
+* {
+  /*border: 1px solid orange;*/
+}
+
+
+@font-face {
+    font-family: "Work Sans";
+    src: url('../fonts/WorkSans-Regular.woff2') format('woff2'),
+         url('../fonts/WorkSans-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Work Sans";
+    src: url('../fonts/WorkSans-Bold.woff2') format('woff2'),
+         url('../fonts/WorkSans-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Harriet";
+    src: url('../fonts/Harriet-Regular.woff2') format('woff2'),
+         url('../fonts/Harriet-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Harriet";
+    src: url('../fonts/Harriet-Bold.woff2') format('woff2'),
+         url('../fonts/Harriet-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Harriet";
+    src: url('../fonts/Harriet-Italic.woff2') format('woff2'),
+         url('../fonts/Harriet-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+html, body {
+  padding: 0;
+  font-family: "Work Sans", sans-serif;
+  margin: 0;
+  background: #f4f3f2;
+}
+
+body {
+    opacity: 1;
+    transition: 3s opacity;
+    -webkit-transition: 3s opacity;
+}
+
+body.fade-out {
+    opacity: 0;
+    transition: none;
+    -webkit-transition: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+h6 {
+  font-size: 0.7rem;
+  color: white;
+  font-weight: normal;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  font-family: "Work Sans", sans-serif;
+}
+
+p {
+  margin: 0;
+}
+
+.button-default {
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 3.5rem;
+  padding: 1rem 2rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.2rem;
+  color: white;
+  border-style: solid;
+  border-width: 2px;
+  -moz-border-image: -moz-linear-gradient(left, #bbe6bc 0%, #ebe4a1 100%);
+  -webkit-border-image: -webkit-linear-gradient(left, #bbe6bc 0%, #ebe4a1 100%);
+  border-image: linear-gradient(to right, #bbe6bc 0%, #ebe4a1 100%);
+  border-image-slice: 1;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.button-default:hover {
+  background-color: rgba(255, 255, 255, .2);
+}
+
+.text-link {
+  color: white;
+  text-decoration: none;
+  padding-bottom: 3px;
+  font-size: 0.9rem;
+  letter-spacing: 0.02rem;
+}
+
+.inline-link {
+  text-decoration: underline;
+  color: #000;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.inline-link:hover {
+  color: #777;
+}
+
+.text-link:hover {
+  position: relative;
+}
+
+.text-link:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+
+.text-link:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+.in-text-link {
+	color: #eee;
+	border-bottom: solid 1px #eee;
+  text-decoration: none;
+}
+
+nav#container-home-nav {
+  height: 10vh;
+}
+
+nav#container-home-nav #home-link {
+  text-decoration: none;
+  font-family: "Harriet", serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.05rem;
+  float: left;
+  margin-top: 2.5rem;
+  margin-left: 2.5rem;
+  color: #333;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+nav#container-home-nav #home-link:hover {
+  color: #777;
+}
+
+nav#container-home-nav #container-mobile-links {
+  float: right;
+  display: none;
+  visibility: hidden;
+  padding: 2.5rem;
+}
+
+#container-mobile-links a {
+  font-size: 0.75rem;
+  letter-spacing:0.06rem;
+  margin-left: 2rem;
+  color: #333;
+}
+
+#container-mobile-links a:before {
+  background-color: #333;
+}
+
+#thanks-link:before,
+#about-link:before {
+  background-color: #333;
+}
+
+.container-story {
+  background-color: #f4f3f2;
+}
+
+section.row:after {
+  content:"";
+  display: block;
+  clear: both;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+[class*='col-'] {
+  float: left;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+
+* {
+  opacity: 1;
+}
+
+img {
+  max-width: 100%;
+}
+
+.background {
+  background-size: cover;
+  background-position: center center;
+  height: 100vh;
+  text-align: center;
+  overflow: scroll;
+  overflow-x: hidden;
+  -ms-overflow-x: hidden;
+}
+
+/* ----------------------------- home page styling ----------------------------- */
+
+#bg-index {
+  background-image: url("../img/bg-index.jpg");
+}
+
+#container-classroom-infographic {
+  position: relative;
+  width: 27rem;
+  margin: auto;
+  height: 65vh;
+}
+
+#container-classroom-infographic img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+}
+
+#container-classroom-infographic img#infographic {
+  -webkit-animation-name: simpleFadeIn;
+  animation-name: simpleFadeIn;
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+#container-classroom-infographic img#brush-stroke-1,
+#container-classroom-infographic img#brush-stroke-2 {
+  -webkit-animation-name: simpleFadeIn;
+  animation-name: simpleFadeIn;
+  -webkit-animation-duration: 1.5s;
+  animation-duration: 1.5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+#container-classroom-infographic img#brush-stroke-1 {
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+}
+
+#container-classroom-infographic img#brush-stroke-2 {
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s;
+}
+
+p.para-fade {
+  max-width: 30em;
+  color: white;
+  letter-spacing: 0.01rem;
+  font-size: 0.9rem;
+  margin: auto;
+  line-height: 1.3
+}
+
+#bg-index .para-fade {
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.button-next {
+  position: absolute;
+  top: 6rem;
+  transform: translate(-50%, -50%);
+  border: none;
+  background: transparent;
+  font-family: "Work Sans", sans-serif;
+  font-size: 0.75rem;
+  color: #666;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.button-next:hover {
+  color: #777;
+}
+
+#index-container-fade-1,
+#index-container-fade-2,
+#index-container-fade-3 {
+  position: relative;
+}
+
+.not-initially-visible {
+  opacity: 0;
+  z-index: -1;
+}
+
+.fade-in {
+  -webkit-animation-name: fadeIn;
+   animation-name: fadeIn;
+   -webkit-animation-duration: 4s;
+   animation-duration: 4s;
+   z-index: 5;
+}
+
+.fade-out {
+  -webkit-animation-name: simpleFadeOut;
+   animation-name: simpleFadeOut;
+   -webkit-animation-duration: 0.7s;
+   animation-duration: 0.7s;
+   -webkit-animation-fill-mode: both;
+   animation-fill-mode: both;
+}
+
+#about-link,
+#thanks-link {
+  position: absolute;
+  top: 50%;
+  font-size: 0.75rem;
+  letter-spacing: 0.2rem;
+  line-height: 0;
+  padding-bottom: 10px;
+  opacity: 0.7;
+  color: #333;
+}
+
+#thanks-link {
+  right: 0;
+  transform: rotate(90deg);
+}
+
+#about-link {
+  left: 0;
+  transform: rotate(-90deg);
+}
+
+/* ----------------------------- questions styling ----------------------------- */
+
+#bg-questions {
+  background-image: url("../img/bg-questions.jpg");
+  opacity: 0.8;
+}
+
+#container-questions {
+  margin: auto;
+  width: 40em;
+  height: 90vh;
+  position: relative;
+}
+
+#container-questions #container-questions-explanation {
+  position: absolute;
+  width: 100%;
+  top: 40%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  left: 50%;
+}
+
+/*MS Edge Fix*/
+body#stories-page {
+  overflow-x: hidden;
+}
+
+#container-questions-explanation p:first-of-type,
+#container-stories-explanation-1 p:first-of-type,
+#container-stories-explanation-2 p:first-of-type {
+  margin-bottom: 1rem;
+}
+
+#container-questions-explanation .button-next {
+  top: 8rem;
+}
+
+#question-one, #question-two, #question-three, #question-four, #question-four-p2, #question-five {
+  display: none;
+}
+
+.question {
+  padding-top: 15%;
+  text-align: left;
+}
+
+.question p {
+  color: white;
+  letter-spacing: 0.05rem;
+  font-size: 0.85rem;
+}
+
+.question label {
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.2rem;
+  color: white;
+}
+
+.question button {
+	display: block;
+	background: transparent;
+	border: none;
+	text-transform: uppercase;
+	letter-spacing: 0.2rem;
+  font-size: .9rem;
+  line-height: 1.1rem;
+	color: white;
+	min-height: 77px;
+	min-width: 230px;
+	padding: 0 2rem;
+	cursor: pointer;
+	margin: auto;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	font-size: 0.8rem;
+}
+
+.question button:hover,
+.question button:focus,
+.question button:active {
+	background-image: url('../img/hover-questions-brush.png');
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 100% 100%;
+	color: #999;
+	border: none;
+}
+
+.question input#text-input {
+  border: 0;
+  background: transparent;
+  border-bottom: 1px solid white;
+  font-size: 0.8rem;
+  color: white;
+  width: 15rem;
+  font-family: "Work Sans", sans-serif;
+}
+
+.question input[type="submit"] {
+  border: none;
+  background-color: rgba(255, 255, 255, 0.3);
+  font-family: "Work Sans", sans-serif;
+  text-transform: uppercase;
+  padding: 0.3rem 0.7rem;
+  color: white;
+  letter-spacing: 0.08rem;
+  margin-left: 0.5rem;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.question input[type="submit"]:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.question #container-other-input {
+  text-align: center;
+  line-height: 2rem;
+}
+
+.question h2 {
+  font-size: 1.3rem;
+  color: white;
+  letter-spacing: 0.3rem;
+}
+
+.question h2::after {
+  content: ' ';
+  display: block;
+  width: 10px;
+  margin: 10px 0;
+  border: 1px solid white;
+}
+
+#question-four-p2 span {
+  color: #ebe4a1;
+}
+
+/* ----------------------------- stories page styling ----------------------------- */
+
+#bg-stories {
+  background-image: url(../img/bg-stories.jpg);
+}
+
+#container-stories-explanation-1,
+#container-stories-explanation-2,
+#container-stories-explanation-3 {
+  position: absolute;
+  width: 100%;
+  top: 30%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  left: 50%;
+}
+
+section#stories-explanation .button-next {
+  
+}
+
+section#stories-explanation p {
+   max-width: 40em;
+}
+
+section#stories-explanation {
+  height: 30vh;
+}
+
+section#story-selection {
+  height: 60vh;
+}
+
+#container-brushes {
+   margin: auto;
+   width: 40em;
+   height: 100%;
+   position: relative;
+   display: none;
+}
+
+.container-brush {
+  position: absolute;
+}
+
+.container-brush#ruiwen {
+  right: 0;
+}
+
+.container-brush#andy {
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+#container-brushes img {
+  max-height: 90%;
+}
+
+.container-story-text {
+  position: absolute;
+  font-family: "Harriet", serif;
+  letter-spacing: 0.08rem;
+  color: #555;
+  top: 32%;
+}
+
+.container-story-text h4 {
+  font-size: 0.9rem;
+  font-weight: normal;
+}
+
+.container-story-text {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+}
+
+#container-brushes .brush-link {
+  position: absolute;
+  display: inline-block;
+  width: 20%;
+  height: 90%;
+  transform: rotate(30deg);
+  z-index: 999;
+}
+
+div.container-brush img {
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  opacity: 0.8;
+}
+
+.brush-link:hover + div.container-brush img {
+  opacity: 1;
+}
+
+#container-brushes #brush-link-vivian {
+  left: 15%;
+  top: 0;
+}
+
+#container-brushes #brush-link-andy {
+  left: 40%;
+  top: 0;
+}
+
+#container-brushes #brush-link-ruiwen {
+  left: 67%;
+  top: 0;
+}
+
+.disable-click {
+  pointer-events: none; /* this stops users from clicking on buttons before fadey stuff ends. enabled via javascript after fadey stuff ends */
+}
+
+/* ----------------------------- thank you page styling ----------------------------- */
+
+#bg-thankyou {
+  background-image: url(../img/bg-thankyou.jpg);
+}
+
+#container-thankyou-fade-1,
+#container-thankyou-fade-2 {
+  position: absolute;
+  width: 100%;
+  top: 45%;
+  transform: translate(-50%, -50%);
+  left: 50%;
+}
+
+#container-thankyou-fade-2 p:last-of-type {
+  margin-top: 1rem;
+}
+
+section#thank-you-text {
+  height: 30vh;
+}
+
+#bg-thankyou .para-fade {
+  max-width: 40em;
+}
+
+#container-share-buttons {
+  margin-top: 2rem;
+}
+
+.button-share {
+  text-decoration: none;
+  margin: 0.5rem;
+  width: 12rem;
+  font-size: 0.9rem;
+  padding: 1rem 1.5rem;
+  color: white;
+  display: inline-block;
+  letter-spacing: 0.02rem;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.button-share#fb {
+  background-color: #3b5998;
+}
+
+.button-share#fb:hover {
+  background-color: #758ab6;
+}
+
+.button-share#twitter {
+  background-color: #00aced;
+}
+
+.button-share#twitter:hover {
+  background-color: #4cc4f2;
+}
+
+/* ----------------------------- about us page styling ----------------------------- */
+
+#bg-about-us {
+  background-image: url(../img/bg-about-us.jpg);
+}
+
+#about-us-text {
+  text-align: left;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  line-height: 1.5;
+}
+
+#about-us-text .para-fade {
+  max-width: 40em;
+}
+
+#about-us-text p:last-of-type {
+  margin-top: 1rem;
+}
+
+/* ----------------------------- story styling ----------------------------- */
+
+.story-container p {
+  color: #333;
+  line-height: 1.4;
+}
+
+.language-panel {
+  position: fixed;
+  background-color: white;
+  opacity: 0.9;
+  bottom: 4rem;
+  height: 60px;
+  width: 100px;
+  right: -100px;
+  -webkit-transition: right 0.4s ease-in-out;
+  transition: right 0.4s ease-in-out;
+  z-index: 999;
+}
+
+.language-panel-caller {
+  position: absolute;
+  right: 100px;
+  width: 60px;
+  padding: 7px;
+  height: 60px;
+  opacity: 0.9;
+  background: white;
+}
+
+.language-panel:hover {
+  right: 0;
+}
+
+.language-options {
+  position: relative;
+  height: 100%;
+}
+
+.language-options button {
+  background: none;
+  border: none;
+  padding: 10px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.language-options button#eng {
+  left: 0;
+}
+
+.language-options button#chinese {
+  right: 0;
+}
+
+section h2 {
+  font-family: "Harriet", sans-serif;
+  letter-spacing: 0.03rem;
+  line-height: 1.3;
+}
+
+.story-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+section#assumptions {
+  max-width: 900px;
+  margin: auto;
+}
+
+section#assumptions .col-left,
+section#assumptions .col-right {
+  width: 50%;
+  height: 400px;
+  padding-top: 5rem;
+}
+
+section#assumptions .col-right {
+  position: relative;
+}
+
+section#assumptions ul {
+  list-style: none;
+  padding: 0;
+}
+
+section#assumptions ul li {
+  margin-top: 1.5rem;
+  opacity: 0;
+  color: #333;
+}
+
+/* this is for animating the list items */
+.animated {
+  -webkit-animation-name: fadeInUp;
+   animation-name: fadeInUp;
+   -webkit-animation-duration: 1.5s;
+   animation-duration: 1.5s;
+   -webkit-animation-fill-mode: both;
+   animation-fill-mode: both;
+   -webkit-animation-delay: 0.5s;
+   animation-delay: 0.5s;
+}
+
+section#assumptions h3 {
+  font-family: "Harriet", sans-serif;
+  font-size: 1.1rem;
+  letter-spacing: 0.05rem;
+}
+
+section#assumptions h5 {
+  font-family: "Harriet", sans-serif;
+  font-style: italic;
+  font-weight: normal;
+  letter-spacing: 0.08rem;
+  font-size: 0.75rem;
+}
+
+section#footer {
+  height: 22rem;
+  text-align: center;
+  position: relative;
+  background-position: center center;
+  background-image: url(../img/bg-footer.jpg);
+}
+
+.brush-circle {
+  position: absolute;
+  max-height: 7rem;
+  transform: translateY(-50%);
+  top: 50%;
+  padding: 1rem;
+  display: none;
+}
+
+.arrow-link {
+  display: block;
+  text-decoration: none;
+  color: black;
+}
+
+.arrow-link:hover div {
+  opacity: 0.5;
+}
+
+.arrow-link:hover .brush-circle {
+  display: block;
+}
+
+.arrow-link p {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.next-story,
+.prev-story {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  padding: 3rem;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.next-story,
+.brush-circle#right {
+  right: 0;
+}
+
+.prev-story,
+.brush-circle#left  {
+  left: 0;
+}
+
+.arrow-next-story {
+  width: 3rem;
+}
+
+section#footer .container-conclusion-text {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  left: 50%;
+}
+
+.container-conclusion-text h5 {
+  font-size: 1.2rem;
+  letter-spacing: 0.05rem;
+  color: #555;
+  font-family: "Harriet", sans-serif;
+  max-width: 15rem;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.container-conclusion-text:hover h5 {
+  opacity: 0.6;
+}
+
+/* ----------------------------- video styling ----------------------------- */
+
+/*both videos*/
+video {
+  min-width: 100vw;
+  min-height: 100vh;
+}
+
+/*just the top video*/
+#intro video {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+/*just the bottom video*/
+#outro video {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.container-video {
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+  display: block;
+  max-width: 100vw;
+  min-height: 100vh;
+}
+
+.container-video .button-back {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  z-index: 999;
+  text-decoration: none;
+}
+
+.container-video .button-back span {
+  font-size: 0.8rem;
+  color: #555;
+  opacity: 0;
+  display: inline-block;
+  margin-top: 0.5rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.container-video .button-back img {
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  display: block;
+}
+
+.container-video .button-back:hover img {
+  opacity: 0.5;
+}
+
+.container-video .button-back:hover span {
+  opacity: 1;
+}
+
+/* to disable scrolling past the video until it's ended - see video.js */
+body.noscroll {
+    position: fixed;
+    overflow-y: scroll;
+    width: 100%;
+}
+
+#skip-andy-video-link {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.skip-video-link-playing {
+  top: 93%;
+}
+
+.skip-video-link-ended {
+  top: 80%;
+}
+
+#skip-andy-video-link.bounce {
+  -webkit-animation-name: bounce;
+   animation-name: bounce;
+   -webkit-animation-duration: 1s;
+   animation-duration: 1s;
+   -webkit-animation-fill-mode: both;
+   animation-fill-mode: both;
+}
+
+.replay {
+  position: absolute;
+  display: none;
+  top: 50%;
+  left: 50%;
+  width: 7%;
+  height: auto;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.container-story-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  color: white;
+  font-family: "Harriet", serif;
+}
+
+.container-story-title h1 {
+  font-weight: bold;
+  font-size: 5rem;
+  letter-spacing: 5px;
+  margin: 0;
+}
+
+.container-story-title h4 {
+  font-weight: normal;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  margin: 0;
+}
+
+/*========================
+  MEDIA QUERIES
+========================*/
+
+/* 800 px */
+@media(max-width: 50em) {
+  nav#container-home-nav #container-mobile-links {
+    display: block;
+    visibility: visible;
+  }
+
+  #thanks-link,
+  #about-link {
+    display: none;
+    visibility: hidden;
+  }
+
+  #about-us-text {
+    position: static;
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+    margin-top: 2rem;
+    padding: 2.5rem;
+  }
+
+  #about-us-text .para-fade {
+    max-width: 100%;
+  }
+}
+
+/* 670 px */
+@media(max-width: 41.875em) {
+  body {
+    overflow-x: hidden;
+  }
+
+  #skip-andy-video-link.skip-video-link-ended {
+    width: 70%;
+  }
+
+  section#assumptions .col-left,
+  section#assumptions .col-right {
+    padding: 15px;
+    font-size: .9rem;
+  }
+
+  #container-brushes,
+  #container-questions {
+    width: 100%;
+  }
+
+  #container-questions {
+    padding: 2.5rem;
+  }
+
+  .container-brush {
+    width: 47%;
+  }
+
+  .container-brushes #brush-link-ruiwen {
+    left: 65%;
+  }
+
+  #container-classroom-infographic img#infographic {
+    padding: 1rem;
+  }
+
+  nav#container-home-nav #home-link {
+    width: 5em;
+    text-align: left;
+  }
+
+  #container-stories-explanation-1,
+  #container-stories-explanation-2,
+  #container-thankyou-fade-1,
+  #container-thankyou-fade-2 {
+    padding: 2.5rem;
+  }
+
+  #bg-thankyou .button-next {
+    top: 9rem;
+  }
+}
+
+/* 570 px */
+@media(max-width: 35.625em) {
+  /*#container-brushes .brush-link {
+    height: 20rem;
+  }*/
+  #container-classroom-infographic {
+    max-width: 100%;
+    /*max-height:50vh;*/
+  }
+
+  .next-story,
+  .prev-story {
+    padding: 1rem;
+  }
+
+  .arrow-next-story {
+    width: 2rem;
+  }
+}
+
+/* 500 px */
+@media(max-width: 31.25em) {
+  #container-brushes .brush-link {
+    height: 18rem;
+  }
+}
+
+/* for non-mobile devices for the yellow paint to hover */
+/*@media(min-width: 31.25em) {
+  .question button:hover,
+  .question button:focus,
+  .question button:active {
+    position: relative;
+    color: #999;
+  }
+
+  #container-classroom-infographic img {
+    max-height: 100%;
+    width: auto;
+  }
+}*/
+
+
+/* 460 px */
+@media(max-width: 28.75em) {
+
+  .arrow-link p {
+    width: 5rem;
+  }
+
+  #bg-index .button-next {
+    top: 7rem;
+  }
+
+  /*section#stories-explanation {
+    height: 40vh;
+  }*/
+
+  p.para-fade {
+    padding: 0 1rem;
+  }
+
+  nav#container-home-nav #home-link {
+    margin-top: 1rem;
+    margin-left: 1rem;
+  }
+
+  nav#container-home-nav #container-mobile-links {
+    padding: 1rem;
+  }
+
+  #container-mobile-links a {
+    font-size: 0.7rem;
+    margin-left: 1rem;
+  }
+
+  .skip-video-link-playing {
+    top: 90%;
+    width: 80%;
+    font-size: .8em;
+  }
+
+  .skip-video-link-ended {
+    top: 70%;
+    width: 90%;
+  }
+
+  /*p {
+    font-size: .95rem !important;
+  }*/
+
+  section#assumptions {
+    margin-top: 3em;
+  }
+
+  section#assumptions .col-left,
+  section#assumptions .col-right {
+    padding: 5px;
+    font-size: .8rem;
+  }
+
+  #story-andy h2,
+  #story-vivian h2,
+  #story-ruiwen h2 {
+    padding: 0 .5em;
+  }
+
+  div#container-classroom-infographic {
+    max-height: 60vh;
+  }
+
+  .button-next {
+    top: 8rem;
+  }
+
+  #container-questions-explanation .button-next {
+    top: 10rem;
+  }
+
+  #container-questions {
+    padding: 1rem;
+  }
+
+  .question {
+    padding-top: 15%;
+  }
+
+  #container-stories-explanation-1,
+  #container-stories-explanation-2,
+  #container-thankyou-fade-1,
+  #container-thankyou-fade-2 {
+    padding: 0rem;
+  }
+
+  .container-story-text h3 {
+    font-size: 1rem;
+  }
+
+  #about-us-text {
+    padding: 0rem;
+  }
+}
+
+/* 400px */
+@media (max-width: 25em) {
+  #container-brushes .brush-link {
+    height: 16rem;
+  }
+
+  .button-share {
+    width: 100%;
+    margin: 0;
+  }
+
+  .button-share#twitter {
+    margin-top: 1rem;
+  }
+
+  #container-share-buttons {
+    padding: 1rem;
+  }
+
+  .next-story,
+  .prev-story {
+    padding: 0rem;
+  }
+
+  .container-conclusion-text h5 {
+    font-size: 1rem;
+    max-width: 8rem;
+  }
+
+  .arrow-link p {
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+  }
+
+  div#container-classroom-infographic {
+    max-height: 50vh;
+  }
+}
+
+
+
+/*========================
+  MEDIA QUERIES - MAX-HEIGHT
+========================*/
+
+/* 700px */
+@media (max-height: 43.75em) {
+  #bg-index .button-default {
+    color: #333;
+  }
+}
+
+/* 680px */
+@media (max-height: 42.5em) {
+  .question {
+    padding-top: 5%;
+  }
+
+  /*#container-brushes {
+    width: 35em;
+  }*/
+
+  .container-brush {
+    width: 47%;
+  }
+}
+
+/* 620px */
+@media (max-height: 38.75em) {
+  .question {
+    padding-top: 5%;
+  }
+}
+
+/* 600px */
+@media (max-height: 37.5em) {
+  /*#container-brushes {
+    width: 30em;
+  }*/
+
+  .container-story-text {
+    font-size: 0.9rem;
+    letter-spacing: 0.03rem;
+  }
+
+  #container-thankyou-fade-1,
+  #container-thankyou-fade-2 {
+    position: static;
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+
+  #container-thankyou-fade-1 {
+    margin-top: 5rem;
+  }
+
+  #container-thankyou-fade-2 {
+    margin-top: 2rem;
+  }
+}
+
+@media (max-height: 556px) {
+  #container-classroom-infographic {
+    width: 70vh;
+  }
+
+  #index-container-fade-1, #index-container-fade-2, #index-container-fade-3 {
+    margin-top: 1.5rem;
+  }
+
+
+}
+
+/* 550px */
+@media (max-height: 34.375em) {
+  .question button {
+    min-height: 60px;
+  }
+}
+
+/* 500px */
+@media (max-height: 31.25em) {
+  section#stories-explanation {
+    height: 20vh;
+  }
+
+  #container-brushes {
+    width: 25em;
+  }
+
+  .question button {
+    min-height: 50px;
+  }
+}
+
+/* 400px */
+@media (max-height: 25em) {
+  #container-stories-explanation-1,
+  #container-stories-explanation-2 {
+    top: 50%;
+  }
+
+  #container-brushes .brush-link {
+    height: 15rem;
+  }
+}
+

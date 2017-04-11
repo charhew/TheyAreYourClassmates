@@ -95,6 +95,10 @@ p {
   margin: 0;
 }
 
+button:focus {
+  outline:0;
+}
+
 .button-default {
   text-transform: uppercase;
   text-decoration: none;
@@ -324,18 +328,22 @@ p.para-fade {
   top: 6rem;
   transform: translate(-50%, -50%);
   border: none;
-  background: transparent;
+  background: #ccc;
   font-family: "Work Sans", sans-serif;
-  font-size: 0.75rem;
-  color: #666;
+  font-size: 0.6rem;
+  color: #000;
+  letter-spacing: 1px;
+  opacity: .5;
   cursor: pointer;
+  text-transform: uppercase;
+  padding: .3rem .7rem;
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
 
 .button-next:hover {
-  color: #777;
+  opacity: .3;
 }
 
 #index-container-fade-1,
@@ -1405,9 +1413,11 @@ body.noscroll {
     width: 70vh;
   }
 
-  #container-classroom-infographic img {
-    
+  #index-container-fade-1, #index-container-fade-2, #index-container-fade-3 {
+    margin-top: 1.5rem;
   }
+
+
 }
 
 /* 550px */

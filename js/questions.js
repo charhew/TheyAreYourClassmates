@@ -146,7 +146,7 @@ $(document).ready(function() {
         }
         $('#question-five').fadeOut(500);
         finishQuestionnaire();
-        window.location.href = 'stories.html';
+        // window.location.href = 'stories.html';
       });
     }, 1000);
   }
@@ -162,7 +162,7 @@ $(document).ready(function() {
     
     xmlhttp.onreadystatechange=function(){
       if (xmlhttp.readyState==4 && xmlhttp.status==200){
-        // document.getElementById("medal-holder").innerHTML+=xmlhttp.responseText;
+        window.location.href = 'stories.html';
       }
     }
 
