@@ -269,7 +269,7 @@ img {
 
 #container-classroom-infographic {
   position: relative;
-  width: 35rem;
+  width: 30rem;
   margin: auto;
   height: 65vh;
 }
@@ -958,22 +958,11 @@ section#footer .container-conclusion-text {
 video {
   min-width: 100vw;
   min-height: 100vh;
-}
-
-/*just the top video*/
-#intro video {
   position: absolute;
+  top: 50%;
   left: 50%;
-  -webkit-transform: translateX(-50%);
-  transform: translateX(-50%);
-}
-
-/*just the bottom video*/
-#outro video {
-  position: absolute;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  transform: translateX(-50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translateX(-50%, -50%);
 }
 
 .container-video {
@@ -1159,7 +1148,7 @@ body.noscroll {
   #container-stories-explanation-2,
   #container-thankyou-fade-1,
   #container-thankyou-fade-2 {
-    padding: 2.5rem;
+    padding: 0 2.5rem;
   }
 
   #bg-thankyou .button-next {
@@ -1227,6 +1216,7 @@ body.noscroll {
 
   p.para-fade {
     padding: 0 1rem;
+    font-size: 0.95rem;
   }
 
   nav#container-home-nav #home-link {
@@ -1257,10 +1247,6 @@ body.noscroll {
     width: 90%;
   }
 
-  /*p {
-    font-size: .95rem !important;
-  }*/
-
   section#assumptions {
     margin-top: 3em;
   }
@@ -1285,6 +1271,7 @@ body.noscroll {
     top: 8rem;
   }
 
+  section#stories-explanation .button-next,
   #container-questions-explanation .button-next {
     top: 10rem;
   }
@@ -1385,6 +1372,10 @@ body.noscroll {
   .question {
     padding-top: 5%;
   }
+
+  #container-classroom-infographic {
+    width: 25rem;
+  }
 }
 
 /* 600px */
@@ -1414,7 +1405,7 @@ body.noscroll {
   }
 }
 
-@media (max-height: 556px) {
+/*@media (max-height: 556px) {
   #container-classroom-infographic {
     width: 70vh;
   }
@@ -1422,14 +1413,20 @@ body.noscroll {
   #index-container-fade-1, #index-container-fade-2, #index-container-fade-3 {
     margin-top: 1.5rem;
   }
-
-
-}
+}*/
 
 /* 550px */
 @media (max-height: 34.375em) {
   .question button {
     min-height: 60px;
+  }
+
+  #container-classroom-infographic {
+    width: 20rem;
+  }
+
+  #bg-index .button-next {
+    margin-bottom: 1rem;
   }
 }
 
@@ -1462,6 +1459,10 @@ body.noscroll {
   #container-questions {
     padding: 3rem 2.5rem;
   }
+
+  #container-classroom-infographic {
+    width: 15rem;
+  }
 }
 
 @media (max-height: 310px) {}
@@ -1469,4 +1470,3 @@ body.noscroll {
     padding: 4rem 2.5rem;
   }
 }
-
