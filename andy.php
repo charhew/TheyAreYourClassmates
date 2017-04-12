@@ -9,7 +9,7 @@ session_start();
 	<link rel="stylesheet" href="css/andy.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=no">
 	<meta charset="utf-8">
-	<title>They Are Your Classmates</title>
+	<title>Andy's Story | They Are Your Classmates</title>
 	<link rel="shortcut icon" type="image/png" href="favicon.png"/>
 </head>
 <body class="noscroll" id="story-andy">
@@ -237,7 +237,8 @@ session_start();
 		<section class="row" id="footer">
 			<a href="thank-you.html">
 				<div class="container-conclusion-text">
-					<h5>Finished the stories? Continue to the conclusion.</h5>
+					<h5>Finished the stories?</h5>
+					<button class="button-next" onclick="window.location.href='conclusion.html'">Read Conclusion >
 				</div>
 			</a>
 			<a class="arrow-link" href="">

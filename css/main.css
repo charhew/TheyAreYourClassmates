@@ -659,6 +659,39 @@ div.container-brush img {
   pointer-events: none; /* this stops users from clicking on buttons before fadey stuff ends. enabled via javascript after fadey stuff ends */
 }
 
+/* ----------------------------- conclusion page styling ----------------------------- */
+
+#bg-conclusion {
+  background-image: url(../img/bg-thankyou.jpg);
+}
+
+#container-conclusion-fade-1,
+#container-conclusion-fade-2 {
+  position: absolute;
+  width: 100%;
+  top: 55%;
+  transform: translate(-50%, -50%);
+  left: 50%;
+}
+
+#container-conclusion-fade-2 p:last-of-type {
+  margin-top: 1rem;
+}
+
+section#conclusion-text {
+  height: 30vh;
+}
+
+section#conclusion-text #container-conclusion-fade-2 .button-next {
+  position: static;
+  transform: none;
+  margin-top: 2rem;
+}
+
+#conclusion-text #container-share-buttons {
+  margin-top: 2rem;
+}
+
 /* ----------------------------- thank you page styling ----------------------------- */
 
 #bg-thankyou {
@@ -948,8 +981,50 @@ section#footer .container-conclusion-text {
   transition: all 0.3s ease-in-out;
 }
 
+.container-conclusion-text .button-next {
+  position: static;
+  transform: none;
+  margin-top: 1.4rem;
+}
+
 .container-conclusion-text:hover h5 {
   opacity: 0.6;
+}
+
+.container-button-back {
+  text-align: left;
+  padding-top: 2.5rem;
+}
+
+.container-button-back .button-back {
+  margin-left: 2.5rem;
+  opacity: 1;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.2s ease-in-out;
+}
+
+.container-button-back .button-back img {
+  display: block;
+  opacity: 1;
+  transition: all 0.2s ease-in-out;
+}
+
+.container-button-back .button-back span {
+  display: block;
+  font-size: 0.8rem;
+  color: #555;
+  opacity: 0;
+  margin-top: 0.5rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.container-button-back .button-back:hover img {
+  opacity: .5;
+}
+
+.container-button-back .button-back:hover span {
+  opacity: 1;
 }
 
 /* ----------------------------- video styling ----------------------------- */
