@@ -659,27 +659,19 @@ div.container-brush img {
   pointer-events: none; /* this stops users from clicking on buttons before fadey stuff ends. enabled via javascript after fadey stuff ends */
 }
 
-/* ----------------------------- conclusion page styling ----------------------------- */
+/* ----------------------------- thank you and conclusion page styling ----------------------------- */
+
+
+#bg-conclusion .button-default {
+  margin-top: 0;
+}
 
 #bg-conclusion {
   background-image: url(../img/bg-thankyou.jpg);
 }
 
-#container-conclusion-fade-1,
-#container-conclusion-fade-2 {
-  position: absolute;
-  width: 100%;
-  top: 55%;
-  transform: translate(-50%, -50%);
-  left: 50%;
-}
-
-#container-conclusion-fade-2 p:last-of-type {
-  margin-top: 1rem;
-}
-
-section#conclusion-text {
-  height: 30vh;
+#bg-thankyou {
+  background-image: url(../img/bg-thankyou.jpg);
 }
 
 section#conclusion-text #container-conclusion-fade-2 .button-next {
@@ -688,18 +680,8 @@ section#conclusion-text #container-conclusion-fade-2 .button-next {
   margin-top: 2rem;
 }
 
-#conclusion-text #container-share-buttons {
-  margin-top: 2rem;
-}
-
-/* ----------------------------- thank you page styling ----------------------------- */
-
-#bg-thankyou {
-  background-image: url(../img/bg-thankyou.jpg);
-}
-
 #container-thankyou-fade-1,
-#container-thankyou-fade-2 {
+#container-conclusion-fade-1 {
   position: absolute;
   width: 100%;
   top: 45%;
@@ -707,20 +689,24 @@ section#conclusion-text #container-conclusion-fade-2 .button-next {
   left: 50%;
 }
 
-#container-thankyou-fade-2 p:last-of-type {
+#container-thankyou-fade-1 p,
+#container-conclusion-fade-1 p {
   margin-top: 1rem;
 }
 
-section#thank-you-text {
+section#thank-you-text,
+section#conclusion-text {
   height: 30vh;
 }
 
-#bg-thankyou .para-fade {
+#bg-thankyou .para-fade,
+#bg-conclusion .para-fade {
   max-width: 40em;
 }
 
-#container-share-buttons {
+.container-buttons {
   margin-top: 2rem;
+  margin-bottom: 1rem;
 }
 
 .button-share {
@@ -892,7 +878,7 @@ section#assumptions h3 {
   letter-spacing: 0.05rem;
 }
 
-section#assumptions h5 {
+section#assumptions h4 {
   font-family: "Harriet", sans-serif;
   font-style: italic;
   font-weight: normal;
@@ -970,7 +956,7 @@ section#footer .container-conclusion-text {
   left: 50%;
 }
 
-.container-conclusion-text h5 {
+.container-conclusion-text h4 {
   font-size: 1.2rem;
   letter-spacing: 0.05rem;
   color: #555;
@@ -985,10 +971,6 @@ section#footer .container-conclusion-text {
   position: static;
   transform: none;
   margin-top: 1.4rem;
-}
-
-.container-conclusion-text:hover h5 {
-  opacity: 0.6;
 }
 
 .container-button-back {
@@ -1147,14 +1129,29 @@ body.noscroll {
   margin: 0;
 }
 
+#footer .button-default {
+  color: #333;
+  margin-top: 1rem;
+}
+
+#footer h6 {
+  text-transform: none;
+  font-size: 0.85rem;
+  letter-spacing: 0.02rem;
+  color: #333;
+}
+
 /*========================
   MEDIA QUERIES
 ========================*/
 
 /* 800 px */
 @media(max-width: 50em) {
-  #about-us-text {
-    padding-bottom: 4rem;
+
+  #bg-thankyou .container-button-back,
+  #bg-conclusion .container-button-back,
+  #bg-about-us .container-button-back {
+    display: none;
   }
 
   nav#container-home-nav #container-mobile-links {
@@ -1168,7 +1165,9 @@ body.noscroll {
     visibility: hidden;
   }
 
-  #about-us-text {
+  #about-us-text,
+  #thank-you-text,
+  #conclusion-text {
     position: static;
     -webkit-transform: translate(0, 0);
     transform: translate(0, 0);
@@ -1176,13 +1175,37 @@ body.noscroll {
     padding: 2.5rem;
   }
 
-  #about-us-text .para-fade {
+  #about-us-text {
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+  }
+
+  #about-us-text .para-fade,
+  #thank-you-text .para-fade,
+  #conclusion-text .para-fade {
     max-width: 100%;
+    text-align: left;
+  }
+
+  #container-thankyou-fade-1,
+  #container-conclusion-fade-1 {
+    position: static;
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+
+  .arrow-next-story {
+    width: 2rem;
+  }
+
+  .arrow-link p {
+    font-size: 0.85rem;
   }
 }
 
 /* 670 px */
 @media(max-width: 41.875em) {
+
   body {
     overflow-x: hidden;
   }
@@ -1224,14 +1247,21 @@ body.noscroll {
   }
 
   #container-stories-explanation-1,
-  #container-stories-explanation-2,
-  #container-thankyou-fade-1,
-  #container-thankyou-fade-2 {
+  #container-stories-explanation-2 {
     padding: 0 2.5rem;
   }
 
   #bg-thankyou .button-next {
     top: 9rem;
+  }
+
+  .next-story,
+  .prev-story {
+    padding: 1rem;
+  }
+
+  .arrow-next-story {
+    width: 1.5rem;
   }
 }
 
@@ -1251,7 +1281,11 @@ body.noscroll {
   }
 
   .arrow-next-story {
-    width: 2rem;
+    width: 1rem;
+  }
+
+  .arrow-link p {
+    width: 3rem;
   }
 }
 
@@ -1260,26 +1294,34 @@ body.noscroll {
   #container-brushes .brush-link {
     height: 18rem;
   }
+
+  .button-share {
+    width: 100%;
+    margin: 0;
+  }
+
+  .button-share#twitter {
+    margin-top: 1rem;
+  }
 }
-
-/* for non-mobile devices for the yellow paint to hover */
-/*@media(min-width: 31.25em) {
-  .question button:hover,
-  .question button:focus,
-  .question button:active {
-    position: relative;
-    color: #999;
-  }
-
-  #container-classroom-infographic img {
-    max-height: 100%;
-    width: auto;
-  }
-}*/
-
 
 /* 460 px */
 @media(max-width: 28.75em) {
+
+  #bg-conclusion .button-default {
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .container-buttons {
+    padding: 1rem;
+  }
+
+  #about-us-text,
+  #thank-you-text,
+  #conclusion-text {
+    padding: 0;
+  }
 
   .arrow-link p {
     width: 5rem;
@@ -1366,7 +1408,7 @@ body.noscroll {
   #container-stories-explanation-1,
   #container-stories-explanation-2,
   #container-thankyou-fade-1,
-  #container-thankyou-fade-2 {
+  #container-conclusion-fade-1 {
     padding: 0rem;
   }
 
@@ -1382,32 +1424,20 @@ body.noscroll {
     height: 16rem;
   }
 
-  .button-share {
-    width: 100%;
-    margin: 0;
-  }
-
-  .button-share#twitter {
-    margin-top: 1rem;
-  }
-
-  #container-share-buttons {
-    padding: 1rem;
-  }
-
   .next-story,
   .prev-story {
     padding: 0rem;
   }
 
-  .container-conclusion-text h5 {
+  .container-conclusion-text h4 {
     font-size: 1rem;
     max-width: 8rem;
   }
 
   .arrow-link p {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     margin-top: 0.5rem;
+    width: 4rem;
   }
 
   div#container-classroom-infographic {
@@ -1466,18 +1496,11 @@ body.noscroll {
   }
 
   #container-thankyou-fade-1,
-  #container-thankyou-fade-2 {
+  #container-conclusion-fade-1 {
     position: static;
     -webkit-transform: translate(0, 0);
     transform: translate(0, 0);
-  }
-
-  #container-thankyou-fade-1 {
-    margin-top: 5rem;
-  }
-
-  #container-thankyou-fade-2 {
-    margin-top: 2rem;
+    margin-top: 1rem;
   }
 }
 
@@ -1504,6 +1527,11 @@ body.noscroll {
   #bg-index .button-next {
     margin-bottom: 1rem;
   }
+
+  #container-stories-explanation-1,
+  #container-stories-explanation-2 {
+    top: 50%;
+  }
 }
 
 /* 500px */
@@ -1519,14 +1547,16 @@ body.noscroll {
   .question button {
     min-height: 50px;
   }
+
+  #bg-thankyou .container-button-back,
+  #bg-conclusion .container-button-back,
+  #bg-about-us .container-button-back {
+    display: none;
+  }
 }
 
 /* 400px */
 @media (max-height: 25em) {
-  #container-stories-explanation-1,
-  #container-stories-explanation-2 {
-    top: 50%;
-  }
 
   #container-brushes .brush-link {
     height: 15rem;

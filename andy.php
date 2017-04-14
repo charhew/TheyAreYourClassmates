@@ -186,7 +186,7 @@ session_start();
 		<section class="row" id="assumptions">
 			<div class="col-left">
 				<h3>Andy's Experience</h3>
-				<h5>from his perspective</h5>
+				<h4>from his perspective</h4>
 				<ul>
 					<li id="assumptions-li-0">I came here because my dad wanted me to have a better education, but I didn't want to leave my friends in Beijing.</li>
 					<li id="assumptions-li-2">I believed Canada would be inclusive of me because it is known for its multiculturalism.</li>
@@ -194,7 +194,7 @@ session_start();
 			</div>
 			<div class="col-right">
 				<h3>Your Perspective</h3>
-				<h5>sourced from the prior questions</h5>
+				<h4>from the questions</h4>
 				<ul>
 					<?php
 						//if the questions were answered
@@ -235,12 +235,10 @@ session_start();
 		</section>
 
 		<section class="row" id="footer">
-			<a href="thank-you.html">
-				<div class="container-conclusion-text">
-					<h5>Finished the stories?</h5>
-					<button class="button-next" onclick="window.location.href='conclusion.html'">Read Conclusion >
-				</div>
-			</a>
+			<div class="container-conclusion-text">
+				<h6>Finished the stories?</h6>
+				<a class="button-default" href="conclusion.html">Read Conclusion</a>
+			</div>
 			<a class="arrow-link" href="">
 				<div class="next-story">
 					<img class="arrow-next-story" src="img/arrow-right.png" alt="right arrow">
