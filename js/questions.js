@@ -105,7 +105,7 @@ $(document).ready(function() {
   function showQuestionFourPart2(){
     setTimeout(function() {
       $('#question-four-p2').fadeIn(500);
-      $('#focus-work, #dont-contribute, #other-submit').click(function () {
+      $('#focus-work, #dont-contribute, #other-submit, #bad-grade').click(function () {
         if (this.id == 'focus-work') {
             console.log('focus work clicked');
             answer4b="focus on work";

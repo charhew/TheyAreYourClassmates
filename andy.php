@@ -2,7 +2,7 @@
 session_start();
 ?>
 <!doctype html>
-<html>
+<html lang="en">
 <head>
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="css/animation.css">
@@ -49,7 +49,7 @@ session_start();
 			<!-- welcoming section -->
 			<section class="row" id="welcoming">
 				<div class="col-full">
-					<img src="img/andy/paint1.png" class="paint"
+					<img src="img/andy/paint1.png" class="paint" alt="paint brush stroke"
 						data-bottom-top="opacity: 0;"
 						data-center-top="opacity: 1;">
 					<h2 id="quote-welcoming"
@@ -64,7 +64,7 @@ session_start();
 			<!-- multicultural section -->
 			<section class="row" id="multicultural">
 				<div class="col-left">
-					<img src="img/andy/website.jpg" class="website"
+					<img src="img/andy/website.jpg" class="website" alt="Government of Canada website featuring multicultural promo"
 						data-bottom-top="opacity: 0; left: -100px;"
 						data-center-top="opacity: 1; left: 0;"
 						>
@@ -80,11 +80,11 @@ session_start();
 			<!-- divide section -->
 			<section class="row" id="divide">
 				<div class="col-full">
-					<img src="img/andy/paint3.png" class="paint"
+					<img src="img/andy/paint3.png" class="paint" alt="paint brush stroke"
 						data-bottom-top="opacity: 0;;"
 						data-center-top="opacity: 1;"
 						>
-					<img src="img/andy/divide.png" class="divide"
+					<img src="img/andy/divide.png" class="divide" alt="classroom with a diagonal line across"
 						data-bottom-top="opacity: 0;"
 						data-center-top="opacity: 1;">
 					<p
@@ -106,11 +106,11 @@ session_start();
 						data-bottom-top="opacity: 0;"
 						data-center-top="opacity: 1;">Halloween came around and so many Canadian students dressed up. We don’t celebrate Halloween in China and I was so confused when I saw all the costumes. It was awkward because none of my friends dressed up. I felt like we missed the memo.</p>
 
-					<img src="img/andy/halloween.jpg" class="halloween"
+					<img src="img/andy/halloween.jpg" class="halloween" alt="picture of a yearbook, featuring the Halloween page"
 						data-bottom-top="opacity: 0;"
 						data-center-top="opacity: 0.7;"
 						>
-					<img src="img/andy/paint4.png" class="paint"
+					<img src="img/andy/paint4.png" class="paint" alt="paint brush stroke"
 						data-bottom-top="opacity: 0;"
 						data-center-top="opacity: 1;"
 						>
@@ -133,7 +133,7 @@ session_start();
 					<p
 						data-bottom-top="opacity: 0;"
 						data-center-top="opacity: 1;">With every school spirit event like Pajama Day, no one in my group really understood what school spirit was. We never had these events back home and no one told us why these events happened. That's why we didn’t take part in these events. </p>
-					<img src="img/andy/paint5.png" class="paint"
+					<img src="img/andy/paint5.png" class="paint" alt="paint brush stroke"
 						data-bottom-top="opacity: 0;"
 						data-center-top="opacity: 1;">
 					<h2 id="quote-invited"
@@ -152,11 +152,11 @@ session_start();
 						data-bottom-top="opacity: 0;"
 						data-center-top="opacity: 1;">After the very first day of school, some Canadian students in my class were laughing and talking to each other. When other classmates walked past, they said hi and asked them for their names. But when my friends and I walked past, they looked at us but didn't approach us or include us.</p>
 
-					<img src="img/andy/lemonade.gif" class="lemonade"
+					<img src="img/andy/lemonade.gif" class="lemonade" alt="gif of Canadian students ignoring the person in the POV"
 						data-bottom-top="opacity: 0;"
 						data-center-top="opacity: 0.7;"
 						>
-					<img src="img/andy/paint6.png" class="paint"
+					<img src="img/andy/paint6.png" class="paint" alt="paint brush stroke"
 						data-bottom-top="opacity: 0;"
 						data-center-top="opacity: 1;"
 						>
@@ -201,27 +201,27 @@ session_start();
 						if(!empty($_SESSION['answer2'])&&!empty($_SESSION['answer3'])) {
 							//display answer 2 (why they came here)
 							if($_SESSION['answer2']=="learn english") {
-								echo "<li id='assumptions-li-1'>Chinese international students chose to come to Canada <b>to learn English</b>.</li>";
+								echo "<li id='assumptions-li-1'>Chinese international students chose to come to Canada <strong>to learn English</strong>.</li>";
 							}
 							else if($_SESSION['answer2']=="better education") {
-								echo "<li id='assumptions-li-1'>Chinese international students came to Canada because <b>education is better</b> here.</li>";
+								echo "<li id='assumptions-li-1'>Chinese international students came to Canada because <strong>education is better</strong> here.</li>";
 							}
 							else if($_SESSION['answer2']=="better life") {
-								echo "<li id='assumptions-li-1'>Chinese international students came to Canada to <b>have a better life</b>.</li>";
+								echo "<li id='assumptions-li-1'>Chinese international students came to Canada to <strong>have a better life</strong>.</li>";
 							}
 
 							//display answer 3 (how i feel when they stick together)
 							if($_SESSION['answer3']=="annoyed") {
-								echo "<li id='assumptions-li-3'>I feel <b>annoyed</b> when Chinese international students stick together and speak their own language</b>.</li>";
+								echo "<li id='assumptions-li-3'>I feel <strong>annoyed</strong> when Chinese international students stick together and speak their own language.</li>";
 							}
 							else if($_SESSION['answer3']=="frustrated") {
-								echo "<li id='assumptions-li-3'>I feel <b>frustrated</b> when Chinese international students stick together and speak their own language.</li>";
+								echo "<li id='assumptions-li-3'>I feel <strong>frustrated</strong> when Chinese international students stick together and speak their own language.</li>";
 							}
 							else if($_SESSION['answer3']=="dont mind") {
-								echo "<li id='assumptions-li-3'>I <b>don't mind</b> when Chinese international students stick together and speak their own language.</li>";
+								echo "<li id='assumptions-li-3'>I <strong>don't mind</strong> when Chinese international students stick together and speak their own language.</li>";
 							}
 							else if($_SESSION['answer3']=="no opinion") {
-								echo "<li id='assumptions-li-3'>I have <b>no opinion</b> about Chinese international students sticking together and speaking their own language.</li>";
+								echo "<li id='assumptions-li-3'>I have <strong>no opinion</strong> about Chinese international students sticking together and speaking their own language.</li>";
 							}
 						}
 						//but if they werent answered

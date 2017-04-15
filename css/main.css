@@ -104,6 +104,7 @@ button:focus {
   text-decoration: none;
   display: inline-block;
   margin-top: 3.5rem;
+  margin-bottom: 1rem;
   padding: 1rem 2rem;
   font-size: 0.75rem;
   letter-spacing: 0.2rem;
@@ -596,10 +597,6 @@ section#story-selection {
   transform: translateX(-50%);
 }
 
-#container-brushes img {
-  max-height: 90%;
-}
-
 .container-story-text {
   position: absolute;
   font-family: "Harriet", serif;
@@ -667,7 +664,7 @@ div.container-brush img {
 }
 
 #bg-conclusion {
-  background-image: url(../img/bg-thankyou.jpg);
+  background-image: url(../img/bg-conclusion.jpg);
 }
 
 #bg-thankyou {
@@ -1019,7 +1016,7 @@ video {
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
-  transform: translateX(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 .container-video {
@@ -1530,7 +1527,16 @@ body.noscroll {
 
   #container-stories-explanation-1,
   #container-stories-explanation-2 {
-    top: 50%;
+    position: static;
+    padding-top: 5rem;
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+
+  section#stories-explanation .button-next {
+    position: static;
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
   }
 }
 
@@ -1542,6 +1548,7 @@ body.noscroll {
 
   #container-brushes {
     width: 25em;
+    margin-top: 3rem;
   }
 
   .question button {
