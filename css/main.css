@@ -681,7 +681,7 @@ section#conclusion-text #container-conclusion-fade-2 .button-next {
 #container-conclusion-fade-1 {
   position: absolute;
   width: 100%;
-  top: 45%;
+  top: 52vh;
   transform: translate(-50%, -50%);
   left: 50%;
 }
@@ -758,6 +758,33 @@ section#conclusion-text {
 
 #about-us-text p:last-of-type {
   margin-top: 1rem;
+}
+
+/* ----------------------------- citation styling ----------------------------- */
+
+.citation {
+  display: block;
+  text-align: left;
+  margin: 0;
+  font-size: .7rem;
+  color: #eee;
+  max-width: 500px;
+}
+
+.citation.title {
+  margin-bottom: .4rem;
+}
+
+.citation a {
+  color: #eee;
+}
+
+.citation span {
+  display: block;
+}
+
+.citation.special-thanks {
+  margin-top: 1.4rem;
 }
 
 /* ----------------------------- story styling ----------------------------- */
