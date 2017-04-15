@@ -172,6 +172,25 @@ button:focus {
 	color: #eee;
 	border-bottom: solid 1px #eee;
   text-decoration: none;
+  transition: all .2s ease-in-out;
+}
+
+.in-text-link:hover {
+  color: #ddd;
+  border-color: #ddd;
+}
+
+.link-works-cited {
+  font-size: .7rem;
+  color: #ccc;
+  text-decoration: none;
+  border-bottom: solid 1px #ccc;
+  transition: all .2s ease-in-out;
+}
+
+.link-works-cited:hover {
+  color: #bbb;
+  border-color: #bbb;
 }
 
 nav#container-home-nav {
