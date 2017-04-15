@@ -1,7 +1,12 @@
-#story-andy #intro .container-video {
-  /*background-image: url(../img/andy/bg-andy-intro-video.png);
-  background-size: cover;*/
-}
+/*
+NOTES AND REMINDERS
+===================
+
+Every story section has its own .col-full or .col-left or .col-right,
+so each one needs to be styled individually! even though all
+.col-fulls will likely all be 100%, I separated them anyways
+just in case!
+*/
 
 section#multicultural {
   margin-top: 5rem;
@@ -297,14 +302,6 @@ section#lemonade h2 {
     width: 400px;
   }
 
-  section#halloween h2 {
-    /*position: static;*/
-  }
-
-  section#halloween img.paint {
-    /*position: static;*/
-  }
-
   section#welcoming .col-full {
     margin-top: 3rem;
   }
@@ -380,6 +377,8 @@ section#lemonade h2 {
     left: 0;
     width: 100%;
     transform: none;
+    position: static;
+    margin-top: 1rem;
   }
 
   section#halloween p {
@@ -400,7 +399,7 @@ section#lemonade h2 {
   }
 
   section#invited p {
-    
+
   }
 
   section#invited h2 {

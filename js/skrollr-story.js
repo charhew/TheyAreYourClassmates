@@ -9,7 +9,6 @@ $(document).ready(function() {
             images_loaded++;
             if (images_loaded >= total_images) {
                 // now all images are loaded.
-                console.log("all images are loaded");
                 $(".story-container img").show();
                 var s = skrollr.init();
             }

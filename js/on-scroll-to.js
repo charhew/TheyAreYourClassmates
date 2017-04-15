@@ -38,7 +38,6 @@ $(document).ready(function() {
       } else {
         scrollingDown = false;
       }
-      console.log(scrollingDown);
       initScrollPos = curScrollPos;
 
       function elementScrolled(elem, offsetTop)
@@ -102,34 +101,6 @@ $(document).ready(function() {
         }
       }
 
-      // if(elementScrolled('#quote-welcoming', 350)) {
-      //   if (insideBuffer('#quote-welcoming')) {
-      //     // if (audioAndyWelcoming.played.length === 0 ) {
-      //     console.log("inside welcoming quote");
-      //     if (playSoundWelcoming) {
-      //       audioAndyWelcoming.play();
-      //       playSoundWelcoming = false;
-      //     }
-      //     // }
-      //   } else {
-      //     playSoundWelcoming = true;
-      //     console.log("outside welcoming quote");
-      //   }
-      // }
-
-      // if(elementScrolled('#quote-divide', 350)) {
-      //   // if (audioAndyDivide.played.length === 0 ) {
-      //   if (insideBuffer('#quote-welcoming')) {
-      //     if (playSoundDivide) {
-      //       audioAndyDivide.play();
-      //       playSoundDivide = false;
-      //     }
-      //   } else {
-      //     playSoundDivide = true;
-      //   }
-      //   // }
-      // }
-
       //-------SCROLLING DOWN--------
       //-------SCROLLING DOWN--------
       //-------SCROLLING DOWN--------
@@ -184,7 +155,7 @@ $(document).ready(function() {
           }
         }
       }
-      
+
       //-------SCROLLING UP--------
       //-------SCROLLING UP--------
       //-------SCROLLING UP--------

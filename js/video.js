@@ -27,7 +27,6 @@ $(document).ready(function() {
 	});
 
 	$("#skip-andy-video-link").click(function(event) {
-		console.log("You clicked me!");
 		$('body').removeClass('noscroll');
 		// videoVivianIntro.pause();
 		videoAndyIntro.pause();
