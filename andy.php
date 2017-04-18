@@ -164,7 +164,7 @@ session_start();
 						data-bottom-top="opacity: 0; right: 60px;"
 						data-center-top="opacity: 1; right: 80px;"
 						data-top-bottom="opacity: 1; right: 100px;"
-						>Maybe Canadian students didn’t bother to talk with us because they saw us as temporary since we were international students.</h2>
+						>Maybe Canadian students didn’t bother to talk with us because they saw us as temporary.</h2>
 					<audio id="audio-andy-temporary">
 						<source src="res/andy-quote-temporary-eng.mp3" type="audio/mpeg">
 					</audio>
@@ -194,7 +194,7 @@ session_start();
 			</div>
 			<div class="col-right">
 				<h3>Your Perspective</h3>
-				<h4>from the questions</h4>
+				<h4>from the questions you answered</h4>
 				<ul>
 					<?php
 						//if the questions were answered
